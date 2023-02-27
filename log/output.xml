@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230227 21:47:51.017" rpa="false" schemaversion="3">
+<suite id="s1" name="Verify that Deep link URL is providing QR code" source="D:\com.visionProject.android\Com.visionProject.Android\VisionProject.Testsuite\Verify_that_Deep_link_URL_is_providing_QR code.robot">
+<test id="s1-t1" name="Verify that Google Play button redirecting user to Vision Project on play store" line="22">
+<kw name="Launch vision app" library="launch_app_browser_keywords">
+<kw name="Start Appium Service" library="MobileTestLibrary">
+<status status="PASS" starttime="20230227 21:47:51.617" endtime="20230227 21:47:52.918"/>
+</kw>
+<kw name="Open Application" library="MobileTestLibrary">
+<arg>${remote_url}</arg>
+<arg>&amp;{device}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<msg timestamp="20230227 21:47:57.801" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'app' option is required for reinstall
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'app' option is required for reinstall
+    at getResponseForW3CError (C:\Users\ZMO-WIN-ShrikantL-01\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+    at asyncHandler (C:\Users\ZMO-WIN-ShrikantL-01\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:380:37)</msg>
+<status status="FAIL" starttime="20230227 21:47:52.919" endtime="20230227 21:47:57.808"/>
+</kw>
+<status status="FAIL" starttime="20230227 21:47:51.616" endtime="20230227 21:47:57.809"/>
+</kw>
+<kw name="Open camera app" library="launch_flow_keywords">
+<status status="NOT RUN" starttime="20230227 21:47:57.809" endtime="20230227 21:47:57.809"/>
+</kw>
+<kw name="wait until user scan the QR code from study link url" library="launch_flow_keywords">
+<status status="NOT RUN" starttime="20230227 21:47:57.809" endtime="20230227 21:47:57.809"/>
+</kw>
+<kw name="tap on generated link" library="launch_flow_keywords">
+<status status="NOT RUN" starttime="20230227 21:47:57.810" endtime="20230227 21:47:57.810"/>
+</kw>
+<kw name="tap on 'google play store' button" library="launch_flow_keywords">
+<status status="NOT RUN" starttime="20230227 21:47:57.810" endtime="20230227 21:47:57.810"/>
+</kw>
+<kw name="verify user is landed on 'google playstore' on vision app page" library="launch_flow_keywords">
+<status status="NOT RUN" starttime="20230227 21:47:57.811" endtime="20230227 21:47:57.811"/>
+</kw>
+<kw name="Verify that if the &quot;Need Help?&quot; button works" library="launch_flow_keywords">
+<status status="NOT RUN" starttime="20230227 21:47:57.811" endtime="20230227 21:47:57.812"/>
+</kw>
+<kw name="close vision app" library="launch_app_browser_keywords">
+<status status="NOT RUN" starttime="20230227 21:47:57.812" endtime="20230227 21:47:57.812"/>
+</kw>
+<doc>Verification that Google Play button redirecting user to Vision Project on play store</doc>
+<tag>Regression</tag>
+<status status="FAIL" starttime="20230227 21:47:51.615" endtime="20230227 21:47:57.812">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'app' option is required for reinstall
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'app' option is required for reinstall
+    at getResponseForW3CError (C:\Users\ZMO-WIN-ShrikantL-01\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+    at asyncHandler (C:\Users\ZMO-WIN-ShrikantL-01\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:380:37)</status>
+</test>
+<status status="FAIL" starttime="20230227 21:47:51.022" endtime="20230227 21:47:57.814"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Regression</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Verify that Deep link URL is providing QR code">Verify that Deep link URL is providing QR code</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
