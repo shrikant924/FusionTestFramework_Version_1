@@ -13,4 +13,4 @@ class SeleniumUtils:
         reader = zxing.BarCodeReader()
         print(reader.zxing_version, reader.zxing_version_info)
         barcode = reader.decode(img)
-        print(barcode)
+        return barcode

@@ -1,12 +1,13 @@
-from robot.api.deco import keyword
+from robot.api.deco import keyword, library
 from robot.libraries.BuiltIn import BuiltIn
 
 
+@library
 class NativeAppsUtil:
 
     @property
     def appium_library_instance(self):
-        return BuiltIn().get_library_instance('AppiumLibrary')
+        return BuiltIn().get_library_instance("AppiumLibrary")
 
     @keyword
     def open_camera_app(self):

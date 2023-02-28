@@ -1,0 +1,39 @@
+{
+  "Pixel_Emulator" : {
+
+                      "platformName": "android",
+                      "platformVersion": "11.0",
+                      "deviceName": "emulator-5554",
+                      "automationName": "UiAutomator2",
+                      "appPackage": "com.playgroundxyz.vision_project",
+                      "appActivity": ".MainActivity",
+                      "chromedriverExecutableDir": "drivers/chromedriver.exe"
+
+                     },
+
+  "Pixel_6" : {
+                      "platformName": "android",
+                      "platformVersion": "13.0",
+                      "deviceName": "Pixel 6",
+                      "automationName": "UiAutomator2",
+                      "appPackage": "com.playgroundxyz.vision_project",
+                      "appActivity": ".MainActivity",
+                      "chromedriverExecutableDir": "drivers/chromedriver.exe"
+
+              },
+
+  "vivo_s1" : {
+                      "platformName": "android",
+                      "platformVersion": "12.0",
+                      "deviceName": "LBYPFQXSVCZLUGQ4",
+                      "automationName": "UiAutomator2",
+                      "app": "app-debug-multimodel.apk",
+                      "appPackage": "com.playgroundxyz.vision_project",
+                      "appActivity": ".MainActivity",
+                      "chromedriverExecutableDir": "drivers/chromedriver.exe"
+
+}
+
+
+
+}

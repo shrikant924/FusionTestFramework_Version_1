@@ -1,5 +1,5 @@
 *** Settings ***
-Library       WebApplicationTestLibrary
+Library       ../../../WebApplicationTestLibrary/
 Variables      ../../VisionProject.Config.Files/configuration.py
 Resource       ../VisionProject.PageObject.locators/Locators.resource
 

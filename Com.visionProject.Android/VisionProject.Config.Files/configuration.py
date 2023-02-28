@@ -1,30 +1,43 @@
-# webPage configuration
+import json
+import os
+
+""" Url configuration Details"""
 
 Deeplink_url = "https://social.vision-project.co/?studyID=d2563e38-04e4-4c06-8323-f8c4722040b0&userID=Jai"
 Browser = "chrome"
 remote_url = "http://localhost:4723/wd/hub"
-Pixel_6 = {
-    "platformName": "android",
-    "platformVersion": "13.0",
-    "deviceName": "Pixel 6",
-    "automationName": "UiAutomator2",
-    # "appPackage": "com.playgroundxyz.vision_project",
-    # "appActivity": ".MainActivity",
-    "app" : "/app-debug-multimodel.apk",
-    "chromedriverExecutableDir": "drivers/chromedriver.exe"
+url = Deeplink_url
+
+""" File path configuration Details """
+
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+jsonFilePath = os.path.join(ROOT_DIR, '\Com.visionProject.Android\Com.visionProject.Android\VisionProject.Config'
+                                      '.Files\deviceDetails.json')
+
+""" Select device : device name should be match as per deviceDetails.json file"""
+
+deviceName = "Pixel_Emulator"
+Emualator_Name = "Pixel_3a_API_30"
+
+""" value device type = "real" or "virtual" """
+
+device_Type = "virtual"
+
+""" below code is reading json file & setting device configuration as per device specification"""
+
+with open(jsonFilePath, mode='r') as jsonObject:
+    data = json.load(jsonObject)
+
+device = {
+
+    "platformName": data[deviceName]['platformName'],
+    "platformVersion": data[deviceName]['platformVersion'],
+    "deviceName": data[deviceName]['deviceName'],
+    "automationName": data[deviceName]['automationName'],
+    "appPackage": data[deviceName]['appPackage'],
+    "appActivity": data[deviceName]['appActivity'],
+    "chromedriverExecutableDir": data[deviceName]['chromedriverExecutableDir']
 
 }
 
-Pixel_Emulator = {
-    "platformName": "android",
-    "platformVersion": "11.0",
-    "deviceName": "emulator-5554",
-    "automationName": "UiAutomator2",
-    "appPackage": "com.playgroundxyz.vision_project",
-    "appActivity": ".MainActivity",
-     "chromedriverExecutableDir": "drivers/chromedriver.exe"
 
-}
-
-device = Pixel_Emulator
-# Mobile app configuration

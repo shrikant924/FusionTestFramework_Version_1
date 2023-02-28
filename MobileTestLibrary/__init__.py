@@ -1,4 +1,5 @@
 from AppiumLibrary import AppiumLibrary
+
 from MobileTestLibrary.NativeAppsUtil import NativeAppsUtil
 from MobileTestLibrary.androidUtils import androidUtils
 
