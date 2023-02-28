@@ -37,6 +37,15 @@ device = {
     "automationName": data[deviceName]['automationName'],
     "appPackage": data[deviceName]['appPackage'],
     "appActivity": data[deviceName]['appActivity'],
-    "chromedriverExecutableDir": data[deviceName]['chromedriverExecutableDir']
+    "chromedriverExecutableDir": data[deviceName]['chromedriverExecutableDir'],
+    "automationType": data[deviceName]['automationType'],
+    "sessionName": data[deviceName]['sessionName'],
+    "sessionDescription": data[deviceName]['sessionDescription'],
+    "deviceOrientation": data[deviceName]['deviceOrientation'],
+    "noReset": data[deviceName]['noReset'],
+    "fullReset": data[deviceName]['fullReset'],
+    "captureScreenshots": data[deviceName]['captureScreenshots'],
+    "udid": data[deviceName]['udid'],
+
 
 }

@@ -9,7 +9,7 @@
                       "appActivity": ".MainActivity",
                       "chromedriverExecutableDir": "drivers/chromedriver.exe",
                       "automationType": "app",
-                      "sessionName": "virtual",
+                      "sessionName": "Automation test session",
                       "sessionDescription": "",
                       "deviceOrientation": "portrait",
                       "noReset": true,
@@ -35,8 +35,9 @@
                       "noReset": true,
                       "fullReset": false,
                       "captureScreenshots": true,
-                      "udid": "emulator-5554",
+                      "udid": " ",
                       "appium-url": "http://0.0.0.0:4723/wd/hub"
+
 
               },
 
