@@ -1,6 +1,5 @@
 import os.path
 from datetime import datetime
-
 from robot import run
 
 

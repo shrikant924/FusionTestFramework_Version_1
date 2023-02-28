@@ -7,7 +7,16 @@
                       "automationName": "UiAutomator2",
                       "appPackage": "com.playgroundxyz.vision_project",
                       "appActivity": ".MainActivity",
-                      "chromedriverExecutableDir": "drivers/chromedriver.exe"
+                      "chromedriverExecutableDir": "drivers/chromedriver.exe",
+                      "automationType": "app",
+                      "sessionName": "virtual",
+                      "sessionDescription": "",
+                      "deviceOrientation": "portrait",
+                      "noReset": true,
+                      "fullReset": false,
+                      "captureScreenshots": true,
+                      "udid": "emulator-5554",
+                      "appium-url": "http://0.0.0.0:4723/wd/hub"
 
                      },
 
@@ -18,7 +27,16 @@
                       "automationName": "UiAutomator2",
                       "appPackage": "com.playgroundxyz.vision_project",
                       "appActivity": ".MainActivity",
-                      "chromedriverExecutableDir": "drivers/chromedriver.exe"
+                      "chromedriverExecutableDir": "drivers/chromedriver.exe",
+                      "automationType": "app",
+                      "sessionName": "Automation test session",
+                      "sessionDescription": "",
+                      "deviceOrientation": "portrait",
+                      "noReset": true,
+                      "fullReset": false,
+                      "captureScreenshots": true,
+                      "udid": "emulator-5554",
+                      "appium-url": "http://0.0.0.0:4723/wd/hub"
 
               },
 
@@ -30,7 +48,16 @@
                       "app": "app-debug-multimodel.apk",
                       "appPackage": "com.playgroundxyz.vision_project",
                       "appActivity": ".MainActivity",
-                      "chromedriverExecutableDir": "drivers/chromedriver.exe"
+                      "chromedriverExecutableDir": "drivers/chromedriver.exe",
+                      "automationType": "app",
+                      "sessionName": "Automation test session",
+                      "sessionDescription": "",
+                      "deviceOrientation": "portrait",
+                      "noReset": true,
+                      "fullReset": false,
+                      "captureScreenshots": true,
+                      "udid": "emulator-5554",
+                      "appium-url": "http://0.0.0.0:4723/wd/hub"
 
 }
 

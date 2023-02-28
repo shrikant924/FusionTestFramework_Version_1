@@ -7,7 +7,7 @@ def read_Json_file(jsonfile):
             return json.load(jsonObject)
 
     except:
-        pass
+        raise "file not found error..."
 
 
 class reader:
