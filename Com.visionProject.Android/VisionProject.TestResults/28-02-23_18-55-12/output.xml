@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230228 18:55:13.000" rpa="false" schemaversion="3">
+<suite id="s1" name="VisionProject.Testsuite" source="D:\com.visionProject.android\Com.visionProject.Android\VisionProject.Testsuite">
+<suite id="s1-s1" name="Verify that Deep link URL is providing QR code" source="D:\com.visionProject.android\Com.visionProject.Android\VisionProject.Testsuite\Verify that Deep link URL is providing QR code.robot">
+<test id="s1-s1-t1" name="Verify that Deep link URL is providing QR code" line="13">
+<kw name="Launch browser and input url" library="Setup keywords">
+<kw name="Open Browser" library="WebApplicationTestLibrary">
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230228 18:55:13.430" level="FAIL">Variable '${url}' not found.</msg>
+<status status="FAIL" starttime="20230228 18:55:13.430" endtime="20230228 18:55:13.430"/>
+</kw>
+<kw name="Maximize Browser Window" library="WebApplicationTestLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20230228 18:55:13.430" endtime="20230228 18:55:13.430"/>
+</kw>
+<status status="FAIL" starttime="20230228 18:55:13.429" endtime="20230228 18:55:13.431"/>
+</kw>
+<kw name="wait until QR code generated and validate QR code link details and log to console" library="QR_Code_page_keywords">
+<status status="NOT RUN" starttime="20230228 18:55:13.431" endtime="20230228 18:55:13.431"/>
+</kw>
+<doc>verification of barcode generation of specified link</doc>
+<tag>Regression</tag>
+<status status="FAIL" starttime="20230228 18:55:13.429" endtime="20230228 18:55:13.431">Variable '${url}' not found.</status>
+</test>
+<status status="FAIL" starttime="20230228 18:55:13.023" endtime="20230228 18:55:13.431"/>
+</suite>
+<suite id="s1-s2" name="Verify that Google Play button redirecting user to Vision Project on play store" source="D:\com.visionProject.android\Com.visionProject.Android\VisionProject.Testsuite\Verify that Google Play button redirecting user to Vision Project on play store.robot">
+<kw name="Setup before suit start" library="Setup keywords" type="SETUP">
+<kw name="Start Emulator" library="MobileTestLibrary">
+<arg>${Emualator_Name}</arg>
+<arg>${device_Type}</arg>
+<msg timestamp="20230228 18:55:13.441" level="FAIL">Variable '${Emualator_Name}' not found.</msg>
+<status status="FAIL" starttime="20230228 18:55:13.441" endtime="20230228 18:55:13.441"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230228 18:55:13.442" endtime="20230228 18:55:13.442"/>
+</kw>
+<kw name="Start Appium Service" library="MobileTestLibrary">
+<status status="NOT RUN" starttime="20230228 18:55:13.442" endtime="20230228 18:55:13.442"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230228 18:55:13.442" endtime="20230228 18:55:13.442"/>
+</kw>
+<status status="FAIL" starttime="20230228 18:55:13.441" endtime="20230228 18:55:13.442"/>
+</kw>
+<test id="s1-s2-t1" name="Verify that Google Play button redirecting user to Vision Project on play store" line="14">
+<doc>Verification that Google Play button redirecting user to Vision Project on play store</doc>
+<tag>Regression</tag>
+<status status="FAIL" starttime="20230228 18:55:13.442" endtime="20230228 18:55:13.442">Parent suite setup failed:
+Variable '${Emualator_Name}' not found.</status>
+</test>
+<test id="s1-s2-t2" name="Verify that user is able to paste study link using Paste study link" line="26">
+<doc>Verification that user is able to paste study link using Paste study link</doc>
+<tag>Regression</tag>
+<status status="FAIL" starttime="20230228 18:55:13.443" endtime="20230228 18:55:13.443">Parent suite setup failed:
+Variable '${Emualator_Name}' not found.</status>
+</test>
+<kw name="tearDown" library="Setup keywords" type="TEARDOWN">
+<kw name="Stop Emulator" library="MobileTestLibrary">
+<msg timestamp="20230228 18:55:30.600" level="INFO">closing emulator...
+emulator closed successfully...</msg>
+<status status="PASS" starttime="20230228 18:55:13.444" endtime="20230228 18:55:30.600"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230228 18:55:31.601" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230228 18:55:30.600" endtime="20230228 18:55:31.601"/>
+</kw>
+<kw name="Stop Appium Service" library="MobileTestLibrary">
+<status status="PASS" starttime="20230228 18:55:31.601" endtime="20230228 18:55:31.602"/>
+</kw>
+<status status="PASS" starttime="20230228 18:55:13.443" endtime="20230228 18:55:31.602"/>
+</kw>
+<status status="FAIL" starttime="20230228 18:55:13.432" endtime="20230228 18:55:31.602">Suite setup failed:
+Variable '${Emualator_Name}' not found.</status>
+</suite>
+<status status="FAIL" starttime="20230228 18:55:13.002" endtime="20230228 18:55:31.605"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="3" skip="0">Regression</stat>
+</tag>
+<suite>
+<stat pass="0" fail="3" skip="0" id="s1" name="VisionProject.Testsuite">VisionProject.Testsuite</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Verify that Deep link URL is providing QR code">VisionProject.Testsuite.Verify that Deep link URL is providing QR code</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s2" name="Verify that Google Play button redirecting user to Vision Project on play store">VisionProject.Testsuite.Verify that Google Play button redirecting user to Vision Project on play store</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230228 18:55:13.196" level="ERROR">Error in file 'D:\com.visionProject.android\Com.visionProject.Android\VisionProject.Testsuite\Verify that Deep link URL is providing QR code.robot' on line 2: Processing variable file 'D:\com.visionProject.android\Com.visionProject.Android\VisionProject.Config.Files\configuration.py' failed: Importing variable file 'D:\com.visionProject.android\Com.visionProject.Android\VisionProject.Config.Files\configuration.py' failed: TypeError: exceptions must derive from BaseException
+Traceback (most recent call last):
+  File "D:\com.visionProject.android\Com.visionProject.Android\VisionProject.Config.Files\configuration.py", line 14, in &lt;module&gt;
+    data = read_Json_file(deviceDetailsjsonFilePath)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\com.visionProject.android\MobileTestLibrary\JsonFileReader.py", line 10, in read_Json_file
+    raise "file not found error..."
+PYTHONPATH:
+  D:\com.visionProject.android\Com.visionProject.Android\VisionProject.Config.Files
+  D:\com.visionProject.android\Com.visionProject.Android
+  D:\com.visionProject.android
+  C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311\python311.zip
+  C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311\DLLs
+  C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311\Lib
+  C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311
+  D:\com.visionProject.android\venv
+  D:\com.visionProject.android\venv\Lib\site-packages</msg>
+<msg timestamp="20230228 18:55:13.435" level="ERROR">Error in file 'D:\com.visionProject.android\Com.visionProject.Android\VisionProject.Testsuite\Verify that Google Play button redirecting user to Vision Project on play store.robot' on line 2: Processing variable file 'D:\com.visionProject.android\Com.visionProject.Android\VisionProject.Config.Files\configuration.py' failed: Importing variable file 'D:\com.visionProject.android\Com.visionProject.Android\VisionProject.Config.Files\configuration.py' failed: TypeError: exceptions must derive from BaseException
+Traceback (most recent call last):
+  File "D:\com.visionProject.android\Com.visionProject.Android\VisionProject.Config.Files\configuration.py", line 14, in &lt;module&gt;
+    data = read_Json_file(deviceDetailsjsonFilePath)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\com.visionProject.android\MobileTestLibrary\JsonFileReader.py", line 10, in read_Json_file
+    raise "file not found error..."
+PYTHONPATH:
+  D:\com.visionProject.android\Com.visionProject.Android\VisionProject.Config.Files
+  D:\com.visionProject.android\Com.visionProject.Android
+  D:\com.visionProject.android
+  C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311\python311.zip
+  C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311\DLLs
+  C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311\Lib
+  C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311
+  D:\com.visionProject.android\venv
+  D:\com.visionProject.android\venv\Lib\site-packages</msg>
+</errors>
+</robot>
