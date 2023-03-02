@@ -10,13 +10,10 @@ Resource       ../VisionProject.PageObject.locators/Locators.resource
 Setup before suit start
 
     Start Emulator    ${Emualator_Name}     ${device_Type}
-    Sleep    1
     Start Appium Service
-    Sleep    1
 
 tearDown
     Stop Emulator
-    Sleep    1
     Stop Appium Service
 
 Launch browser and input url
@@ -27,6 +24,9 @@ Launch Test application
     Open Application        ${remote_url}           &{device}
     AppiumLibrary.Capture Page Screenshot
 
+
 close Test application
-    Close Application
-    Close All Applications
+    Run Keyword And Continue On Failure    Close Application
+    Run Keyword And Continue On Failure    Close Browser
+    Run Keyword And Continue On Failure    Close All Browsers
+    Run Keyword And Continue On Failure     Close All Applications

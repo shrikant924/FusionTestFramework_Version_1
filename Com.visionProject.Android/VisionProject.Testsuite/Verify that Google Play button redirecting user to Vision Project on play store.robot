@@ -19,14 +19,9 @@ Verify that Google Play button redirecting user to Vision Project on play store
     tap on generated link
     tap on 'google play store' button
     verify user is landed on 'google playstore' on vision app page
-    Verify that if the "Need Help?" button works
-
-
-Verify that user is able to paste study link using Paste study link
-
-    [Documentation]        Verification that user is able to paste study link using Paste study link
-    [Tags]      Regression
-
-    launch camera app and wait until user scan the QR code from study link url
-    tap on generated link
-
+    Verify if Need Help? page opens up after tapping Need Help? link from landing page
+    Verify if "Contact Us", "How to check Android version" , "Privacy Policy" and "Terms of User Agreement" option are provided on Need help page
+    tap on 'Contact us' and verify user is landing on contact us page
+    tap on 'Terms of Use Agreement' and verify user is landing on contact us page
+    tap on 'How to check Android version' and verify user is landing on contact us page
+    tap on 'Privacy policy' and verify user is landing on contact us page

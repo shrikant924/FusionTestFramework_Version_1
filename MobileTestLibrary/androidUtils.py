@@ -19,10 +19,9 @@ class androidUtils:
     def start_appium_service(self):
         appium_service = AppiumService()
         appium_service.start(args=['--address', '127.0.0.1', '-p', str(DEFAULT_PORT), '--base-path', '/wd/hub/',
-                                  ])
-        assert (appium_service.is_running)
-        assert (appium_service.is_listening)
-
+                                   ])
+        assert appium_service.is_running
+        assert appium_service.is_listening
 
     @keyword
     def stop_appium_service(self):
@@ -38,6 +37,8 @@ class androidUtils:
                             "new UiScrollable(new UiSelector().scrollable(true).instance("
                             "0)).scrollIntoView(""new UiSelector().textContains(\"" + element +
                             "\").instance(0))")
+
+
 
     @keyword
     def scroll_to_element_by_text(self, element_text):
