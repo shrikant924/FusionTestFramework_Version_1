@@ -23,9 +23,10 @@ Launch browser and input url
     WebApplicationTestLibrary.Open Browser        ${url}          ${Browser}
     WebApplicationTestLibrary.Maximize Browser Window
 
-Launch application
+Launch Test application
     Open Application        ${remote_url}           &{device}
+    AppiumLibrary.Capture Page Screenshot
 
-close application
+close Test application
     Close Application
     Close All Applications

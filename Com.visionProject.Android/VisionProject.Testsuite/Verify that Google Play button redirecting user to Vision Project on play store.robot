@@ -5,8 +5,8 @@ Resource        ../VisionProject.PageObject/VisionProject.PageObject.keywords/la
 Resource        ../VisionProject.PageObject/VisionProject.PageObject.keywords/Setup keywords.resource
 Suite Setup     Setup before suit start
 Suite Teardown  tearDown
-Test Setup      Setup keywords.Launch application
-Test Teardown   Setup keywords.close application
+Test Setup      Launch Test application
+Test Teardown   close Test application
 
 
 *** Test Cases ***
@@ -15,8 +15,7 @@ Verify that Google Play button redirecting user to Vision Project on play store
     [Documentation]        Verification that Google Play button redirecting user to Vision Project on play store
     [Tags]      Regression
 
-    launch_flow_keywords.Open camera app
-    wait until user scan the QR code from study link url
+    launch camera app and wait until user scan the QR code from study link url
     tap on generated link
     tap on 'google play store' button
     verify user is landed on 'google playstore' on vision app page
@@ -28,7 +27,6 @@ Verify that user is able to paste study link using Paste study link
     [Documentation]        Verification that user is able to paste study link using Paste study link
     [Tags]      Regression
 
-    launch_flow_keywords.Open camera app
-    wait until user scan the QR code from study link url
+    launch camera app and wait until user scan the QR code from study link url
     tap on generated link
 

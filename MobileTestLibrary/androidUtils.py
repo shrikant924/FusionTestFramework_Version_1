@@ -18,9 +18,11 @@ class androidUtils:
     @keyword
     def start_appium_service(self):
         appium_service = AppiumService()
-        appium_service.start(args=['--address', '127.0.0.1', '-p', str(DEFAULT_PORT), '--base-path', '/wd/hub/'])
+        appium_service.start(args=['--address', '127.0.0.1', '-p', str(DEFAULT_PORT), '--base-path', '/wd/hub/',
+                                  ])
         assert (appium_service.is_running)
         assert (appium_service.is_listening)
+
 
     @keyword
     def stop_appium_service(self):

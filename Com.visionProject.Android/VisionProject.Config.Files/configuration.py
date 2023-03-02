@@ -6,7 +6,7 @@ from MobileTestLibrary.JsonFileReader import read_Json_file
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 deviceDetailsjsonFilePath = os.path.join(ROOT_DIR,
                                          '\Com.visionProject.Android\Com.visionProject.Android\VisionProject.Config'
-                                         '.Files\deviceDetails.json')
+                                         '.Files\\deviceDetails.json')
 testDataDetailsjsonFilePath = os.path.join(ROOT_DIR,
                                            '\Com.visionProject.Android\Com.visionProject.Android\VisionProject.Config'
                                            '.Files\\testData.json')
@@ -37,15 +37,26 @@ device = {
     "automationName": data[deviceName]['automationName'],
     "appPackage": data[deviceName]['appPackage'],
     "appActivity": data[deviceName]['appActivity'],
-    "chromedriverExecutableDir": data[deviceName]['chromedriverExecutableDir'],
-    "automationType": data[deviceName]['automationType'],
-    "sessionName": data[deviceName]['sessionName'],
-    "sessionDescription": data[deviceName]['sessionDescription'],
-    "deviceOrientation": data[deviceName]['deviceOrientation'],
-    "noReset": data[deviceName]['noReset'],
-    "fullReset": data[deviceName]['fullReset'],
-    "captureScreenshots": data[deviceName]['captureScreenshots'],
+    "chromedriverUseSystemExecutable": data[deviceName]['chromedriverUseSystemExecutable'],
+    # "chromedriverExecutableDir": data[deviceName]['chromedriverExecutableDir'],
+    # "automationType": data[deviceName]['automationType'],
+    # "sessionName": data[deviceName]['sessionName'],
+    # "sessionDescription": data[deviceName]['sessionDescription'],
+    # "deviceOrientation": data[deviceName]['deviceOrientation'],
+    # "noReset": data[deviceName]['noReset'],
+    # "fullReset": data[deviceName]['fullReset'],
+    # "captureScreenshots": data[deviceName]['captureScreenshots'],
     "udid": data[deviceName]['udid'],
 
+}
+
+Pixel_6_chrome = {
+    "platformName": "android",
+    "platformVersion": "13.0",
+    "deviceName": "pixel 6",
+    "automationName": "UiAutomator2",
+    "chromedriverUseSystemExecutable": "true",
+    # "chromedriverExecutableDir": "\chromedriver.exe",
+    "browserName": "chrome"
 
 }

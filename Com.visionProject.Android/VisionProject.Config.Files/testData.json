@@ -3,8 +3,9 @@
     "Deeplink_url": "https://social.vision-project.co/?studyID=d2563e38-04e4-4c06-8323-f8c4722040b0&userID=Jai",
     "Browser": "chrome",
     "remote_url": "http://localhost:4723/wd/hub",
-    "deviceName": "Pixel_Emulator",
+    "deviceName": "Pixel_6",
     "Emulator_Name": "Pixel_3a_API_30",
-    "device_Type": "virtual"
+    "device_Type": "real"
 
 }
+
