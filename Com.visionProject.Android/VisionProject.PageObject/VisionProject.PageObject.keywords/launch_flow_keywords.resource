@@ -45,14 +45,15 @@ tap on 'Contact us' and verify user is landing on contact us page
     AppiumLibrary.Page Should Contain Text    	support@vision-project.co
     AppiumLibrary.Click Element    ${Go Back Button}
 
-tap on 'How to check Android version' and verify user is landing on contact us page
+tap on 'How to check Android version' and verify user is landing on 'How to check Android version' page
     AppiumLibrary.Wait Until Element Is Visible    ${How to check Android version}
     AppiumLibrary.Click Element    ${How to check Android version}
     AppiumLibrary.Page Should Contain Text    How to check Android version
     AppiumLibrary.Page Should Contain Element    ${Go Back Button}
     AppiumLibrary.Click Element    ${Go Back Button}
 
-tap on 'Privacy policy' and verify user is landing on contact us page
+tap on 'Privacy policy' and verify user is landing on Privacy policy page
+    
     AppiumLibrary.Wait Until Element Is Visible    ${Privacy policy}
     AppiumLibrary.Click Element    ${Privacy policy}
     TRY
@@ -73,13 +74,15 @@ tap on 'Privacy policy' and verify user is landing on contact us page
     AppiumLibrary.Go Back
     AppiumLibrary.Go Back
 
-tap on 'Terms of Use Agreement' and verify user is landing on contact us page
+tap on 'Terms of Use Agreement' and verify user is landing on Terms of Use Agreement page
+
     AppiumLibrary.Wait Until Element Is Visible    ${Terms of Use Agreement}    timeout=10
     AppiumLibrary.Click Element    ${Terms of Use Agreement}
     AppiumLibrary.Wait Until Page Contains    Vision Project Terms of Use Agreement
     MobileTestLibrary.Scroll To Element By Text    19. Electronic Signatures
     AppiumLibrary.Page Should Contain Text    19. Electronic Signatures
     AppiumLibrary.Go Back
+
 
 
 

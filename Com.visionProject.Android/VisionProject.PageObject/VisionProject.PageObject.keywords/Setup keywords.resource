@@ -1,8 +1,8 @@
 *** Settings ***
-Library       MobileTestLibrary
-Library        AppiumLibrary
-Library       WebApplicationTestLibrary
-Library    OperatingSystem
+Library         MobileTestLibrary
+Library         AppiumLibrary
+Library         WebApplicationTestLibrary
+Library         OperatingSystem
 Variables      ../../VisionProject.Config.Files/configuration.py
 Resource       ../VisionProject.PageObject.locators/Locators.resource
 
@@ -26,7 +26,8 @@ Launch Test application
 
 
 close Test application
-    Run Keyword And Continue On Failure    Close Application
+    Run Keyword And Continue On Failure    AppiumLibrary.Quit Application
+    Run Keyword And Continue On Failure    AppiumLibrary.Close Application
     Run Keyword And Continue On Failure    Close Browser
     Run Keyword And Continue On Failure    Close All Browsers
     Run Keyword And Continue On Failure     Close All Applications

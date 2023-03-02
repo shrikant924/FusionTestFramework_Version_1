@@ -38,8 +38,6 @@ class androidUtils:
                             "0)).scrollIntoView(""new UiSelector().textContains(\"" + element +
                             "\").instance(0))")
 
-
-
     @keyword
     def scroll_to_element_by_text(self, element_text):
         driver = self.appium_library_instance._current_application()
