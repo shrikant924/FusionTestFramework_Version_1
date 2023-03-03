@@ -5,8 +5,8 @@ Resource        ../VisionProject.PageObject/VisionProject.PageObject.keywords/QR
 Resource        ../VisionProject.PageObject/VisionProject.PageObject.keywords/launch_flow_keywords.resource
 Suite Setup
 Suite Teardown
-Test Setup
-Test Teardown
+Test Setup          Launch browser and input url
+Test Teardown       Close Browser
 
 
 *** Test Cases ***
@@ -14,8 +14,8 @@ Verify that Deep link URL is providing QR code
     [Documentation]     verification of barcode generation of specified link
     [Tags]      Regression
 
-    Launch browser and input url
+
     wait until QR code generated and validate QR code link details and log to console
-    Close Browser
+
 
 

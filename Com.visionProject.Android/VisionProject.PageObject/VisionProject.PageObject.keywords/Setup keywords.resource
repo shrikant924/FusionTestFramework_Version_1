@@ -1,7 +1,6 @@
 *** Settings ***
-Library         MobileTestLibrary
-Library         AppiumLibrary
-Library         WebApplicationTestLibrary
+Library         ../../../../com.visionProject.android/WebApplicationTestLibrary/
+Library         ../../../../com.visionProject.android/MobileTestLibrary/
 Library         OperatingSystem
 Variables      ../../VisionProject.Config.Files/configuration.py
 Resource       ../VisionProject.PageObject.locators/Locators.resource
@@ -9,25 +8,23 @@ Resource       ../VisionProject.PageObject.locators/Locators.resource
 *** Keywords ***
 Setup before suit start
 
-    Start Emulator    ${Emualator_Name}     ${device_Type}
-    Start Appium Service
+    MobileTestLibrary.Start Emulator    ${Emualator_Name}     ${device_Type}
+    MobileTestLibrary.Start Appium Service
 
 tearDown
-    Stop Emulator
-    Stop Appium Service
+    MobileTestLibrary.Stop Emulator
+    MobileTestLibrary.Stop Appium Service
 
 Launch browser and input url
     WebApplicationTestLibrary.Open Browser        ${url}          ${Browser}
     WebApplicationTestLibrary.Maximize Browser Window
 
 Launch Test application
-    Open Application        ${remote_url}           &{device}
-    AppiumLibrary.Capture Page Screenshot
-
+    MobileTestLibrary.Open Application        ${remote_url}           &{device}
 
 close Test application
-    Run Keyword And Continue On Failure    AppiumLibrary.Quit Application
-    Run Keyword And Continue On Failure    AppiumLibrary.Close Application
-    Run Keyword And Continue On Failure    Close Browser
-    Run Keyword And Continue On Failure    Close All Browsers
-    Run Keyword And Continue On Failure     Close All Applications
+    Run Keyword And Continue On Failure    MobileTestLibrary.Quit Application
+    Run Keyword And Continue On Failure    MobileTestLibrary.Close Application
+    Run Keyword And Continue On Failure    WebApplicationTestLibrary.Close Browser
+    Run Keyword And Continue On Failure    WebApplicationTestLibrary.Close All Browsers
+    Run Keyword And Continue On Failure    MobileTestLibrary.Close All Applications
