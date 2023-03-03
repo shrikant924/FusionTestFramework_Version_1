@@ -1,9 +1,5 @@
 *** Settings ***
-Library         ../../../../com.visionProject.android/src/MobileTestLibrary/
-Library         ../../../../com.visionProject.android/src/WebApplicationTestLibrary/
-Library         OperatingSystem
-Variables      ../../VisionProject.Config.Files/configuration.py
-Resource       ../VisionProject.PageObject.locators/Locators.resource
+Resource        KeywordsSetup.resource
 
 *** Keywords ***
 Setup before suit start
@@ -21,6 +17,7 @@ Launch browser and input url
 
 Launch Test application
     MobileTestLibrary.Open Application        ${remote_url}           &{device}
+    MobileTestLibrary.Set Appium Timeout    30
 
 close Test application
     Run Keyword And Continue On Failure    MobileTestLibrary.Close Application

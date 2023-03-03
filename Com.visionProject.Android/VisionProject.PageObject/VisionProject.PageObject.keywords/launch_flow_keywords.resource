@@ -1,9 +1,5 @@
 *** Settings ***
-Library         ../../../../com.visionProject.android/src/MobileTestLibrary/
-Library         ../../../../com.visionProject.android/src/WebApplicationTestLibrary/
-Variables      ../../VisionProject.Config.Files/configuration.py
-Resource       ../VisionProject.PageObject.locators/Locators.resource
-
+Resource        KeywordsSetup.resource
 
 *** Keywords ***
 launch camera app and wait until user scan the QR code from study link url
@@ -20,6 +16,11 @@ tap on generated link
     Set global Variable     ${SlicedStudyLink}
     log to console          ${SlicedStudyLink}
 
+Verify that user can start study by hitting Get Started button
+    MobileTestLibrary.Wait Until Page Contains Element    ${GET STARTED}
+    MobileTestLibrary.Click Element    ${GET STARTED}
+    MobileTestLibrary.Wait Until Page Contains Element    ${About the study}
+    MobileTestLibrary.Page Should Contain Element    ${BEGIN Button}
 
 tap on 'google play store' button
     MobileTestLibrary.Wait Until Element Is Visible    ${google_playstore_Button}       timeout=30

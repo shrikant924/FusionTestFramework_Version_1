@@ -1,4 +1,8 @@
 *** Settings ***
+Library         ../../../../com.visionProject.android/src/MobileTestLibrary/
+Library         ../../../../com.visionProject.android/src/WebApplicationTestLibrary/
+Variables      ../../VisionProject.Config.Files/configuration.py
+Resource       ../VisionProject.PageObject.locators/Locators.resource
 Resource        ../VisionProject.PageObject.keywords/launch_flow_keywords.resource
 Resource        ../VisionProject.PageObject.keywords/QR_Code_page_keywords.resource
 Resource        ../VisionProject.PageObject.keywords/Setup keywords.resource

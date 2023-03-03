@@ -1,8 +1,5 @@
 *** Settings ***
-Variables      ../VisionProject.Config.Files/configuration.py
-Resource        ../VisionProject.PageObject/VisionProject.PageObject.keywords/pageObjects.resource
-Suite Setup
-Suite Teardown
+Resource        ../VisionProject.PageObject/VisionProject.PageObject.keywords/KeywordsSetup.resource
 Test Setup          Launch browser and input url
 Test Teardown       Close Browser
 

@@ -14,16 +14,17 @@ testDataDetailsjsonFilePath = os.path.join(ROOT_DIR,
 data = read_Json_file(deviceDetailsjsonFilePath)
 testData = read_Json_file(testDataDetailsjsonFilePath)
 
+""" Select device : device name should be match as per deviceDetails.json file"""
+
+deviceName = testData['deviceName']
+Emualator_Name = testData['Emulator_Name']
+
 """ Url configuration Details"""
 
 Browser = testData["Browser"]
 remote_url = testData['remote_url']
 url = testData['Deeplink_url']
-
-""" Select device : device name should be match as per deviceDetails.json file"""
-
-deviceName = testData['deviceName']
-Emualator_Name = testData['Emulator_Name']
+currentAppVersion = testData['currentAppVersion']
 
 """ value device type = "real" or "virtual" """
 
@@ -50,13 +51,3 @@ device = {
 
 }
 
-Pixel_6_chrome = {
-    "platformName": "android",
-    "platformVersion": "13.0",
-    "deviceName": "pixel 6",
-    "automationName": "UiAutomator2",
-    "chromedriverUseSystemExecutable": "true",
-    # "chromedriverExecutableDir": "\chromedriver.exe",
-    "browserName": "chrome"
-
-}

@@ -5,7 +5,8 @@
     "remote_url": "http://localhost:4723/wd/hub",
     "deviceName": "Pixel_6",
     "Emulator_Name": "Pixel_3a_API_30",
-    "device_Type": "real"
+    "device_Type": "real",
+    "currentAppVersion" : "App version: 1.1.23-56"
 
 }
 

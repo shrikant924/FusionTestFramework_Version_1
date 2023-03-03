@@ -1,8 +1,5 @@
 *** Settings ***
-Variables      ../VisionProject.Config.Files/configuration.py
-Resource        ../VisionProject.PageObject/VisionProject.PageObject.keywords/QR_Code_page_keywords.resource
-Resource        ../VisionProject.PageObject/VisionProject.PageObject.keywords/launch_flow_keywords.resource
-Resource        ../VisionProject.PageObject/VisionProject.PageObject.keywords/Setup keywords.resource
+Resource        ../VisionProject.PageObject/VisionProject.PageObject.keywords/KeywordsSetup.resource
 Suite Setup     Setup before suit start
 Suite Teardown  tearDown
 Test Setup      Launch Test application
