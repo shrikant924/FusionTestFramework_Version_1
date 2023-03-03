@@ -1,8 +1,6 @@
 *** Settings ***
 Variables      ../VisionProject.Config.Files/configuration.py
-Resource        ../VisionProject.PageObject/VisionProject.PageObject.keywords/QR_Code_page_keywords.resource
-Resource        ../VisionProject.PageObject/VisionProject.PageObject.keywords/launch_flow_keywords.resource
-Resource        ../VisionProject.PageObject/VisionProject.PageObject.keywords/Setup keywords.resource
+Resource        ../VisionProject.PageObject/VisionProject.PageObject.keywords/pageObjects.resource
 Suite Setup     Setup before suit start
 Suite Teardown  tearDown
 Test Setup      Launch Test application
@@ -11,7 +9,7 @@ Test Teardown   close Test application
 
 *** Test Cases ***
 
-tap on 'Privacy policy' and verify user is landing on Privacy policy page
+Tap on 'Privacy policy' and verify user is landing on Privacy policy page
     [Documentation]        Verification that Google Play button redirecting user to Vision Project on play store
     [Tags]      Regression
 

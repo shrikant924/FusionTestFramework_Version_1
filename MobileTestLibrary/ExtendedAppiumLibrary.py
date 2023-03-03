@@ -1,5 +1,7 @@
 from AppiumLibrary import AppiumLibrary
+from appium.webdriver.common.appiumby import AppiumBy
 from robot.api.deco import library, keyword
+from robot.libraries.BuiltIn import BuiltIn
 
 
 @library
@@ -636,3 +638,22 @@ class ExtendedAppiumLibrary(AppiumLibrary):
 
         slicedText = txt[int(startIndex):int(lastIndex)]
         return slicedText
+
+    @keyword
+    def scroll_to_element(self, element):
+        # driver = self.appium_library_instance._current_application()
+        driver = self._current_application()
+
+        driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR,
+                            "new UiScrollable(new UiSelector().scrollable(true).instance("
+                            "0)).scrollIntoView(""new UiSelector().textContains(\"" + element +
+                            "\").instance(0))")
+
+    @keyword
+    def scroll_to_element_by_text(self, element_text):
+        # driver = self.appium_library_instance._current_application()
+        driver = self._current_application()
+
+        driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, "new UiScrollable(new UiSelector().scrollable(true).instance("
+                                                          "0)).scrollIntoView(""new UiSelector().textContains(\"" + element_text +
+                            "\").instance(0))")
