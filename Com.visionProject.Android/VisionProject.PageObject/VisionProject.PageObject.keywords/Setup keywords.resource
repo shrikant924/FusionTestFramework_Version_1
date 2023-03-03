@@ -23,7 +23,6 @@ Launch Test application
     MobileTestLibrary.Open Application        ${remote_url}           &{device}
 
 close Test application
-    Run Keyword And Continue On Failure    MobileTestLibrary.Quit Application
     Run Keyword And Continue On Failure    MobileTestLibrary.Close Application
     Run Keyword And Continue On Failure    WebApplicationTestLibrary.Close Browser
     Run Keyword And Continue On Failure    WebApplicationTestLibrary.Close All Browsers

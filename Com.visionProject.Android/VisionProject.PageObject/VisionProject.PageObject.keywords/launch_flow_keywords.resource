@@ -1,11 +1,8 @@
 *** Settings ***
 Library         ../../../../com.visionProject.android/WebApplicationTestLibrary/
-Library         AppiumLibrary
 Library         ../../../../com.visionProject.android/MobileTestLibrary/
 Variables      ../../VisionProject.Config.Files/configuration.py
 Resource       ../VisionProject.PageObject.locators/Locators.resource
-
-*** Variables ***
 
 
 *** Keywords ***
