@@ -1,3 +1,5 @@
+import time
+
 from AppiumLibrary import AppiumLibrary
 from appium.webdriver.common.appiumby import AppiumBy
 from robot.api.deco import library, keyword
@@ -635,7 +637,6 @@ class ExtendedAppiumLibrary(AppiumLibrary):
 
     @keyword
     def get_text_from_index(self, txt, startIndex, lastIndex):
-
         slicedText = txt[int(startIndex):int(lastIndex)]
         return slicedText
 
@@ -657,3 +658,11 @@ class ExtendedAppiumLibrary(AppiumLibrary):
         driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, "new UiScrollable(new UiSelector().scrollable(true).instance("
                                                           "0)).scrollIntoView(""new UiSelector().textContains(\"" + element_text +
                             "\").instance(0))")
+
+    @keyword
+    def wait_until_element_gets_enabled(self, element):
+
+        ele = self.get_webelement(element)
+        while ele.is_enabled():
+            time.sleep(0.5)
+

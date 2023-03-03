@@ -85,4 +85,33 @@ Verify on tapping on 'How to recover completion code' relevant page getting disp
     MobileTestLibrary.Wait Until Page Contains    ${Native vision app Need help?}
     MobileTestLibrary.Click Element    ${Native vision Need HelpPage Go Back Btn}
 
+tap on 'BEGIN' button
+    MobileTestLibrary.Wait Until Page Contains Element    ${BEGIN Button}
+    MobileTestLibrary.Wait Until Element Is Visible    ${Help icon}
+    MobileTestLibrary.Click Element    ${Help icon}
+    Verify help page getting displayed to the user with 'contact us' , 'Eye tracking tips' , 'privacy' ...
+    MobileTestLibrary.Click Element    ${Native vision Need HelpPage Go Back Btn}
+    MobileTestLibrary.Wait Until Page Contains Element    ${BEGIN Button}
+    MobileTestLibrary.Click Element    ${BEGIN Button}
+    
+read 'privacy Notice'
+    MobileTestLibrary.Wait Until Page Contains    Privacy Notice
+    MobileTestLibrary.Scroll To Element By Text    For more information on our processing of your personal data, please see our Privacy Policy, which is available at www.playground.xyz/privacy/
 
+
+accept 'privacy Notice'
+    MobileTestLibrary.Wait Until Element Is Visible    ${PrivacyNoticeCheckbox}
+    MobileTestLibrary.Wait Until Element Gets Enabled  ${PrivacyNoticeCheckbox}
+    MobileTestLibrary.Click Element    ${PrivacyNoticeCheckbox}
+    MobileTestLibrary.Wait Until Element Is Visible         ${TermsOfUseCheckbox}
+    MobileTestLibrary.Click Element    ${TermsOfUseCheckbox}
+    Sleep    2
+    MobileTestLibrary.Wait Until Element Is Visible    ${acceptBtn}
+    MobileTestLibrary.Wait Until Element Gets Enabled    ${acceptBtn}
+    MobileTestLibrary.Click Element    ${acceptBtn}
+    MobileTestLibrary.Wait Until Page Contains    Track your gaze
+
+decline 'privacy Notice'
+    MobileTestLibrary.Wait Until Element Is Visible    ${Decline}
+    MobileTestLibrary.Click Element    ${Decline}
+    MobileTestLibrary.Wait Until Page Contains    Study stopped

@@ -20,7 +20,7 @@ Verify that user can start study by hitting Get Started button
     MobileTestLibrary.Wait Until Page Contains Element    ${GET STARTED}
     MobileTestLibrary.Click Element    ${GET STARTED}
     MobileTestLibrary.Wait Until Page Contains Element    ${About the study}
-    MobileTestLibrary.Page Should Contain Element    ${BEGIN Button}
+    MobileTestLibrary.Wait Until Page Contains Element    ${BEGIN Button}
 
 tap on 'google play store' button
     MobileTestLibrary.Wait Until Element Is Visible    ${google_playstore_Button}       timeout=30
@@ -32,7 +32,6 @@ verify user is landed on 'google playstore' on vision app page
     MobileTestLibrary.Go Back
 
 Verify if Need Help? page opens up after tapping Need Help? link from landing page
-
     MobileTestLibrary.Wait Until Page Contains    Need Help
     MobileTestLibrary.Click Element    ${Need_Help}
 
@@ -59,7 +58,6 @@ tap on 'How to check Android version' and verify user is landing on 'How to chec
     MobileTestLibrary.Click Element    ${Go Back Button}
 
 tap on 'Privacy policy' and verify user is landing on Privacy policy page
-    
     MobileTestLibrary.Wait Until Element Is Visible    ${Privacy policy}
     MobileTestLibrary.Click Element    ${Privacy policy}
     TRY
@@ -81,7 +79,6 @@ tap on 'Privacy policy' and verify user is landing on Privacy policy page
     MobileTestLibrary.Go Back
 
 tap on 'Terms of Use Agreement' and verify user is landing on Terms of Use Agreement page
-
     MobileTestLibrary.Wait Until Element Is Visible    ${Terms of Use Agreement}    timeout=10
     MobileTestLibrary.Click Element    ${Terms of Use Agreement}
     MobileTestLibrary.Wait Until Page Contains    Vision Project Terms of Use Agreement
@@ -92,7 +89,6 @@ tap on 'Terms of Use Agreement' and verify user is landing on Terms of Use Agree
 tap on 'OPEN STUDY IN APP' button
     MobileTestLibrary.Wait Until Element Is Visible    ${Open Study In app}
     MobileTestLibrary.Click Element    ${Open Study In app}
-    
 
 verify link is pasted in textbox
     MobileTestLibrary.Wait Until Element Is Visible    ${Study link textbox}
