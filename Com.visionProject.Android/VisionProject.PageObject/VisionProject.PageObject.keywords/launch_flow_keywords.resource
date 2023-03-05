@@ -70,7 +70,7 @@ tap on 'Privacy policy' and verify user is landing on Privacy policy page
     MobileTestLibrary.Click Element    ${Read Privacy Policy Btn}
     MobileTestLibrary.Wait Until Page Contains    In this Privacy Policy, 'us' 'we' or 'our' means PLAYGROUND XYZ HOLDINGS
     MobileTestLibrary.Page Should Contain Text    	In this Privacy Policy, 'us' 'we' or 'our' means PLAYGROUND XYZ HOLDINGS PTY LTD (ABN 76 607 526 027) and our related bodies PLAYGROUND XYZ AUSTRALIA PTY LTD (ABN 42 607 532 365), PLAYGROUND XYZ IP PTY LTD (ABN 66 607 532 025), PLAYGROUND XYZ EMEA LTD (UK Company No. 10802474), PLAYGROUND XYZ ASIA PTE. LTD. (SG Registration No. 201809380E) and PLAYGROUND XYZ NORTH AMERICA CORP (EIN 36-4922580). We are committed to respecting your privacy.
-    MobileTestLibrary.Scroll To Element By Text     Read Privacy Policy for California Residents
+    MobileTestLibrary.Scroll To Element By Exact Text     Read Privacy Policy for California Residents
     MobileTestLibrary.Click Element    ${Read Privacy Policy for California Residents Btn}
     MobileTestLibrary.Wait Until Page Contains    	Playground XYZ Holdings Pty. Ltd., Playground XYZ Australia Pty. Ltd.        timeout=15
     MobileTestLibrary.Page Should Contain Text    	Playground XYZ Holdings Pty. Ltd., Playground XYZ Australia Pty. Ltd., Playground XYZ IP Pty. Ltd., Playground XYZ EMEA Ltd., Playground XYZ Asia Pte. Ltd. and Playground XYZ North America Corp. and their affiliates (collectively,“[COMPANY],” “we,” “us,” or “our”) adopts this Privacy Statement to comply with the California Consumer Privacy Act of 2018 (“CCPA”) and other California privacy laws. This Privacy Statement applies solely to visitors, users, and others who reside in the State of California (“consumers,” “you,” or “your”).  This Privacy Statement explains our privacy practices and your rights regarding the collection, use, and disclosure of your personal information.
@@ -82,7 +82,7 @@ tap on 'Terms of Use Agreement' and verify user is landing on Terms of Use Agree
     MobileTestLibrary.Wait Until Element Is Visible    ${Terms of Use Agreement}    timeout=10
     MobileTestLibrary.Click Element    ${Terms of Use Agreement}
     MobileTestLibrary.Wait Until Page Contains    Vision Project Terms of Use Agreement
-    MobileTestLibrary.Scroll To Element By Text    19. Electronic Signatures
+    MobileTestLibrary.Scroll To Element By Exact Text    19. Electronic Signatures
     MobileTestLibrary.Page Should Contain Text    19. Electronic Signatures
     MobileTestLibrary.Go Back
 

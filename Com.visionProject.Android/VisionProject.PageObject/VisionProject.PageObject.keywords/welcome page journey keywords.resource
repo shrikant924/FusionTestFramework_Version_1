@@ -63,7 +63,7 @@ Verify on tapping on 'Terms of Use Agreement' relevant page getting displayed
     MobileTestLibrary.Wait Until Page Contains Element   ${Native vision Terms of Use Agreement}
     MobileTestLibrary.Click Element    ${Native vision Terms of Use Agreement}
     MobileTestLibrary.Wait Until Page Contains    Vision Project Terms of Use
-    MobileTestLibrary.Scroll To Element By Text    19. Electronic Signatures
+    MobileTestLibrary.Scroll To Element By Exact Text    19. Electronic Signatures
     MobileTestLibrary.Page Should Contain Text    19. Electronic Signatures
     MobileTestLibrary.Go Back
 
@@ -96,16 +96,17 @@ tap on 'BEGIN' button
     
 read 'privacy Notice'
     MobileTestLibrary.Wait Until Page Contains    Privacy Notice
-    MobileTestLibrary.Scroll To Element By Text    For more information on our processing of your personal data, please see our Privacy Policy, which is available at www.playground.xyz/privacy/
+    MobileTestLibrary.Scroll To Element By Partial Text In LongView    For more information on our processing of your personal data, please see our Privacy Policy, which is available at www.playground.xyz/privacy/       50
 
 
 accept 'privacy Notice'
     MobileTestLibrary.Wait Until Element Is Visible    ${PrivacyNoticeCheckbox}
     MobileTestLibrary.Wait Until Element Gets Enabled  ${PrivacyNoticeCheckbox}
     MobileTestLibrary.Click Element    ${PrivacyNoticeCheckbox}
+    Sleep    3
     MobileTestLibrary.Wait Until Element Is Visible         ${TermsOfUseCheckbox}
     MobileTestLibrary.Click Element    ${TermsOfUseCheckbox}
-    Sleep    2
+    Sleep    3
     MobileTestLibrary.Wait Until Element Is Visible    ${acceptBtn}
     MobileTestLibrary.Wait Until Element Gets Enabled    ${acceptBtn}
     MobileTestLibrary.Click Element    ${acceptBtn}

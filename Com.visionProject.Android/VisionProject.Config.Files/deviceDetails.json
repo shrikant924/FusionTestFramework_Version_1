@@ -4,7 +4,7 @@
     "platformVersion": "11.0",
     "deviceName": "emulator-5554",
     "automationName": "UiAutomator2",
-    "appPackage": "com.playgroundxyz.vision_project",
+    "appPackage": "com.androidsample.generalstore",
     "appActivity": ".MainActivity",
     "chromedriverUseSystemExecutable": true,
     "chromedriverExecutableDir": "drivers/chromedriver.exe",
@@ -16,7 +16,8 @@
     "fullReset": false,
     "captureScreenshots": true,
     "udid": "emulator-5554",
-    "appium-url": "http://0.0.0.0:4723/wd/hub"
+    "appium-url": "http://0.0.0.0:4723/wd/hub",
+    "avd": "Pixel_3a_API_30"
   },
   "Pixel_6": {
     "platformName": "android",
@@ -43,8 +44,8 @@
     "deviceName": "LBYPFQXSVCZLUGQ4",
     "automationName": "UiAutomator2",
     "app": "app-debug-multimodel.apk",
-    "appPackage": "com.playgroundxyz.vision_project",
-    "appActivity": ".MainActivity",
+    "appPackage": "",
+    "appActivity": " ",
     "automationType": "app",
     "sessionName": "Automation test session",
     "sessionDescription": "",
@@ -54,6 +55,7 @@
     "captureScreenshots": true,
     "udid": "LBYPFQXSVCZLUGQ4",
     "appium-url": "http://0.0.0.0:4723/wd/hub",
+    "chromedriverExecutableDir": "drivers/chromedriver.exe",
     "chromedriverUseSystemExecutable": true
   }
 }

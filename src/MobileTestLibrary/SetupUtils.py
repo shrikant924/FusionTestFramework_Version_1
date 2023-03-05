@@ -24,25 +24,28 @@ class SetupUtils:
         assert (not appium_service.is_running)
         assert (not appium_service.is_listening)
 
-    @keyword
-    def start_emulator(self, emulator_name, deviceType):
-        if deviceType == 'virtual':
-            print('Starting emulator...')
-            subprocess.Popen(['emulator', '-avd', emulator_name])
-            os.system('adb wait-for-device')
-            os.system('Perform whatever adb commands you need')
-            print('Started emulator...')
-        else:
-            print("Testing started")
+    # @keyword
+    # def stop_emulator(self):
+    #
+    #     try:
+    #         print('closing emulator...')
+    #         time.sleep(15.0)
+    #         os.system('adb -s emulator-5554 emu kill')
+    #         print('emulator closed successfully...')
+    #
+    #     except:
+    #         raise print("No emulator running...")
 
-    @keyword
-    def stop_emulator(self):
 
-        try:
-            print('closing emulator...')
-            time.sleep(15.0)
-            os.system('adb -s emulator-5554 emu kill')
-            print('emulator closed successfully...')
 
-        except:
-            raise print("No emulator running...")
+    # @keyword
+    # def start_emulator(self, emulator_name, deviceType):
+    #     if deviceType == 'virtual':
+    #         print('Starting emulator...')
+    #         subprocess.Popen(['emulator', '-avd', emulator_name])
+    #         os.system('adb wait-for-device')
+    #         os.system('Perform whatever adb commands you need')
+    #         print('Started emulator...')
+    #     else:
+    #         print("Testing started")
+

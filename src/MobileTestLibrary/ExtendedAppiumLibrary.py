@@ -3,7 +3,6 @@ import time
 from AppiumLibrary import AppiumLibrary
 from appium.webdriver.common.appiumby import AppiumBy
 from robot.api.deco import library, keyword
-from robot.libraries.BuiltIn import BuiltIn
 
 
 @library
@@ -640,24 +639,74 @@ class ExtendedAppiumLibrary(AppiumLibrary):
         slicedText = txt[int(startIndex):int(lastIndex)]
         return slicedText
 
-    @keyword
-    def scroll_to_element(self, element):
-        # driver = self.appium_library_instance._current_application()
-        driver = self._current_application()
-
-        driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR,
-                            "new UiScrollable(new UiSelector().scrollable(true).instance("
-                            "0)).scrollIntoView(""new UiSelector().textContains(\"" + element +
-                            "\").instance(0))")
+    """Scrolling action stuffs"""
 
     @keyword
-    def scroll_to_element_by_text(self, element_text):
-        # driver = self.appium_library_instance._current_application()
+    def scroll_to_element_By_Exact_Text(self, element):
+
+        driver = self._current_application()
+        try:
+            driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR,
+                                "new UiScrollable(new UiSelector().scrollable(true).instance("
+                                "0)).scrollIntoView(""new UiSelector().text(\"" + element + "\").instance(0))")
+        except:
+            raise TypeError("Failed to scroll...")
+
+        return self
+
+    @keyword
+    def scroll_to_element_By_Exact_Text_in_longView(self, element, MaxSwapCount):
+
+        """ element : give exact text of elements
+            MaxSwapCount : Input how many times you have to swap to find element"""
+
+        driver = self._current_application()
+        try:
+            driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR,
+                                "new UiScrollable(new UiSelector().scrollable(true).instance("
+                                "0)).setMaxSearchSwipes(" + MaxSwapCount + ").scrollIntoView(""new UiSelector().text(\"" + element + "\").instance(0))")
+        except:
+            raise TypeError("Failed to scroll...")
+        return self
+
+    @keyword
+    def scroll_to_element_by_Partial_text(self, element_text):
         driver = self._current_application()
 
-        driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, "new UiScrollable(new UiSelector().scrollable(true).instance("
-                                                          "0)).scrollIntoView(""new UiSelector().textContains(\"" + element_text +
-                            "\").instance(0))")
+        try:
+            driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR,
+                                "new UiScrollable(new UiSelector().scrollable(true).instance("
+                                "0)).scrollIntoView(""new UiSelector().textContains(\"" + element_text + "\").instance(0))")
+        except:
+            raise TypeError("Failed to scroll...")
+
+        return self
+
+    @keyword
+    def scroll_to_element_by_Partial_text_in_longView(self, element_text, MaxSwapCount):
+
+        """ element_text : give partial element text of elements
+            MaxSwapCount : Input how many times you have to swap to find element"""
+
+        driver = self._current_application()
+        try:
+            driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR,
+                                "new UiScrollable(new UiSelector().scrollable(true).instance("
+                                "0)).setMaxSearchSwipes(" + MaxSwapCount + ").scrollIntoView(""new UiSelector().textContains(\"" + element_text + "\").instance(0))")
+        except:
+            raise TypeError("Failed to scroll...")
+        return self
+
+    def scroll_to_element_by_ResourceId(self, resourceId):
+        driver = self._current_application()
+
+        try:
+            driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR,
+                                "new UiScrollable(new UiSelector().scrollable(true).instance("
+                                "0)).scrollIntoView(""new UiSelector().resourceIdMatches(\"" + resourceId + "\").instance(0))")
+        except:
+            raise print("Failed to scroll...")
+        return self
 
     @keyword
     def wait_until_element_gets_enabled(self, element):
@@ -665,4 +714,3 @@ class ExtendedAppiumLibrary(AppiumLibrary):
         ele = self.get_webelement(element)
         while ele.is_enabled():
             time.sleep(0.5)
-

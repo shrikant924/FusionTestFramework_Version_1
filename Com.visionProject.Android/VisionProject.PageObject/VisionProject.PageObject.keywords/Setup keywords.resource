@@ -3,12 +3,9 @@ Resource        KeywordsSetup.resource
 
 *** Keywords ***
 Setup before suit start
-
-    MobileTestLibrary.Start Emulator    ${Emualator_Name}     ${device_Type}
     MobileTestLibrary.Start Appium Service
 
 tearDown
-    MobileTestLibrary.Stop Emulator
     MobileTestLibrary.Stop Appium Service
 
 Launch browser and input url

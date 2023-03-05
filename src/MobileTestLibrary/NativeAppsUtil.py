@@ -1,18 +1,20 @@
+from AppiumLibrary import AppiumLibrary
 from robot.api.deco import keyword, library
 from robot.libraries.BuiltIn import BuiltIn
 
 
 @library
-class NativeAppsUtil:
+class NativeAppsUtil(AppiumLibrary):
 
-    @property
-    def appium_library_instance(self):
-        return BuiltIn().get_library_instance("AppiumLibrary")
-
-    # @keyword
-    # def open_camera_app(self):
-    #     self.start_activity('com.google.android.GoogleCamera', 'com.android.camera.CameraLauncher')
+    def __init__(self):
+        super().__init__()
+        super(AppiumLibrary, self).__init__()
 
     @keyword
     def press_enter_key(self):
         self.appium_library_instance.press_keycode(66)
+
+    @keyword
+    def unlock_device(self):
+        driver = self._current_application()
+        driver.unlock()

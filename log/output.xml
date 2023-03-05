@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230305 19:44:38.530" rpa="false" schemaversion="3">
+<suite id="s1" name="TC001" source="D:\com.visionProject.android\Com.visionProject.Android\VisionProject.Testsuite\TC001.robot">
+<kw name="Setup before suit start" library="Setup keywords" type="SETUP">
+<kw name="Start Appium Service" library="MobileTestLibrary">
+<status status="PASS" starttime="20230305 19:44:39.083" endtime="20230305 19:44:40.218"/>
+</kw>
+<status status="PASS" starttime="20230305 19:44:39.082" endtime="20230305 19:44:40.218"/>
+</kw>
+<test id="s1-t1" name="unlock device" line="10">
+<kw name="Launch Test application" library="Setup keywords" type="SETUP">
+<kw name="Open Application" library="MobileTestLibrary">
+<arg>${remote_url}</arg>
+<arg>&amp;{device}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20230305 19:44:40.220" endtime="20230305 19:44:49.763"/>
+</kw>
+<kw name="Set Appium Timeout" library="MobileTestLibrary">
+<arg>30</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20230305 19:44:49.763" endtime="20230305 19:44:49.763"/>
+</kw>
+<status status="PASS" starttime="20230305 19:44:40.219" endtime="20230305 19:44:49.764"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="MobileTestLibrary">
+<arg>android:id/text1</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230305 19:44:50.351" level="INFO">criteria is android:id/text1</msg>
+<status status="PASS" starttime="20230305 19:44:49.764" endtime="20230305 19:44:50.352"/>
+</kw>
+<kw name="Click Element" library="MobileTestLibrary">
+<arg>android:id/text1</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230305 19:44:50.356" level="INFO">Clicking element 'android:id/text1'.</msg>
+<msg timestamp="20230305 19:44:50.477" level="INFO">criteria is android:id/text1</msg>
+<status status="PASS" starttime="20230305 19:44:50.352" endtime="20230305 19:44:50.477"/>
+</kw>
+<kw name="Scroll To Element By Partial Text In LongView" library="MobileTestLibrary">
+<arg>abc</arg>
+<arg>50</arg>
+<doc>element : give exact text of elements
+MaxSwapCount : Input how many times you have to swap to find element</doc>
+<status status="PASS" starttime="20230305 19:44:50.477" endtime="20230305 19:46:12.544"/>
+</kw>
+<kw name="close Test application" library="Setup keywords" type="TEARDOWN">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>MobileTestLibrary.Close Application</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Close Application" library="MobileTestLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20230305 19:46:12.546" endtime="20230305 19:46:13.271"/>
+</kw>
+<status status="PASS" starttime="20230305 19:46:12.546" endtime="20230305 19:46:13.272"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>WebApplicationTestLibrary.Close Browser</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Close Browser" library="WebApplicationTestLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230305 19:46:13.273" endtime="20230305 19:46:13.274"/>
+</kw>
+<status status="PASS" starttime="20230305 19:46:13.272" endtime="20230305 19:46:13.274"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>WebApplicationTestLibrary.Close All Browsers</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Close All Browsers" library="WebApplicationTestLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230305 19:46:13.275" endtime="20230305 19:46:13.275"/>
+</kw>
+<status status="PASS" starttime="20230305 19:46:13.274" endtime="20230305 19:46:13.275"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>MobileTestLibrary.Close All Applications</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Close All Applications" library="MobileTestLibrary">
+<doc>Closes all open applications.</doc>
+<status status="PASS" starttime="20230305 19:46:13.276" endtime="20230305 19:46:13.279"/>
+</kw>
+<status status="PASS" starttime="20230305 19:46:13.275" endtime="20230305 19:46:13.279"/>
+</kw>
+<status status="PASS" starttime="20230305 19:46:12.545" endtime="20230305 19:46:13.280"/>
+</kw>
+<status status="PASS" starttime="20230305 19:44:40.218" endtime="20230305 19:46:13.280"/>
+</test>
+<kw name="tearDown" library="Setup keywords" type="TEARDOWN">
+<kw name="Stop Appium Service" library="MobileTestLibrary">
+<status status="PASS" starttime="20230305 19:46:13.282" endtime="20230305 19:46:13.282"/>
+</kw>
+<status status="PASS" starttime="20230305 19:46:13.281" endtime="20230305 19:46:13.282"/>
+</kw>
+<status status="PASS" starttime="20230305 19:44:38.534" endtime="20230305 19:46:13.282"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC001">TC001</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
