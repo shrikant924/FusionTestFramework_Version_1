@@ -5,7 +5,6 @@ Suite Teardown  tearDown
 Test Setup      Launch Test application
 Test Teardown   close Test application
 
-
 *** Test Cases ***
 unlock device
     MobileTestLibrary.Wait Until Element Is Visible    android:id/text1
