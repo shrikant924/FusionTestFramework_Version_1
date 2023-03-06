@@ -1,5 +1,6 @@
 import os.path
 from datetime import datetime
+
 from robot import run
 
 
@@ -7,7 +8,10 @@ def runTest():
     reportDirectory = os.path.join('../Com.visionProject.Android/VisionProject.TestResults/',
                                    datetime.now().strftime('%d-%m-%y_%H-%M-%S'))
     os.makedirs(reportDirectory)
-    run('../Com.visionProject.Android/VisionProject.Testsuite', outputdir=reportDirectory)
+    try:
+        run('..//Com.visionProject.Android/VisionProject.Testsuite//', outputdir=reportDirectory)
+    except:
+        print("File not found ....")
 
 
 def sendEmail():

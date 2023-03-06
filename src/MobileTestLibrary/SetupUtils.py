@@ -1,7 +1,3 @@
-import os
-import subprocess
-import time
-
 from appium.webdriver.appium_service import AppiumService, DEFAULT_PORT
 from robot.api.deco import keyword, library
 
@@ -13,6 +9,7 @@ class SetupUtils:
     def start_appium_service(self):
         appium_service = AppiumService()
         appium_service.start(args=['--address', '127.0.0.1', '-p', str(DEFAULT_PORT), '--base-path', '/wd/hub/',
+                                   'console-level:logfile-level', '--log-level:debug'
                                    ])
         assert appium_service.is_running
         assert appium_service.is_listening

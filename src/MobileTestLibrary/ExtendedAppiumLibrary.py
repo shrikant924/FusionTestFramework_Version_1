@@ -2,6 +2,7 @@ import time
 
 from AppiumLibrary import AppiumLibrary
 from appium.webdriver.common.appiumby import AppiumBy
+from appium.webdriver.common.touch_action import TouchAction
 from robot.api.deco import library, keyword
 
 
@@ -712,5 +713,20 @@ class ExtendedAppiumLibrary(AppiumLibrary):
     def wait_until_element_gets_enabled(self, element):
 
         ele = self.get_webelement(element)
-        while ele.is_enabled():
-            time.sleep(0.5)
+        while True:
+
+            if ele.is_enabled():
+                break
+            else:
+                time.sleep(0.5)
+
+        return self
+
+    @keyword
+    def move_to_element_and_click(self, element):
+        driver = self._current_application()
+        elementid = driver.find_element(AppiumBy.ID, element)
+        action = TouchAction()
+        action.long_press(elementid).perform()
+        action.tap(elementid).perform()
+        return self

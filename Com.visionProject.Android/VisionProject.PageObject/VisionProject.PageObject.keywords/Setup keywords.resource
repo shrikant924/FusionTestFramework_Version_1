@@ -1,5 +1,5 @@
 *** Settings ***
-Resource        KeywordsSetup.resource
+Resource        ../../../../com.visionProject.android/Com.visionProject.Android/VisionProject.PageObject/VisionProject.PageObject.keywords/pageObjects.resource
 
 *** Keywords ***
 Setup before suit start

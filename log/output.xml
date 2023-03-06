@@ -1,110 +1,698 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230305 19:44:38.530" rpa="false" schemaversion="3">
-<suite id="s1" name="TC001" source="D:\com.visionProject.android\Com.visionProject.Android\VisionProject.Testsuite\TC001.robot">
-<kw name="Setup before suit start" library="Setup keywords" type="SETUP">
-<kw name="Start Appium Service" library="MobileTestLibrary">
-<status status="PASS" starttime="20230305 19:44:39.083" endtime="20230305 19:44:40.218"/>
-</kw>
-<status status="PASS" starttime="20230305 19:44:39.082" endtime="20230305 19:44:40.218"/>
-</kw>
-<test id="s1-t1" name="unlock device" line="10">
-<kw name="Launch Test application" library="Setup keywords" type="SETUP">
-<kw name="Open Application" library="MobileTestLibrary">
-<arg>${remote_url}</arg>
-<arg>&amp;{device}</arg>
-<doc>Opens a new application to given Appium server.
-Capabilities of appium server, Android and iOS,
-Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
-| *Option*            | *Man.* | *Description*     |
-| remote_url          | Yes    | Appium server url |
-| alias               | no     | alias             |
-| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" starttime="20230305 19:44:40.220" endtime="20230305 19:44:49.763"/>
-</kw>
-<kw name="Set Appium Timeout" library="MobileTestLibrary">
-<arg>30</arg>
-<doc>Sets the timeout in seconds used by various keywords.</doc>
-<status status="PASS" starttime="20230305 19:44:49.763" endtime="20230305 19:44:49.763"/>
-</kw>
-<status status="PASS" starttime="20230305 19:44:40.219" endtime="20230305 19:44:49.764"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="MobileTestLibrary">
-<arg>android:id/text1</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20230305 19:44:50.351" level="INFO">criteria is android:id/text1</msg>
-<status status="PASS" starttime="20230305 19:44:49.764" endtime="20230305 19:44:50.352"/>
-</kw>
-<kw name="Click Element" library="MobileTestLibrary">
-<arg>android:id/text1</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20230305 19:44:50.356" level="INFO">Clicking element 'android:id/text1'.</msg>
-<msg timestamp="20230305 19:44:50.477" level="INFO">criteria is android:id/text1</msg>
-<status status="PASS" starttime="20230305 19:44:50.352" endtime="20230305 19:44:50.477"/>
-</kw>
-<kw name="Scroll To Element By Partial Text In LongView" library="MobileTestLibrary">
-<arg>abc</arg>
-<arg>50</arg>
-<doc>element : give exact text of elements
-MaxSwapCount : Input how many times you have to swap to find element</doc>
-<status status="PASS" starttime="20230305 19:44:50.477" endtime="20230305 19:46:12.544"/>
-</kw>
-<kw name="close Test application" library="Setup keywords" type="TEARDOWN">
-<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
-<arg>MobileTestLibrary.Close Application</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<kw name="Close Application" library="MobileTestLibrary">
-<doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" starttime="20230305 19:46:12.546" endtime="20230305 19:46:13.271"/>
-</kw>
-<status status="PASS" starttime="20230305 19:46:12.546" endtime="20230305 19:46:13.272"/>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230306 17:17:35.810" rpa="false" schemaversion="3">
+    <suite id="s1" name="Verify welcome page journey is as excepted"
+           source="D:\com.visionProject.android\Com.visionProject.Android\VisionProject.Testsuite\Verify welcome page journey is as excepted.robot">
+        <kw name="Setup before suit start" library="Setup keywords" type="SETUP">
+            <kw name="Start Appium Service" library="MobileTestLibrary">
+                <status status="PASS" starttime="20230306 17:17:36.255" endtime="20230306 17:17:37.055"/>
+            </kw>
+            <status status="PASS" starttime="20230306 17:17:36.254" endtime="20230306 17:17:37.055"/>
+        </kw>
+        <test id="s1-t1" name="Verify that Help page open up when user taps on help icon&quot;?&quot;" line="22">
+            <kw name="Launch Test application" library="Setup keywords" type="SETUP">
+                <kw name="Open Application" library="MobileTestLibrary">
+                    <arg>${remote_url}</arg>
+                    <arg>&amp;{device}</arg>
+                    <doc>Opens a new application to given Appium server.
+                        Capabilities of appium server, Android and iOS,
+                        Please check
+                        https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+                        | *Option* | *Man.* | *Description* |
+                        | remote_url | Yes | Appium server url |
+                        | alias | no | alias |
+                        | strict_ssl | No | allows you to send commands to an invalid certificate host like a
+                        self-signed one. |
+                    </doc>
+                    <status status="PASS" starttime="20230306 17:17:37.058" endtime="20230306 17:17:45.737"/>
+                </kw>
+                <kw name="Set Appium Timeout" library="MobileTestLibrary">
+                    <arg>30</arg>
+                    <doc>Sets the timeout in seconds used by various keywords.</doc>
+                    <status status="PASS" starttime="20230306 17:17:45.738" endtime="20230306 17:17:45.739"/>
+                </kw>
+                <status status="PASS" starttime="20230306 17:17:37.056" endtime="20230306 17:17:45.739"/>
+            </kw>
+            <kw name="Tap on 'help icon'" library="welcome page journey keywords">
+                <kw name="Start Activity" library="MobileTestLibrary">
+                    <arg>com.playgroundxyz.vision_project</arg>
+                    <arg>.MainActivity</arg>
+                    <doc>Opens an arbitrary activity during a test. If the activity belongs to
+                        another application, that application is started and the activity is opened.
+                    </doc>
+                    <status status="PASS" starttime="20230306 17:17:45.740" endtime="20230306 17:17:46.451"/>
+                </kw>
+                <kw name="Wait Until Element Is Visible" library="MobileTestLibrary">
+                    <arg>${Help icon}</arg>
+                    <doc>Waits until element specified with `locator` is visible.</doc>
+                    <msg timestamp="20230306 17:17:46.689" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/logo_help
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:46.451" endtime="20230306 17:17:46.693"/>
+                </kw>
+                <kw name="Click Element" library="MobileTestLibrary">
+                    <arg>${Help icon}</arg>
+                    <doc>Click element identified by `locator`.</doc>
+                    <msg timestamp="20230306 17:17:46.703" level="INFO">Clicking element
+                        'com.playgroundxyz.vision_project:id/logo_help'.
+                    </msg>
+                    <msg timestamp="20230306 17:17:47.508" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/logo_help
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:46.694" endtime="20230306 17:17:47.508"/>
+                </kw>
+                <status status="PASS" starttime="20230306 17:17:45.740" endtime="20230306 17:17:47.508"/>
+            </kw>
+            <kw name="Verify help page getting displayed to the user with 'contact us' , 'Eye tracking tips' , 'privacy' ..."
+                library="welcome page journey keywords">
+                <kw name="Wait Until Element Is Visible" library="MobileTestLibrary">
+                    <arg>${Native vision app Need help?}</arg>
+                    <doc>Waits until element specified with `locator` is visible.</doc>
+                    <msg timestamp="20230306 17:17:47.602" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/title
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:47.508" endtime="20230306 17:17:47.604"/>
+                </kw>
+                <kw name="Page Should Contain Element" library="MobileTestLibrary">
+                    <arg>${Native vision Contact us}</arg>
+                    <doc>Verifies that current page contains `locator` element.</doc>
+                    <msg timestamp="20230306 17:17:47.668" level="INFO">Current page contains element
+                        'com.playgroundxyz.vision_project:id/need_help_contact_link'.
+                    </msg>
+                    <msg timestamp="20230306 17:17:47.669" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/need_help_contact_link
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:47.605" endtime="20230306 17:17:47.669"/>
+                </kw>
+                <kw name="Page Should Contain Element" library="MobileTestLibrary">
+                    <arg>${Native vision Eye tracking tips}</arg>
+                    <doc>Verifies that current page contains `locator` element.</doc>
+                    <msg timestamp="20230306 17:17:47.730" level="INFO">Current page contains element
+                        'com.playgroundxyz.vision_project:id/need_help_tracking_link'.
+                    </msg>
+                    <msg timestamp="20230306 17:17:47.730" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/need_help_tracking_link
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:47.669" endtime="20230306 17:17:47.730"/>
+                </kw>
+                <kw name="Page Should Contain Element" library="MobileTestLibrary">
+                    <arg>${Native vision Privacy}</arg>
+                    <doc>Verifies that current page contains `locator` element.</doc>
+                    <msg timestamp="20230306 17:17:47.780" level="INFO">Current page contains element
+                        'com.playgroundxyz.vision_project:id/need_help_privacy_link'.
+                    </msg>
+                    <msg timestamp="20230306 17:17:47.780" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/need_help_privacy_link
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:47.730" endtime="20230306 17:17:47.780"/>
+                </kw>
+                <kw name="Page Should Contain Element" library="MobileTestLibrary">
+                    <arg>${Native vision Terms of Use Agreement}</arg>
+                    <doc>Verifies that current page contains `locator` element.</doc>
+                    <msg timestamp="20230306 17:17:47.842" level="INFO">Current page contains element
+                        'com.playgroundxyz.vision_project:id/need_help_terms_link'.
+                    </msg>
+                    <msg timestamp="20230306 17:17:47.842" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/need_help_terms_link
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:47.780" endtime="20230306 17:17:47.842"/>
+                </kw>
+                <kw name="Page Should Contain Element" library="MobileTestLibrary">
+                    <arg>${Native vision How to check Android version}</arg>
+                    <doc>Verifies that current page contains `locator` element.</doc>
+                    <msg timestamp="20230306 17:17:47.899" level="INFO">Current page contains element
+                        'com.playgroundxyz.vision_project:id/need_help_version_link'.
+                    </msg>
+                    <msg timestamp="20230306 17:17:47.899" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/need_help_version_link
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:47.842" endtime="20230306 17:17:47.899"/>
+                </kw>
+                <kw name="Page Should Contain Element" library="MobileTestLibrary">
+                    <arg>${Native vision How to recover completion code}</arg>
+                    <doc>Verifies that current page contains `locator` element.</doc>
+                    <msg timestamp="20230306 17:17:47.968" level="INFO">Current page contains element
+                        'com.playgroundxyz.vision_project:id/need_help_code_link'.
+                    </msg>
+                    <msg timestamp="20230306 17:17:47.968" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/need_help_code_link
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:47.899" endtime="20230306 17:17:47.968"/>
+                </kw>
+                <status status="PASS" starttime="20230306 17:17:47.508" endtime="20230306 17:17:47.968"/>
+            </kw>
+            <kw name="verify app version should be as excepted" library="welcome page journey keywords">
+                <kw name="Get Text" library="MobileTestLibrary">
+                    <var>${APP_VERSION}</var>
+                    <arg>${Native vision App version}</arg>
+                    <msg timestamp="20230306 17:17:48.081" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/app_version
+                    </msg>
+                    <msg timestamp="20230306 17:17:48.082" level="INFO">${APP_VERSION} = App version: 1.1.23-56</msg>
+                    <status status="PASS" starttime="20230306 17:17:47.974" endtime="20230306 17:17:48.083"/>
+                </kw>
+                <kw name="Should Be Equal As Strings" library="BuiltIn">
+                    <arg>${APP_VERSION}</arg>
+                    <arg>${currentAppVersion}</arg>
+                    <doc>Fails if objects are unequal after converting them to strings.</doc>
+                    <status status="PASS" starttime="20230306 17:17:48.083" endtime="20230306 17:17:48.084"/>
+                </kw>
+                <status status="PASS" starttime="20230306 17:17:47.968" endtime="20230306 17:17:48.084"/>
+            </kw>
+            <kw name="Verify on tapping on 'Contact us' and verify user is landing on contact us page"
+                library="welcome page journey keywords">
+                <kw name="Wait Until Page Contains" library="MobileTestLibrary">
+                    <arg>${Native vision Contact us}</arg>
+                    <doc>Waits until `text` appears on current page.</doc>
+                    <status status="PASS" starttime="20230306 17:17:48.084" endtime="20230306 17:17:48.180"/>
+                </kw>
+                <kw name="Click Element" library="MobileTestLibrary">
+                    <arg>${Native vision Contact us}</arg>
+                    <doc>Click element identified by `locator`.</doc>
+                    <msg timestamp="20230306 17:17:48.193" level="INFO">Clicking element
+                        'com.playgroundxyz.vision_project:id/need_help_contact_link'.
+                    </msg>
+                    <msg timestamp="20230306 17:17:48.313" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/need_help_contact_link
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:48.181" endtime="20230306 17:17:48.313"/>
+                </kw>
+                <kw name="Wait Until Page Contains" library="MobileTestLibrary">
+                    <arg>Contact us</arg>
+                    <doc>Waits until `text` appears on current page.</doc>
+                    <status status="PASS" starttime="20230306 17:17:48.313" endtime="20230306 17:17:48.948"/>
+                </kw>
+                <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                    <arg>If you need help or have any questions or feedback, please send an email to the following
+                        address. We will get back to you within 1 business day.
+                    </arg>
+                    <doc>Verifies that current page contains `text`.</doc>
+                    <msg timestamp="20230306 17:17:49.024" level="INFO">Current page contains text 'If you need help or
+                        have any questions or feedback, please send an email to the following address. We will get back
+                        to you within 1 business day.'.
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:48.948" endtime="20230306 17:17:49.024"/>
+                </kw>
+                <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                    <arg>support@vision-project.co</arg>
+                    <doc>Verifies that current page contains `text`.</doc>
+                    <msg timestamp="20230306 17:17:49.105" level="INFO">Current page contains text
+                        'support@vision-project.co'.
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:49.024" endtime="20230306 17:17:49.106"/>
+                </kw>
+                <kw name="Click Element" library="MobileTestLibrary">
+                    <arg>${Native vision Need HelpPage Go Back Btn}</arg>
+                    <doc>Click element identified by `locator`.</doc>
+                    <msg timestamp="20230306 17:17:49.116" level="INFO">Clicking element
+                        'com.playgroundxyz.vision_project:id/go_back_button'.
+                    </msg>
+                    <msg timestamp="20230306 17:17:49.839" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/go_back_button
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:49.106" endtime="20230306 17:17:49.841"/>
+                </kw>
+                <status status="PASS" starttime="20230306 17:17:48.084" endtime="20230306 17:17:49.841"/>
+            </kw>
+            <kw name="Verify on tapping on 'Eye tracking tips' relevant page getting displayed"
+                library="welcome page journey keywords">
+                <kw name="Wait Until Page Contains Element" library="MobileTestLibrary">
+                    <arg>${Native vision app Need help?}</arg>
+                    <doc>Waits until element specified with `locator` appears on current page.</doc>
+                    <msg timestamp="20230306 17:17:49.915" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/title
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:49.842" endtime="20230306 17:17:49.916"/>
+                </kw>
+                <kw name="Wait Until Page Contains Element" library="MobileTestLibrary">
+                    <arg>${Native vision Eye tracking tips}</arg>
+                    <doc>Waits until element specified with `locator` appears on current page.</doc>
+                    <msg timestamp="20230306 17:17:49.983" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/need_help_tracking_link
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:49.916" endtime="20230306 17:17:49.986"/>
+                </kw>
+                <kw name="Click Element" library="MobileTestLibrary">
+                    <arg>${Native vision Eye tracking tips}</arg>
+                    <doc>Click element identified by `locator`.</doc>
+                    <msg timestamp="20230306 17:17:49.997" level="INFO">Clicking element
+                        'com.playgroundxyz.vision_project:id/need_help_tracking_link'.
+                    </msg>
+                    <msg timestamp="20230306 17:17:50.143" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/need_help_tracking_link
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:49.987" endtime="20230306 17:17:50.144"/>
+                </kw>
+                <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                    <arg>Eye tracking tips</arg>
+                    <doc>Verifies that current page contains `text`.</doc>
+                    <msg timestamp="20230306 17:17:50.841" level="INFO">Current page contains text 'Eye tracking
+                        tips'.
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:50.144" endtime="20230306 17:17:50.841"/>
+                </kw>
+                <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                    <arg>Keep your head and phone still while looking at the dots during the eye tracking setup.</arg>
+                    <doc>Verifies that current page contains `text`.</doc>
+                    <msg timestamp="20230306 17:17:50.911" level="INFO">Current page contains text 'Keep your head and
+                        phone still while looking at the dots during the eye tracking setup.'.
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:50.841" endtime="20230306 17:17:50.911"/>
+                </kw>
+                <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                    <arg>Sit upright at a desk or a table in a well-lit place.</arg>
+                    <doc>Verifies that current page contains `text`.</doc>
+                    <msg timestamp="20230306 17:17:50.974" level="INFO">Current page contains text 'Sit upright at a
+                        desk or a table in a well-lit place.'.
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:50.911" endtime="20230306 17:17:50.974"/>
+                </kw>
+                <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                    <arg>Avoid windows and mirrors (wearing your glasses is fine).</arg>
+                    <doc>Verifies that current page contains `text`.</doc>
+                    <msg timestamp="20230306 17:17:51.040" level="INFO">Current page contains text 'Avoid windows and
+                        mirrors (wearing your glasses is fine).'.
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:50.974" endtime="20230306 17:17:51.040"/>
+                </kw>
+                <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                    <arg>Make sure your phone’s battery is above 50%.</arg>
+                    <doc>Verifies that current page contains `text`.</doc>
+                    <msg timestamp="20230306 17:17:51.099" level="INFO">Current page contains text 'Make sure your
+                        phone’s battery is above 50%.'.
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:51.040" endtime="20230306 17:17:51.099"/>
+                </kw>
+                <kw name="Page Should Contain Element" library="MobileTestLibrary">
+                    <arg>${Native vision Need HelpPage Go Back Btn}</arg>
+                    <doc>Verifies that current page contains `locator` element.</doc>
+                    <msg timestamp="20230306 17:17:51.147" level="INFO">Current page contains element
+                        'com.playgroundxyz.vision_project:id/go_back_button'.
+                    </msg>
+                    <msg timestamp="20230306 17:17:51.147" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/go_back_button
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:51.107" endtime="20230306 17:17:51.147"/>
+                </kw>
+                <kw name="Click Element" library="MobileTestLibrary">
+                    <arg>${Native vision Need HelpPage Go Back Btn}</arg>
+                    <doc>Click element identified by `locator`.</doc>
+                    <msg timestamp="20230306 17:17:51.161" level="INFO">Clicking element
+                        'com.playgroundxyz.vision_project:id/go_back_button'.
+                    </msg>
+                    <msg timestamp="20230306 17:17:51.241" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/go_back_button
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:51.147" endtime="20230306 17:17:51.241"/>
+                </kw>
+                <status status="PASS" starttime="20230306 17:17:49.842" endtime="20230306 17:17:51.241"/>
+            </kw>
+            <kw name="Verify on tapping on 'Privacy' relevant page getting displayed"
+                library="welcome page journey keywords">
+                <kw name="Wait Until Element Is Visible" library="MobileTestLibrary">
+                    <arg>${Native vision Privacy}</arg>
+                    <doc>Waits until element specified with `locator` is visible.</doc>
+                    <msg timestamp="20230306 17:17:51.933" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/need_help_privacy_link
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:51.241" endtime="20230306 17:17:51.937"/>
+                </kw>
+                <kw name="Click Element" library="MobileTestLibrary">
+                    <arg>${Native vision Privacy}</arg>
+                    <doc>Click element identified by `locator`.</doc>
+                    <msg timestamp="20230306 17:17:51.942" level="INFO">Clicking element
+                        'com.playgroundxyz.vision_project:id/need_help_privacy_link'.
+                    </msg>
+                    <msg timestamp="20230306 17:17:52.085" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/need_help_privacy_link
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:51.937" endtime="20230306 17:17:52.085"/>
+                </kw>
+                <kw name="Wait Until Element Is Visible" library="MobileTestLibrary">
+                    <arg>${policy page Privacy policy Btn}</arg>
+                    <doc>Waits until element specified with `locator` is visible.</doc>
+                    <msg timestamp="20230306 17:17:52.767" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/privacy_policy_link
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:52.086" endtime="20230306 17:17:52.768"/>
+                </kw>
+                <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                    <arg>Privacy</arg>
+                    <doc>Verifies that current page contains `text`.</doc>
+                    <msg timestamp="20230306 17:17:52.865" level="INFO">Current page contains text 'Privacy'.</msg>
+                    <status status="PASS" starttime="20230306 17:17:52.768" endtime="20230306 17:17:52.865"/>
+                </kw>
+                <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                    <arg>Your data rights</arg>
+                    <doc>Verifies that current page contains `text`.</doc>
+                    <msg timestamp="20230306 17:17:52.942" level="INFO">Current page contains text 'Your data rights'.
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:52.865" endtime="20230306 17:17:52.950"/>
+                </kw>
+                <kw name="Page Should Contain Element" library="MobileTestLibrary">
+                    <arg>${Native vision Need HelpPage Go Back Btn}</arg>
+                    <doc>Verifies that current page contains `locator` element.</doc>
+                    <msg timestamp="20230306 17:17:53.007" level="INFO">Current page contains element
+                        'com.playgroundxyz.vision_project:id/go_back_button'.
+                    </msg>
+                    <msg timestamp="20230306 17:17:53.007" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/go_back_button
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:52.950" endtime="20230306 17:17:53.007"/>
+                </kw>
+                <kw name="Click Element" library="MobileTestLibrary">
+                    <arg>${policy page Privacy policy Btn}</arg>
+                    <doc>Click element identified by `locator`.</doc>
+                    <msg timestamp="20230306 17:17:53.014" level="INFO">Clicking element
+                        'com.playgroundxyz.vision_project:id/privacy_policy_link'.
+                    </msg>
+                    <msg timestamp="20230306 17:17:53.107" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/privacy_policy_link
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:53.012" endtime="20230306 17:17:53.107"/>
+                </kw>
+                <kw name="Go Back" library="MobileTestLibrary">
+                    <doc>Goes one step backward in the browser history.</doc>
+                    <status status="PASS" starttime="20230306 17:17:53.109" endtime="20230306 17:17:56.028"/>
+                </kw>
+                <kw name="Wait Until Element Is Visible" library="MobileTestLibrary">
+                    <arg>${policy page Your data rights Btn}</arg>
+                    <doc>Waits until element specified with `locator` is visible.</doc>
+                    <msg timestamp="20230306 17:17:56.611" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/data_link
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:56.028" endtime="20230306 17:17:56.612"/>
+                </kw>
+                <kw name="Click Element" library="MobileTestLibrary">
+                    <arg>${policy page Your data rights Btn}</arg>
+                    <doc>Click element identified by `locator`.</doc>
+                    <msg timestamp="20230306 17:17:56.623" level="INFO">Clicking element
+                        'com.playgroundxyz.vision_project:id/data_link'.
+                    </msg>
+                    <msg timestamp="20230306 17:17:56.733" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/data_link
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:56.613" endtime="20230306 17:17:56.733"/>
+                </kw>
+                <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                    <arg>Your data rights</arg>
+                    <doc>Verifies that current page contains `text`.</doc>
+                    <msg timestamp="20230306 17:17:57.387" level="INFO">Current page contains text 'Your data rights'.
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:56.733" endtime="20230306 17:17:57.387"/>
+                </kw>
+                <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                    <arg>If you would like to delete your data, please send an email with the study link to the
+                        following address.
+                    </arg>
+                    <doc>Verifies that current page contains `text`.</doc>
+                    <msg timestamp="20230306 17:17:57.463" level="INFO">Current page contains text 'If you would like to
+                        delete your data, please send an email with the study link to the following address.'.
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:57.387" endtime="20230306 17:17:57.463"/>
+                </kw>
+                <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                    <arg>privacy@playgroundxyz.com</arg>
+                    <doc>Verifies that current page contains `text`.</doc>
+                    <msg timestamp="20230306 17:17:57.522" level="INFO">Current page contains text
+                        'privacy@playgroundxyz.com'.
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:57.463" endtime="20230306 17:17:57.530"/>
+                </kw>
+                <kw name="Click Element" library="MobileTestLibrary">
+                    <arg>${Native vision Need HelpPage Go Back Btn}</arg>
+                    <doc>Click element identified by `locator`.</doc>
+                    <msg timestamp="20230306 17:17:57.531" level="INFO">Clicking element
+                        'com.playgroundxyz.vision_project:id/go_back_button'.
+                    </msg>
+                    <msg timestamp="20230306 17:17:57.631" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/go_back_button
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:57.530" endtime="20230306 17:17:57.631"/>
+                </kw>
+                <kw name="Wait Until Page Contains" library="MobileTestLibrary">
+                    <arg>Privacy</arg>
+                    <doc>Waits until `text` appears on current page.</doc>
+                    <status status="PASS" starttime="20230306 17:17:57.636" endtime="20230306 17:17:58.300"/>
+                </kw>
+                <kw name="Click Element" library="MobileTestLibrary">
+                    <arg>${Native vision Need HelpPage Go Back Btn}</arg>
+                    <doc>Click element identified by `locator`.</doc>
+                    <msg timestamp="20230306 17:17:58.314" level="INFO">Clicking element
+                        'com.playgroundxyz.vision_project:id/go_back_button'.
+                    </msg>
+                    <msg timestamp="20230306 17:17:58.425" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/go_back_button
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:58.300" endtime="20230306 17:17:58.431"/>
+                </kw>
+                <status status="PASS" starttime="20230306 17:17:51.241" endtime="20230306 17:17:58.432"/>
+            </kw>
+            <kw name="Verify on tapping on 'Terms of Use Agreement' relevant page getting displayed"
+                library="welcome page journey keywords">
+                <kw name="Wait Until Page Contains Element" library="MobileTestLibrary">
+                    <arg>${Native vision Terms of Use Agreement}</arg>
+                    <doc>Waits until element specified with `locator` appears on current page.</doc>
+                    <msg timestamp="20230306 17:17:59.101" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/need_help_terms_link
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:58.432" endtime="20230306 17:17:59.107"/>
+                </kw>
+                <kw name="Click Element" library="MobileTestLibrary">
+                    <arg>${Native vision Terms of Use Agreement}</arg>
+                    <doc>Click element identified by `locator`.</doc>
+                    <msg timestamp="20230306 17:17:59.117" level="INFO">Clicking element
+                        'com.playgroundxyz.vision_project:id/need_help_terms_link'.
+                    </msg>
+                    <msg timestamp="20230306 17:18:00.534" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/need_help_terms_link
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:17:59.108" endtime="20230306 17:18:00.534"/>
+                </kw>
+                <kw name="Wait Until Page Contains" library="MobileTestLibrary">
+                    <arg>Vision Project Terms of Use</arg>
+                    <doc>Waits until `text` appears on current page.</doc>
+                    <status status="PASS" starttime="20230306 17:18:00.535" endtime="20230306 17:18:02.706"/>
+                </kw>
+                <kw name="Scroll To Element By Exact Text" library="MobileTestLibrary">
+                    <arg>19. Electronic Signatures</arg>
+                    <status status="PASS" starttime="20230306 17:18:02.712" endtime="20230306 17:18:43.250"/>
+                </kw>
+                <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                    <arg>19. Electronic Signatures</arg>
+                    <doc>Verifies that current page contains `text`.</doc>
+                    <msg timestamp="20230306 17:18:43.444" level="INFO">Current page contains text '19. Electronic
+                        Signatures'.
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:18:43.258" endtime="20230306 17:18:43.452"/>
+                </kw>
+                <kw name="Go Back" library="MobileTestLibrary">
+                    <doc>Goes one step backward in the browser history.</doc>
+                    <status status="PASS" starttime="20230306 17:18:43.452" endtime="20230306 17:18:44.085"/>
+                </kw>
+                <status status="PASS" starttime="20230306 17:17:58.432" endtime="20230306 17:18:44.093"/>
+            </kw>
+            <kw name="Verify on tapping on 'How to check Android version' relevant page getting displayed"
+                library="welcome page journey keywords">
+                <kw name="Wait Until Page Contains Element" library="MobileTestLibrary">
+                    <arg>${Native vision How to check Android version}</arg>
+                    <doc>Waits until element specified with `locator` appears on current page.</doc>
+                    <msg timestamp="20230306 17:18:44.595" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/need_help_version_link
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:18:44.096" endtime="20230306 17:18:44.603"/>
+                </kw>
+                <kw name="Click Element" library="MobileTestLibrary">
+                    <arg>${Native vision How to check Android version}</arg>
+                    <doc>Click element identified by `locator`.</doc>
+                    <msg timestamp="20230306 17:18:44.614" level="INFO">Clicking element
+                        'com.playgroundxyz.vision_project:id/need_help_version_link'.
+                    </msg>
+                    <msg timestamp="20230306 17:18:45.353" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/need_help_version_link
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:18:44.604" endtime="20230306 17:18:45.357"/>
+                </kw>
+                <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                    <arg>How to check Android version</arg>
+                    <doc>Verifies that current page contains `text`.</doc>
+                    <msg timestamp="20230306 17:18:45.452" level="INFO">Current page contains text 'How to check Android
+                        version'.
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:18:45.358" endtime="20230306 17:18:45.452"/>
+                </kw>
+                <kw name="Page Should Contain Element" library="MobileTestLibrary">
+                    <arg>${Native vision Need HelpPage Go Back Btn}</arg>
+                    <doc>Verifies that current page contains `locator` element.</doc>
+                    <msg timestamp="20230306 17:18:45.526" level="INFO">Current page contains element
+                        'com.playgroundxyz.vision_project:id/go_back_button'.
+                    </msg>
+                    <msg timestamp="20230306 17:18:45.527" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/go_back_button
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:18:45.452" endtime="20230306 17:18:45.527"/>
+                </kw>
+                <kw name="Click Element" library="MobileTestLibrary">
+                    <arg>${Native vision Need HelpPage Go Back Btn}</arg>
+                    <doc>Click element identified by `locator`.</doc>
+                    <msg timestamp="20230306 17:18:45.534" level="INFO">Clicking element
+                        'com.playgroundxyz.vision_project:id/go_back_button'.
+                    </msg>
+                    <msg timestamp="20230306 17:18:45.644" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/go_back_button
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:18:45.527" endtime="20230306 17:18:45.650"/>
+                </kw>
+                <status status="PASS" starttime="20230306 17:18:44.094" endtime="20230306 17:18:45.650"/>
+            </kw>
+            <kw name="Verify on tapping on 'How to recover completion code' relevant page getting displayed"
+                library="welcome page journey keywords">
+                <kw name="Wait Until Page Contains Element" library="MobileTestLibrary">
+                    <arg>${Native vision How to recover completion code}</arg>
+                    <doc>Waits until element specified with `locator` appears on current page.</doc>
+                    <msg timestamp="20230306 17:18:46.303" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/need_help_code_link
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:18:45.651" endtime="20230306 17:18:46.309"/>
+                </kw>
+                <kw name="Click Element" library="MobileTestLibrary">
+                    <arg>${Native vision How to recover completion code}</arg>
+                    <doc>Click element identified by `locator`.</doc>
+                    <msg timestamp="20230306 17:18:46.311" level="INFO">Clicking element
+                        'com.playgroundxyz.vision_project:id/need_help_code_link'.
+                    </msg>
+                    <msg timestamp="20230306 17:18:46.439" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/need_help_code_link
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:18:46.309" endtime="20230306 17:18:46.440"/>
+                </kw>
+                <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                    <arg>Recover completion code</arg>
+                    <doc>Verifies that current page contains `text`.</doc>
+                    <msg timestamp="20230306 17:18:47.113" level="INFO">Current page contains text 'Recover completion
+                        code'.
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:18:46.440" endtime="20230306 17:18:47.113"/>
+                </kw>
+                <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                    <arg>Please send an email with the study link to the following address and we will get back to you
+                        with completion code.
+                    </arg>
+                    <doc>Verifies that current page contains `text`.</doc>
+                    <msg timestamp="20230306 17:18:47.177" level="INFO">Current page contains text 'Please send an email
+                        with the study link to the following address and we will get back to you with completion code.'.
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:18:47.122" endtime="20230306 17:18:47.177"/>
+                </kw>
+                <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                    <arg>support@vision-project.co</arg>
+                    <doc>Verifies that current page contains `text`.</doc>
+                    <msg timestamp="20230306 17:18:47.234" level="INFO">Current page contains text
+                        'support@vision-project.co'.
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:18:47.177" endtime="20230306 17:18:47.234"/>
+                </kw>
+                <kw name="Page Should Contain Element" library="MobileTestLibrary">
+                    <arg>${Native vision Need HelpPage Go Back Btn}</arg>
+                    <doc>Verifies that current page contains `locator` element.</doc>
+                    <msg timestamp="20230306 17:18:47.278" level="INFO">Current page contains element
+                        'com.playgroundxyz.vision_project:id/go_back_button'.
+                    </msg>
+                    <msg timestamp="20230306 17:18:47.278" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/go_back_button
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:18:47.234" endtime="20230306 17:18:47.278"/>
+                </kw>
+                <kw name="Click Element" library="MobileTestLibrary">
+                    <arg>${Native vision Need HelpPage Go Back Btn}</arg>
+                    <doc>Click element identified by `locator`.</doc>
+                    <msg timestamp="20230306 17:18:47.287" level="INFO">Clicking element
+                        'com.playgroundxyz.vision_project:id/go_back_button'.
+                    </msg>
+                    <msg timestamp="20230306 17:18:47.377" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/go_back_button
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:18:47.278" endtime="20230306 17:18:47.377"/>
+                </kw>
+                <kw name="Wait Until Page Contains" library="MobileTestLibrary">
+                    <arg>${Native vision app Need help?}</arg>
+                    <doc>Waits until `text` appears on current page.</doc>
+                    <status status="PASS" starttime="20230306 17:18:47.378" endtime="20230306 17:18:48.066"/>
+                </kw>
+                <kw name="Click Element" library="MobileTestLibrary">
+                    <arg>${Native vision Need HelpPage Go Back Btn}</arg>
+                    <doc>Click element identified by `locator`.</doc>
+                    <msg timestamp="20230306 17:18:48.084" level="INFO">Clicking element
+                        'com.playgroundxyz.vision_project:id/go_back_button'.
+                    </msg>
+                    <msg timestamp="20230306 17:18:48.197" level="INFO">criteria is
+                        com.playgroundxyz.vision_project:id/go_back_button
+                    </msg>
+                    <status status="PASS" starttime="20230306 17:18:48.074" endtime="20230306 17:18:48.205"/>
+                </kw>
+                <status status="PASS" starttime="20230306 17:18:45.650" endtime="20230306 17:18:48.205"/>
+            </kw>
+            <kw name="close Test application" library="Setup keywords" type="TEARDOWN">
+                <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+                    <arg>MobileTestLibrary.Close Application</arg>
+                    <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+                    <kw name="Close Application" library="MobileTestLibrary">
+                        <doc>Closes the current application and also close webdriver session.</doc>
+                        <status status="PASS" starttime="20230306 17:18:48.205" endtime="20230306 17:18:48.867"/>
+                    </kw>
+                    <status status="PASS" starttime="20230306 17:18:48.205" endtime="20230306 17:18:48.870"/>
 </kw>
 <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
 <arg>WebApplicationTestLibrary.Close Browser</arg>
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
 <kw name="Close Browser" library="WebApplicationTestLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230305 19:46:13.273" endtime="20230305 19:46:13.274"/>
+    <status status="PASS" starttime="20230306 17:18:48.873" endtime="20230306 17:18:48.874"/>
 </kw>
-<status status="PASS" starttime="20230305 19:46:13.272" endtime="20230305 19:46:13.274"/>
+    <status status="PASS" starttime="20230306 17:18:48.870" endtime="20230306 17:18:48.874"/>
 </kw>
 <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
 <arg>WebApplicationTestLibrary.Close All Browsers</arg>
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
 <kw name="Close All Browsers" library="WebApplicationTestLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20230305 19:46:13.275" endtime="20230305 19:46:13.275"/>
+    <status status="PASS" starttime="20230306 17:18:48.874" endtime="20230306 17:18:48.874"/>
 </kw>
-<status status="PASS" starttime="20230305 19:46:13.274" endtime="20230305 19:46:13.275"/>
+    <status status="PASS" starttime="20230306 17:18:48.874" endtime="20230306 17:18:48.874"/>
 </kw>
 <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
-<arg>MobileTestLibrary.Close All Applications</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<kw name="Close All Applications" library="MobileTestLibrary">
-<doc>Closes all open applications.</doc>
-<status status="PASS" starttime="20230305 19:46:13.276" endtime="20230305 19:46:13.279"/>
+    <arg>MobileTestLibrary.Close All Applications</arg>
+    <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+    <kw name="Close All Applications" library="MobileTestLibrary">
+        <doc>Closes all open applications.</doc>
+        <status status="PASS" starttime="20230306 17:18:48.874" endtime="20230306 17:18:48.892"/>
+    </kw>
+    <status status="PASS" starttime="20230306 17:18:48.874" endtime="20230306 17:18:48.892"/>
 </kw>
-<status status="PASS" starttime="20230305 19:46:13.275" endtime="20230305 19:46:13.279"/>
-</kw>
-<status status="PASS" starttime="20230305 19:46:12.545" endtime="20230305 19:46:13.280"/>
-</kw>
-<status status="PASS" starttime="20230305 19:44:40.218" endtime="20230305 19:46:13.280"/>
-</test>
+                <status status="PASS" starttime="20230306 17:18:48.205" endtime="20230306 17:18:48.892"/>
+            </kw>
+            <doc>Verification that Help page open up when user taps on help icon"?"</doc>
+            <tag>Regression</tag>
+            <status status="PASS" starttime="20230306 17:17:37.055" endtime="20230306 17:18:48.892"/>
+        </test>
 <kw name="tearDown" library="Setup keywords" type="TEARDOWN">
 <kw name="Stop Appium Service" library="MobileTestLibrary">
-<status status="PASS" starttime="20230305 19:46:13.282" endtime="20230305 19:46:13.282"/>
+    <status status="PASS" starttime="20230306 17:18:48.899" endtime="20230306 17:18:48.901"/>
 </kw>
-<status status="PASS" starttime="20230305 19:46:13.281" endtime="20230305 19:46:13.282"/>
+    <status status="PASS" starttime="20230306 17:18:48.898" endtime="20230306 17:18:48.902"/>
 </kw>
-<status status="PASS" starttime="20230305 19:44:38.534" endtime="20230305 19:46:13.282"/>
+        <status status="PASS" starttime="20230306 17:17:35.815" endtime="20230306 17:18:48.902"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+    <stat pass="1" fail="0" skip="0">Regression</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="TC001">TC001</stat>
+    <stat pass="1" fail="0" skip="0" id="s1" name="Verify welcome page journey is as excepted">Verify welcome page
+        journey is as excepted
+    </stat>
 </suite>
 </statistics>
 <errors>

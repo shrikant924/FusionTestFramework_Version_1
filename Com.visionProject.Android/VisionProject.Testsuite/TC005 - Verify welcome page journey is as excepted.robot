@@ -1,5 +1,5 @@
 *** Settings ***
-Resource        ../VisionProject.PageObject/VisionProject.PageObject.keywords/KeywordsSetup.resource
+Resource        ../VisionProject.PageObject/VisionProject.PageObject.keywords/pageObjects.resource
 Suite Setup     Setup before suit start
 Test Setup      Launch Test application
 Test Teardown   close Test application
@@ -33,6 +33,3 @@ Verify that Help page open up when user taps on help icon"?"
     Verify on tapping on 'How to check Android version' relevant page getting displayed
     Verify on tapping on 'How to recover completion code' relevant page getting displayed
 
-Verify that if social app is not installed on phone then App was not found screen appears
-    [Documentation]        Verify that if social app is not installed on phone then App was not found screen appears
-    [Tags]      Regression

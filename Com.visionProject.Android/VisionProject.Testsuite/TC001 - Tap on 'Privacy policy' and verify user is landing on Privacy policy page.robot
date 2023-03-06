@@ -1,5 +1,5 @@
 *** Settings ***
-Resource        ../VisionProject.PageObject/VisionProject.PageObject.keywords/KeywordsSetup.resource
+Resource        ../VisionProject.PageObject/VisionProject.PageObject.keywords/pageObjects.resource
 Suite Setup     Setup before suit start
 Suite Teardown  tearDown
 Test Setup      Launch Test application
@@ -8,7 +8,7 @@ Test Teardown   close Test application
 
 *** Test Cases ***
 
-Verify that Google Play button redirecting user to Vision Project on play store
+Tap on 'Privacy policy' and verify user is landing on Privacy policy page
     [Documentation]        Verification that Google Play button redirecting user to Vision Project on play store
     [Tags]      Regression
 
@@ -17,8 +17,4 @@ Verify that Google Play button redirecting user to Vision Project on play store
     tap on 'google play store' button
     verify user is landed on 'google playstore' on vision app page
     Verify if Need Help? page opens up after tapping Need Help? link from landing page
-    Verify if "Contact Us", "How to check Android version" , "Privacy Policy" and "Terms of User Agreement" option are provided on Need help page
-    tap on 'Contact us' and verify user is landing on contact us page
-    tap on 'How to check Android version' and verify user is landing on 'How to check Android version' page
-    tap on 'Terms of Use Agreement' and verify user is landing on Terms of Use Agreement page
-
+    tap on 'Privacy policy' and verify user is landing on Privacy policy page

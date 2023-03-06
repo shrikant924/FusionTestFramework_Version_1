@@ -1,5 +1,5 @@
 *** Settings ***
-Resource        KeywordsSetup.resource
+Resource        ../../VisionProject.PageObject/VisionProject.PageObject.keywords/pageObjects.resource
 
 *** Keywords ***
 
@@ -96,17 +96,16 @@ tap on 'BEGIN' button
     
 read 'privacy Notice'
     MobileTestLibrary.Wait Until Page Contains    Privacy Notice
-    MobileTestLibrary.Scroll To Element By Partial Text In LongView    For more information on our processing of your personal data, please see our Privacy Policy, which is available at www.playground.xyz/privacy/       50
+    MobileTestLibrary.Scroll To Element By Exact Text In LongView    www.playground.xyz/privacy/       30
 
 
 accept 'privacy Notice'
     MobileTestLibrary.Wait Until Element Is Visible    ${PrivacyNoticeCheckbox}
     MobileTestLibrary.Wait Until Element Gets Enabled  ${PrivacyNoticeCheckbox}
-    MobileTestLibrary.Click Element    ${PrivacyNoticeCheckbox}
-    Sleep    3
+    MobileTestLibrary.Tap    ${PrivacyNoticeCheckbox}
     MobileTestLibrary.Wait Until Element Is Visible         ${TermsOfUseCheckbox}
-    MobileTestLibrary.Click Element    ${TermsOfUseCheckbox}
-    Sleep    3
+#    MobileTestLibrary.Tap   ${TermsOfUseCheckbox}
+    MobileTestLibrary.Click Element At Coordinates    112     1459
     MobileTestLibrary.Wait Until Element Is Visible    ${acceptBtn}
     MobileTestLibrary.Wait Until Element Gets Enabled    ${acceptBtn}
     MobileTestLibrary.Click Element    ${acceptBtn}
