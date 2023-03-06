@@ -8,9 +8,7 @@ class SetupUtils:
     @keyword
     def start_appium_service(self):
         appium_service = AppiumService()
-        appium_service.start(args=['--address', '127.0.0.1', '-p', str(DEFAULT_PORT), '--base-path', '/wd/hub/',
-                                   'console-level:logfile-level', '--log-level:debug'
-                                   ])
+        appium_service.start(args=['--address', '127.0.0.1', '-p', str(DEFAULT_PORT), '--base-path', '/wd/hub/'])
         assert appium_service.is_running
         assert appium_service.is_listening
 
