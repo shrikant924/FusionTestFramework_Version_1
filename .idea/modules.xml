@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/com.visionProject.android2.iml" filepath="$PROJECT_DIR$/.idea/com.visionProject.android2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/FusionTestFramework.iml" filepath="$PROJECT_DIR$/.idea/FusionTestFramework.iml" />
     </modules>
   </component>
 </project>

@@ -1,6 +1,5 @@
 *** Settings ***
-Resource        ../../VisionProject.PageObject/VisionProject.PageObject.keywords/pageObjects.resource
-
+Resource        pageObjects.resource
 *** Keywords ***
 Read and accept set up your eye tracking tips
     MobileTestLibrary.Wait Until Page Contains Element    ${LetsSetupYourEyeTrackingPage title}

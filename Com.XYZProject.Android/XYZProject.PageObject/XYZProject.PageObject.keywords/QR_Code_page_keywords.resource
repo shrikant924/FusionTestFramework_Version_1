@@ -1,5 +1,5 @@
 *** Settings ***
-Resource        ../../VisionProject.PageObject/VisionProject.PageObject.keywords/pageObjects.resource
+Resource      pageObjects.resource
 
 *** Keywords ***
 wait until QR code generated and validate QR code link details and log to console

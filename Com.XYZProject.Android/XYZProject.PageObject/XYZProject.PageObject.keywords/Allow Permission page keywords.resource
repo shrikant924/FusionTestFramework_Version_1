@@ -1,5 +1,5 @@
 *** Settings ***
-Resource        ../../../../com.visionProject.android/Com.visionProject.Android/VisionProject.PageObject/VisionProject.PageObject.keywords/pageObjects.resource
+Resource       pageObjects.resource
 
 *** Keywords ***
 Verify help icon is working as excepted

@@ -1,5 +1,5 @@
 *** Settings ***
-Resource        ../VisionProject.PageObject/VisionProject.PageObject.keywords/pageObjects.resource
+Resource        ../XYZProject.PageObject/XYZProject.PageObject.keywords/pageObjects.resource
 Test Setup          Launch browser and input url
 Test Teardown       Close Browser
 

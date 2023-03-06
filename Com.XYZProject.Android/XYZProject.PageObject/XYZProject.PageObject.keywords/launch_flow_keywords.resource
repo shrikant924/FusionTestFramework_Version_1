@@ -1,5 +1,5 @@
 *** Settings ***
-Resource        ../../VisionProject.PageObject/VisionProject.PageObject.keywords/pageObjects.resource
+Resource    pageObjects.resource
 
 *** Keywords ***
 launch camera app and wait until user scan the QR code from study link url

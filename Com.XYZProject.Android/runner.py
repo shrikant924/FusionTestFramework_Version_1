@@ -5,11 +5,11 @@ from robot import run
 
 
 def runTest():
-    reportDirectory = os.path.join('../Com.visionProject.Android/VisionProject.TestResults/',
+    reportDirectory = os.path.join('../Com.XYZProject.Android/XYZProject.TestResults/',
                                    datetime.now().strftime('%d-%m-%y_%H-%M-%S'))
     os.makedirs(reportDirectory)
     try:
-        run('..//Com.visionProject.Android/VisionProject.Testsuite//', outputdir=reportDirectory)
+        run('..//Com.XYZProject.Android/XYZProject.TestcaseSuite//', outputdir=reportDirectory)
     except:
         print("File not found ....")
 

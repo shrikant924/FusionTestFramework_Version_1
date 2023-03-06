@@ -1,5 +1,5 @@
 *** Settings ***
-Resource        ../VisionProject.PageObject/VisionProject.PageObject.keywords/pageObjects.resource
+Resource        ../XYZProject.PageObject/XYZProject.PageObject.keywords/pageObjects.resource
 Suite Setup     Setup before suit start
 Suite Teardown  tearDown
 Test Setup      Launch Test application

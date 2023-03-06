@@ -1,5 +1,5 @@
 *** Settings ***
-Resource        ../../VisionProject.PageObject/VisionProject.PageObject.keywords/pageObjects.resource
+Resource        pageObjects.resource
 
 *** Keywords ***
 
