@@ -14,6 +14,7 @@ Launch browser and input url
 
 Launch Test application
     MobileTestLibrary.Open Application        ${remote_url}           &{device}
+    Set Log Level    ERROR
     MobileTestLibrary.Set Appium Timeout    30
 
 close Test application

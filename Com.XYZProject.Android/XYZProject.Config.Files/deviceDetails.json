@@ -39,7 +39,9 @@
     "relaxed-security": true,
     "sessionDescription": "",
     "sessionName": "Automation test session",
-    "udid": "1A031FDF6004UA"
+    "udid": "1A031FDF6004UA",
+    "unlockType": "pin",
+    "unlockKey": "1111"
   },
   "vivo_s1": {
     "platformName": "android",
