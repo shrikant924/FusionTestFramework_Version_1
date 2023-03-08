@@ -3,22 +3,22 @@ Resource       pageObjects.resource
 
 *** Keywords ***
 Setup before suit start
-    MobileTestLibrary.Start Appium Service
+    mobile.Start Appium Service
 
 tearDown
-    MobileTestLibrary.Stop Appium Service
+    mobile.Stop Appium Service
 
 Launch browser and input url
-    WebApplicationTestLibrary.Open Browser        ${url}          ${Browser}
-    WebApplicationTestLibrary.Maximize Browser Window
+    web.Open Browser        ${url}          ${Browser}
+    web.Maximize Browser Window
 
 Launch Test application
-    MobileTestLibrary.Open Application        ${remote_url}           &{device}
+    mobile.Open Application        ${remote_url}           &{device}
     Set Log Level    ERROR
-    MobileTestLibrary.Set Appium Timeout    30
+    mobile.Set Appium Timeout    30
 
 close Test application
-    Run Keyword And Continue On Failure    MobileTestLibrary.Close Application
-    Run Keyword And Continue On Failure    WebApplicationTestLibrary.Close Browser
-    Run Keyword And Continue On Failure    WebApplicationTestLibrary.Close All Browsers
-    Run Keyword And Continue On Failure    MobileTestLibrary.Close All Applications
+    Run Keyword And Continue On Failure    mobile.Close Application
+    Run Keyword And Continue On Failure    web.Close Browser
+    Run Keyword And Continue On Failure    web.Close All Browsers
+    Run Keyword And Continue On Failure    mobile.Close All Applications

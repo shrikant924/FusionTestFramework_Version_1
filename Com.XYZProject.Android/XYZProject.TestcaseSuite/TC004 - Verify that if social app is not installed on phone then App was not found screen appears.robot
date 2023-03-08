@@ -24,4 +24,10 @@ Verify that if social app is not installed on phone then App was not found scree
     Verify help icon is working as excepted
     Allow Screen recording
     Read and accept set up your eye tracking tips
+    Need to Manual Input here 'Look at the dot until it goes green and disappears'
+    verify 'Well done! The eye tracking setup is complete' screen getting displayed after validation of EYE gaze
+    Verify 'You are ready to begin the study' screen getting displayed
+    Tap on 'View A Quick Demo' Button
+
+
 

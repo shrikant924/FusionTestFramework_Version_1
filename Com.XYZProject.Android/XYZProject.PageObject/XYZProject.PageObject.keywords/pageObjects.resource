@@ -1,6 +1,6 @@
 *** Settings ***
-Library         ../../../../FusionTestFramework/src/MobileTestLibrary/
-Library         ../../../../FusionTestFramework/src/WebApplicationTestLibrary/
+Library         ../../../../FusionTestFramework/src/MobileTestLibrary/      AS   mobile
+Library         ../../../../FusionTestFramework/src/WebApplicationTestLibrary/  AS   web
 Variables      ../../XYZProject.Config.Files/configuration.py
 Resource       ../../XYZProject.PageObject/XYZProject.PageObject.locators/Locators.resource
 Resource       ../../XYZProject.PageObject/XYZProject.PageObject.keywords/LetsSetupYourEyeTrackingKeywords.resource
@@ -10,3 +10,4 @@ Resource       ../../XYZProject.PageObject/XYZProject.PageObject.keywords/welcom
 Resource       ../../XYZProject.PageObject/XYZProject.PageObject.keywords/QR_Code_page_keywords.resource
 Resource       ../../XYZProject.PageObject/XYZProject.PageObject.keywords/launch_flow_keywords.resource
 Resource       ../../XYZProject.PageObject/XYZProject.PageObject.keywords/Setup keywords.resource
+Resource       ../../XYZProject.PageObject/XYZProject.PageObject.keywords/EyeGazeValiidationKeywords.resource

@@ -3,51 +3,51 @@ Resource       pageObjects.resource
 
 *** Keywords ***
 Verify help icon is working as excepted
-    MobileTestLibrary.Wait Until Element Is Visible    ${Help icon}
-    MobileTestLibrary.Tap   ${Help icon}
-    MobileTestLibrary.Wait Until Page Contains Element    ${Native vision app Need help?}
-    MobileTestLibrary.Tap    ${Native vision Need HelpPage Go Back Btn}
+    mobile.Wait Until Element Is Visible    ${Help icon}
+    mobile.Tap   ${Help icon}
+    mobile.Wait Until Page Contains Element    ${Native vision app Need help?}
+    mobile.Tap    ${Native vision Need HelpPage Go Back Btn}
 
 Allow camera access
     TRY
-         MobileTestLibrary.Wait Until Element Is Visible    ${ALLOW CAMERA ACCESS}
-         MobileTestLibrary.Tap    ${ALLOW CAMERA ACCESS}
+         mobile.Wait Until Element Is Visible    ${ALLOW CAMERA ACCESS}
+         mobile.Tap    ${ALLOW CAMERA ACCESS}
 
          TRY
-               MobileTestLibrary.Wait Until Element Is Visible    ${Allow While using the app}
-               MobileTestLibrary.Tap    ${Allow onlyThisTime}
-               MobileTestLibrary.Wait Until Page Contains    Screen recording
+               mobile.Wait Until Element Is Visible    ${Allow While using the app}
+               mobile.Tap    ${Allow onlyThisTime}
+               mobile.Wait Until Page Contains    Screen recording
          EXCEPT
                Log To Console     allowed camera permission
          END
 
     EXCEPT
-        MobileTestLibrary.Wait Until Page Contains    You have previously allowed our app usage access.
-        MobileTestLibrary.Tap    ${continueBtn}
-        MobileTestLibrary.Wait Until Page Contains    Screen recording
+        mobile.Wait Until Page Contains    You have previously allowed our app usage access.
+        mobile.Tap    ${continueBtn}
+        mobile.Wait Until Page Contains    Screen recording
 
     END
 
 Allow Screen recording
     TRY
-         MobileTestLibrary.Wait Until Page Contains    Ensure sensitive information such as passwords, messages or payment details are not visible when recording is on.
-         MobileTestLibrary.Wait Until Element Is Visible    ${ALLOW ScreenRecording}
-         MobileTestLibrary.Click Element    ${ALLOW ScreenRecording}
-         MobileTestLibrary.Wait Until Page Contains    Start recording or casting with Vision Project?
-#         MobileTestLibrary.Move To Element And Click    ${startNowBtn}
-         MobileTestLibrary.Click Element At Coordinates    845    1540
-         MobileTestLibrary.Wait Until Page Contains    You have previously allowed our app usage access.
+         mobile.Wait Until Page Contains    Ensure sensitive information such as passwords, messages or payment details are not visible when recording is on.
+         mobile.Wait Until Element Is Visible    ${ALLOW ScreenRecording}
+         mobile.Click Element    ${ALLOW ScreenRecording}
+         mobile.Wait Until Page Contains    Start recording or casting with Vision Project?
+#         mobile.Move To Element And Click    ${startNowBtn}
+         mobile.Click Element At Coordinates    845    1540
+         mobile.Wait Until Page Contains    You have previously allowed our app usage access.
          Verify help icon is working as excepted
-         MobileTestLibrary.Tap    ${continueBtn}
-         MobileTestLibrary.Wait Until Page Contains    You have previously allowed our app to appear on top.
+         mobile.Tap    ${continueBtn}
+         mobile.Wait Until Page Contains    You have previously allowed our app to appear on top.
          Verify help icon is working as excepted
-         MobileTestLibrary.Tap    ${continueBtn}
+         mobile.Tap    ${continueBtn}
 
     EXCEPT
-         MobileTestLibrary.Wait Until Page Contains    You have previously allowed our app usage access.
+         mobile.Wait Until Page Contains    You have previously allowed our app usage access.
          Verify help icon is working as excepted
-         MobileTestLibrary.Tap    ${continueBtn}
-         MobileTestLibrary.Wait Until Page Contains    You have previously allowed our app to appear on top.
+         mobile.Tap    ${continueBtn}
+         mobile.Wait Until Page Contains    You have previously allowed our app to appear on top.
          Verify help icon is working as excepted
-         MobileTestLibrary.Tap    ${continueBtn}
+         mobile.Tap    ${continueBtn}
     END
