@@ -1,0 +1,1517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230306 18:42:00.305" rpa="false" schemaversion="3">
+    <suite id="s1" name="XYZProject.TestcaseSuite"
+           source="D:\FusionTestFramework\Com.XYZProject.Android\XYZProject.TestcaseSuite">
+        <suite id="s1-s1" name="TC001 - Tap on 'Privacy policy' and verify user is landing on Privacy policy page"
+               source="D:\FusionTestFramework\Com.XYZProject.Android\XYZProject.TestcaseSuite\TC001 - Tap on 'Privacy policy' and verify user is landing on Privacy policy page.robot">
+            <kw name="Setup before suit start" library="Setup keywords" type="SETUP">
+                <kw name="Start Appium Service" library="MobileTestLibrary">
+                    <status status="PASS" starttime="20230306 18:42:00.681" endtime="20230306 18:42:01.551"/>
+                </kw>
+                <status status="PASS" starttime="20230306 18:42:00.680" endtime="20230306 18:42:01.552"/>
+            </kw>
+            <test id="s1-s1-t1" name="Tap on 'Privacy policy' and verify user is landing on Privacy policy page"
+                  line="11">
+                <kw name="Launch Test application" library="Setup keywords" type="SETUP">
+                    <kw name="Open Application" library="MobileTestLibrary">
+                        <arg>${remote_url}</arg>
+                        <arg>&amp;{device}</arg>
+                        <doc>Opens a new application to given Appium server.
+                            Capabilities of appium server, Android and iOS,
+                            Please check
+                            https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+                            | *Option* | *Man.* | *Description* |
+                            | remote_url | Yes | Appium server url |
+                            | alias | no | alias |
+                            | strict_ssl | No | allows you to send commands to an invalid certificate host like a
+                            self-signed one. |
+                        </doc>
+                        <status status="PASS" starttime="20230306 18:42:01.553" endtime="20230306 18:42:10.179"/>
+                    </kw>
+                    <kw name="Set Appium Timeout" library="MobileTestLibrary">
+                        <arg>30</arg>
+                        <doc>Sets the timeout in seconds used by various keywords.</doc>
+                        <status status="PASS" starttime="20230306 18:42:10.180" endtime="20230306 18:42:10.181"/>
+                    </kw>
+                    <status status="PASS" starttime="20230306 18:42:01.553" endtime="20230306 18:42:10.181"/>
+                </kw>
+                <kw name="launch camera app and wait until user scan the QR code from study link url"
+                    library="launch_flow_keywords">
+                    <kw name="Start Activity" library="MobileTestLibrary">
+                        <arg>com.google.android.GoogleCamera</arg>
+                        <arg>com.android.camera.CameraLauncher</arg>
+                        <doc>Opens an arbitrary activity during a test. If the activity belongs to
+                            another application, that application is started and the activity is opened.
+                        </doc>
+                        <status status="PASS" starttime="20230306 18:42:10.183" endtime="20230306 18:42:11.103"/>
+                    </kw>
+                    <kw name="Open Browser" library="WebApplicationTestLibrary">
+                        <arg>${url}</arg>
+                        <arg>${Browser}</arg>
+                        <doc>Opens a new browser instance to the optional ``url``.</doc>
+                        <msg timestamp="20230306 18:42:11.104" level="INFO">Opening browser 'chrome' to base url
+                            'https://social.vision-project.co/?studyID=d2563e38-04e4-4c06-8323-f8c4722040b0&amp;userID=Jai'.
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:42:11.103" endtime="20230306 18:42:13.983"/>
+                    </kw>
+                    <kw name="Maximize Browser Window" library="WebApplicationTestLibrary">
+                        <doc>Maximizes current browser window.</doc>
+                        <status status="PASS" starttime="20230306 18:42:13.984" endtime="20230306 18:42:14.110"/>
+                    </kw>
+                    <status status="PASS" starttime="20230306 18:42:10.182" endtime="20230306 18:42:14.110"/>
+                </kw>
+                <kw name="tap on generated link" library="launch_flow_keywords">
+                    <kw name="Wait Until Element Is Visible" library="MobileTestLibrary">
+                        <arg>${camera_smartchip_text}</arg>
+                        <arg>timeout= 300</arg>
+                        <doc>Waits until element specified with `locator` is visible.</doc>
+                        <msg timestamp="20230306 18:42:15.140" level="INFO">criteria is
+                            com.google.android.GoogleCamera:id/smarts_chip_text
+                            criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:42:14.111" endtime="20230306 18:42:15.140"/>
+                    </kw>
+                    <kw name="Click Element" library="MobileTestLibrary">
+                        <arg>${camera_smartchip_text}</arg>
+                        <doc>Click element identified by `locator`.</doc>
+                        <msg timestamp="20230306 18:42:15.149" level="INFO">Clicking element
+                            'com.google.android.GoogleCamera:id/smarts_chip_text'.
+                        </msg>
+                        <msg timestamp="20230306 18:42:15.337" level="INFO">criteria is
+                            com.google.android.GoogleCamera:id/smarts_chip_text
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:42:15.140" endtime="20230306 18:42:15.338"/>
+                    </kw>
+                    <kw name="Close Browser" library="WebApplicationTestLibrary">
+                        <doc>Closes the current browser.</doc>
+                        <status status="PASS" starttime="20230306 18:42:15.338" endtime="20230306 18:42:17.603"/>
+                    </kw>
+                    <kw name="Wait Until Element Is Visible" library="MobileTestLibrary">
+                        <arg>${google_playstore_Button}</arg>
+                        <arg>timeout=30</arg>
+                        <doc>Waits until element specified with `locator` is visible.</doc>
+                        <msg timestamp="20230306 18:42:17.950" level="INFO">xpath criteria:
+                            //android.widget.Button[@index=3]
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:42:17.603" endtime="20230306 18:42:17.950"/>
+                    </kw>
+                    <kw name="Get Text From Index" library="MobileTestLibrary">
+                        <var>${SlicedStudyLink}</var>
+                        <arg>${url}</arg>
+                        <arg>42</arg>
+                        <arg>78</arg>
+                        <msg timestamp="20230306 18:42:17.951" level="INFO">${SlicedStudyLink} =
+                            d2563e38-04e4-4c06-8323-f8c4722040b0
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:42:17.951" endtime="20230306 18:42:17.951"/>
+                    </kw>
+                    <kw name="Set Global Variable" library="BuiltIn">
+                        <arg>${SlicedStudyLink}</arg>
+                        <doc>Makes a variable available globally in all tests and suites.</doc>
+                        <msg timestamp="20230306 18:42:17.952" level="INFO">${SlicedStudyLink} =
+                            d2563e38-04e4-4c06-8323-f8c4722040b0
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:42:17.951" endtime="20230306 18:42:17.952"/>
+                    </kw>
+                    <kw name="Log To Console" library="BuiltIn">
+                        <arg>${SlicedStudyLink}</arg>
+                        <doc>Logs the given message to the console.</doc>
+                        <status status="PASS" starttime="20230306 18:42:17.952" endtime="20230306 18:42:17.953"/>
+                    </kw>
+                    <status status="PASS" starttime="20230306 18:42:14.111" endtime="20230306 18:42:17.953"/>
+                </kw>
+                <kw name="tap on 'google play store' button" library="launch_flow_keywords">
+                    <kw name="Wait Until Element Is Visible" library="MobileTestLibrary">
+                        <arg>${google_playstore_Button}</arg>
+                        <arg>timeout=30</arg>
+                        <doc>Waits until element specified with `locator` is visible.</doc>
+                        <msg timestamp="20230306 18:42:18.105" level="INFO">xpath criteria:
+                            //android.widget.Button[@index=3]
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:42:17.954" endtime="20230306 18:42:18.105"/>
+                    </kw>
+                    <kw name="Click Element" library="MobileTestLibrary">
+                        <arg>${google_playstore_Button}</arg>
+                        <doc>Click element identified by `locator`.</doc>
+                        <msg timestamp="20230306 18:42:18.110" level="INFO">Clicking element
+                            '//android.widget.Button[@index=3]'.
+                        </msg>
+                        <msg timestamp="20230306 18:42:18.323" level="INFO">xpath criteria:
+                            //android.widget.Button[@index=3]
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:42:18.105" endtime="20230306 18:42:18.323"/>
+                    </kw>
+                    <status status="PASS" starttime="20230306 18:42:17.953" endtime="20230306 18:42:18.323"/>
+                </kw>
+                <kw name="verify user is landed on 'google playstore' on vision app page"
+                    library="launch_flow_keywords">
+                    <kw name="Wait Until Page Contains" library="MobileTestLibrary">
+                        <arg>Google Play</arg>
+                        <doc>Waits until `text` appears on current page.</doc>
+                        <status status="PASS" starttime="20230306 18:42:18.325" endtime="20230306 18:42:18.959"/>
+                    </kw>
+                    <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                        <arg>Vision Project</arg>
+                        <doc>Verifies that current page contains `text`.</doc>
+                        <msg timestamp="20230306 18:42:19.625" level="INFO">Current page contains text 'Vision
+                            Project'.
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:42:18.960" endtime="20230306 18:42:19.625"/>
+                    </kw>
+                    <kw name="Go Back" library="MobileTestLibrary">
+                        <doc>Goes one step backward in the browser history.</doc>
+                        <status status="PASS" starttime="20230306 18:42:19.626" endtime="20230306 18:42:20.346"/>
+                    </kw>
+                    <status status="PASS" starttime="20230306 18:42:18.324" endtime="20230306 18:42:20.346"/>
+                </kw>
+                <kw name="Verify if Need Help? page opens up after tapping Need Help? link from landing page"
+                    library="launch_flow_keywords">
+                    <kw name="Wait Until Page Contains" library="MobileTestLibrary">
+                        <arg>Need Help</arg>
+                        <doc>Waits until `text` appears on current page.</doc>
+                        <status status="PASS" starttime="20230306 18:42:20.348" endtime="20230306 18:42:20.954"/>
+                    </kw>
+                    <kw name="Click Element" library="MobileTestLibrary">
+                        <arg>${Need_Help}</arg>
+                        <doc>Click element identified by `locator`.</doc>
+                        <msg timestamp="20230306 18:42:20.964" level="INFO">Clicking element
+                            '//android.view.View[@content-desc="Need Help"]/android.widget.TextView'.
+                        </msg>
+                        <msg timestamp="20230306 18:42:21.149" level="INFO">xpath criteria:
+                            //android.view.View[@content-desc="Need Help"]/android.widget.TextView
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:42:20.954" endtime="20230306 18:42:21.149"/>
+                    </kw>
+                    <status status="PASS" starttime="20230306 18:42:20.346" endtime="20230306 18:42:21.150"/>
+                </kw>
+                <kw name="tap on 'Privacy policy' and verify user is landing on Privacy policy page"
+                    library="launch_flow_keywords">
+                    <kw name="Wait Until Element Is Visible" library="MobileTestLibrary">
+                        <arg>${Privacy policy}</arg>
+                        <doc>Waits until element specified with `locator` is visible.</doc>
+                        <msg timestamp="20230306 18:42:21.907" level="INFO">xpath criteria:
+                            //android.view.View[@content-desc="Privacy policy"]/android.widget.TextView
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:42:21.152" endtime="20230306 18:42:21.907"/>
+                    </kw>
+                    <kw name="Click Element" library="MobileTestLibrary">
+                        <arg>${Privacy policy}</arg>
+                        <doc>Click element identified by `locator`.</doc>
+                        <msg timestamp="20230306 18:42:21.916" level="INFO">Clicking element
+                            '//android.view.View[@content-desc="Privacy policy"]/android.widget.TextView'.
+                        </msg>
+                        <msg timestamp="20230306 18:42:22.058" level="INFO">xpath criteria:
+                            //android.view.View[@content-desc="Privacy policy"]/android.widget.TextView
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:42:21.908" endtime="20230306 18:42:22.058"/>
+                    </kw>
+                    <try>
+                        <branch type="TRY">
+                            <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+                                <arg>MobileTestLibrary.Wait Until Element Is Visible</arg>
+                                <arg>${accept cookies}</arg>
+                                <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+                                <kw name="Wait Until Element Is Visible" library="MobileTestLibrary">
+                                    <arg>${accept cookies}</arg>
+                                    <doc>Waits until element specified with `locator` is visible.</doc>
+                                    <msg timestamp="20230306 18:42:53.230" level="INFO">&lt;?xml version='1.0'
+                                        encoding='UTF-8' standalone='yes' ?&gt;
+                                        &lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080"
+                                        height="2156"&gt;
+                                        &lt;android.widget.FrameLayout index="0" package="com.android.chrome"
+                                        class="android.widget.FrameLayout" text="" checkable="false" checked="false"
+                                        clickable="false" enabled="true" focusable="false" focused="false"
+                                        long-clickable="false" password="false" scrollable="false" selected="false"
+                                        bounds="[0,0][1080,2156]" displayed="true"&gt;
+                                        &lt;android.widget.LinearLayout index="0" package="com.android.chrome"
+                                        class="android.widget.LinearLayout" text="" checkable="false" checked="false"
+                                        clickable="false" enabled="true" focusable="false" focused="false"
+                                        long-clickable="false" password="false" scrollable="false" selected="false"
+                                        bounds="[0,0][1080,2156]" displayed="true"&gt;
+                                        &lt;android.widget.FrameLayout index="0" package="com.android.chrome"
+                                        class="android.widget.FrameLayout" text="" checkable="false" checked="false"
+                                        clickable="false" enabled="true" focusable="false" focused="false"
+                                        long-clickable="false" password="false" scrollable="false" selected="false"
+                                        bounds="[0,118][1080,2156]" displayed="true"&gt;
+                                        &lt;android.widget.FrameLayout index="0" package="com.android.chrome"
+                                        class="android.widget.FrameLayout" text="" checkable="false" checked="false"
+                                        clickable="false" enabled="true" focusable="false" focused="false"
+                                        long-clickable="false" password="false" scrollable="false" selected="false"
+                                        bounds="[0,118][1080,2156]" displayed="true"&gt;
+                                        &lt;android.widget.FrameLayout index="0" package="com.android.chrome"
+                                        class="android.widget.FrameLayout" text="" resource-id="android:id/content"
+                                        checkable="false" checked="false" clickable="false" enabled="true"
+                                        focusable="false" focused="false" long-clickable="false" password="false"
+                                        scrollable="false" selected="false" bounds="[0,118][1080,2156]" displayed="true"&gt;
+                                        &lt;android.view.ViewGroup index="0" package="com.android.chrome"
+                                        class="android.view.ViewGroup" text=""
+                                        resource-id="com.android.chrome:id/coordinator" checkable="false"
+                                        checked="false" clickable="false" enabled="true" focusable="false"
+                                        focused="false" long-clickable="false" password="false" scrollable="false"
+                                        selected="false" bounds="[0,118][1080,2156]" displayed="true"&gt;
+                                        &lt;android.widget.FrameLayout index="0" package="com.android.chrome"
+                                        class="android.widget.FrameLayout" text=""
+                                        resource-id="com.android.chrome:id/compositor_view_holder" checkable="false"
+                                        checked="false" clickable="false" enabled="true" focusable="false"
+                                        focused="false" long-clickable="false" password="false" scrollable="false"
+                                        selected="false" bounds="[0,118][1080,2156]" displayed="true"&gt;
+                                        &lt;android.widget.FrameLayout index="0" package="com.android.chrome"
+                                        class="android.widget.FrameLayout" text="" checkable="false" checked="false"
+                                        clickable="false" enabled="true" focusable="false" focused="false"
+                                        long-clickable="false" password="false" scrollable="false" selected="false"
+                                        bounds="[0,118][1080,2156]" displayed="true"&gt;
+                                        &lt;android.view.View index="0" package="com.android.chrome"
+                                        class="android.view.View" text="" checkable="false" checked="false"
+                                        clickable="false" enabled="true" focusable="false" focused="false"
+                                        long-clickable="false" password="false" scrollable="false" selected="false"
+                                        bounds="[0,118][1080,2156]" displayed="true" /&gt;
+                                        &lt;/android.widget.FrameLayout&gt;
+                                        &lt;android.widget.FrameLayout index="1" package="com.android.chrome"
+                                        class="android.widget.FrameLayout" text="" checkable="false" checked="false"
+                                        clickable="false" enabled="true" focusable="false" focused="false"
+                                        long-clickable="false" password="false" scrollable="false" selected="false"
+                                        bounds="[0,118][1080,2156]" displayed="true"&gt;
+                                        &lt;android.webkit.WebView index="0" package="com.android.chrome"
+                                        class="android.webkit.WebView" text="Privacy Policy | Playground xyz"
+                                        checkable="false" checked="false" clickable="false" enabled="true"
+                                        focusable="true" focused="true" long-clickable="false" password="false"
+                                        scrollable="true" selected="false" bounds="[0,265][1080,2156]" displayed="true"&gt;
+                                        &lt;android.widget.TextView index="0" package="com.android.chrome"
+                                        class="android.widget.TextView" text="GTM code:" checkable="false"
+                                        checked="false" clickable="false" enabled="true" focusable="false"
+                                        focused="false" long-clickable="false" password="false" scrollable="false"
+                                        selected="false" bounds="[0,270][204,322]" displayed="true" /&gt;
+                                        &lt;android.view.View index="1" package="com.android.chrome"
+                                        class="android.view.View" text="" checkable="false" checked="false"
+                                        clickable="false" enabled="true" focusable="false" focused="false"
+                                        long-clickable="false" password="false" scrollable="false" selected="false"
+                                        bounds="[0,265][1080,433]" displayed="true"&gt;
+                                        &lt;android.view.View index="0" package="com.android.chrome"
+                                        class="android.view.View" text="" content-desc="home" checkable="false"
+                                        checked="false" clickable="true" enabled="true" focusable="true" focused="false"
+                                        long-clickable="false" password="false" scrollable="false" selected="false"
+                                        bounds="[52,307][448,391]" displayed="true"&gt;
+                                        &lt;android.widget.Image index="0" package="com.android.chrome"
+                                        class="android.widget.Image" text="Playground xyz's logo" checkable="false"
+                                        checked="false" clickable="false" enabled="true" focusable="false"
+                                        focused="false" long-clickable="false" password="false" scrollable="false"
+                                        selected="false" bounds="[52,307][448,391]" displayed="true" /&gt;
+                                        &lt;/android.view.View&gt;
+                                        &lt;android.view.View index="1" package="com.android.chrome"
+                                        class="android.view.View" text=""
+                                        resource-id="w-node-_2f49e145-0880-2d91-2792-a15c9851f50d-9851f4f6"
+                                        checkable="false" checked="false" clickable="false" enabled="true"
+                                        focusable="false" focused="false" long-clickable="false" password="false"
+                                        scrollable="false" selected="false" bounds="[921,286][1029,412]"
+                                        displayed="true"&gt;
+                                        &lt;android.widget.Button index="0" package="com.android.chrome"
+                                        class="android.widget.Button" text="menu" checkable="false" checked="false"
+                                        clickable="true" enabled="true" focusable="true" focused="false"
+                                        long-clickable="false" password="false" scrollable="false" selected="false"
+                                        bounds="[921,286][1029,412]" displayed="true" /&gt;
+                                        &lt;/android.view.View&gt;
+                                        &lt;/android.view.View&gt;
+                                        &lt;android.widget.TextView index="2" package="com.android.chrome"
+                                        class="android.widget.TextView" text="" checkable="false" checked="false"
+                                        clickable="false" enabled="true" focusable="false" focused="false"
+                                        long-clickable="false" password="false" scrollable="false" selected="false"
+                                        bounds="[0,456][1080,2156]" displayed="true" /&gt;
+                                        &lt;android.view.View index="3" package="com.android.chrome"
+                                        class="android.view.View" text="" checkable="false" checked="false"
+                                        clickable="false" enabled="true" focusable="false" focused="false"
+                                        long-clickable="false" password="false" scrollable="false" selected="false"
+                                        bounds="[0,456][1080,2156]" displayed="true"&gt;
+                                        &lt;android.view.View index="0" package="com.android.chrome"
+                                        class="android.view.View" text="" checkable="false" checked="false"
+                                        clickable="false" enabled="true" focusable="false" focused="false"
+                                        long-clickable="false" password="false" scrollable="false" selected="false"
+                                        bounds="[0,456][1080,2156]" displayed="true"&gt;
+                                        &lt;android.view.View index="0" package="com.android.chrome"
+                                        class="android.view.View" text="" checkable="false" checked="false"
+                                        clickable="false" enabled="true" focusable="false" focused="false"
+                                        long-clickable="false" password="false" scrollable="false" selected="false"
+                                        bounds="[131,456][950,2156]" displayed="true"&gt;
+                                        &lt;android.widget.TextView index="0" package="com.android.chrome"
+                                        class="android.widget.TextView" text="Privacy Policy" checkable="false"
+                                        checked="false" clickable="false" enabled="true" focusable="false"
+                                        focused="false" long-clickable="false" password="false" scrollable="false"
+                                        selected="false" bounds="[170,519][910,598]" displayed="true" /&gt;
+                                        &lt;android.view.View index="1" package="com.android.chrome"
+                                        class="android.view.View" text="" checkable="false" checked="false"
+                                        clickable="false" enabled="true" focusable="false" focused="false"
+                                        long-clickable="false" password="false" scrollable="false" selected="false"
+                                        bounds="[170,648][763,1661]" displayed="true"&gt;
+                                        &lt;android.widget.TextView index="0" package="com.android.chrome"
+                                        class="android.widget.TextView" text="Thanks for visiting the Playground xyz
+                                        website! We're committed to providing you with meaningful information about our
+                                        products and services, and want to make sure you're aware of your rights when it
+                                        comes to information shared with us. Our goal is to be transparent about the
+                                        data we collect, whether directly or via partners, and inform you about how your
+                                        data is (or is not) used. View our full policy below and please "
+                                        checkable="false" checked="false" clickable="false" enabled="true"
+                                        focusable="false" focused="false" long-clickable="false" password="false"
+                                        scrollable="false" selected="false" bounds="[170,656][758,1590]"
+                                        displayed="true" /&gt;
+                                        &lt;android.view.View index="1" package="com.android.chrome"
+                                        class="android.view.View" text="" content-desc="get in touch" checkable="false"
+                                        checked="false" clickable="true" enabled="true" focusable="true" focused="false"
+                                        long-clickable="false" password="false" scrollable="false" selected="false"
+                                        bounds="[506,1538][729,1590]" displayed="true"&gt;
+                                        &lt;android.widget.TextView index="0" package="com.android.chrome"
+                                        class="android.widget.TextView" text="get in touch" checkable="false"
+                                        checked="false" clickable="false" enabled="true" focusable="false"
+                                        focused="false" long-clickable="false" password="false" scrollable="false"
+                                        selected="false" bounds="[506,1538][729,1590]" displayed="true" /&gt;
+                                        &lt;/android.view.View&gt;
+                                        &lt;android.widget.TextView index="2" package="com.android.chrome"
+                                        class="android.widget.TextView" text=" if you have any questions."
+                                        checkable="false" checked="false" clickable="false" enabled="true"
+                                        focusable="false" focused="false" long-clickable="false" password="false"
+                                        scrollable="false" selected="false" bounds="[170,1601][656,1653]"
+                                        displayed="true" /&gt;
+                                        &lt;/android.view.View&gt;
+                                        &lt;android.view.View index="2" package="com.android.chrome"
+                                        class="android.view.View" text="" content-desc="Read Privacy Policy"
+                                        checkable="false" checked="false" clickable="true" enabled="true"
+                                        focusable="true" focused="false" long-clickable="false" password="false"
+                                        scrollable="false" selected="false" bounds="[283,1719][798,1858]"
+                                        displayed="true"&gt;
+                                        &lt;android.widget.TextView index="0" package="com.android.chrome"
+                                        class="android.widget.TextView" text="Read Privacy Policy" checkable="false"
+                                        checked="false" clickable="false" enabled="true" focusable="false"
+                                        focused="false" long-clickable="false" password="false" scrollable="false"
+                                        selected="false" bounds="[351,1756][729,1821]" displayed="true" /&gt;
+                                        &lt;/android.view.View&gt;
+                                        &lt;android.view.View index="3" package="com.android.chrome"
+                                        class="android.view.View" text="" content-desc="Read Privacy Policy for
+                                        California Residents" checkable="false" checked="false" clickable="true"
+                                        enabled="true" focusable="true" focused="false" long-clickable="false"
+                                        password="false" scrollable="false" selected="false"
+                                        bounds="[170,1897][910,2099]" displayed="true"&gt;
+                                        &lt;android.widget.TextView index="0" package="com.android.chrome"
+                                        class="android.widget.TextView" text="Read Privacy Policy for California
+                                        Residents" checkable="false" checked="false" clickable="false" enabled="true"
+                                        focusable="false" focused="false" long-clickable="false" password="false"
+                                        scrollable="false" selected="false" bounds="[238,1934][842,2063]"
+                                        displayed="true" /&gt;
+                                        &lt;/android.view.View&gt;
+                                        &lt;android.view.View index="4" package="com.android.chrome"
+                                        class="android.view.View" text=""
+                                        resource-id="w-node-a8afc77f-e1e7-cf9f-1712-4ffdf97c284f-f9f88e7d"
+                                        checkable="false" checked="false" clickable="false" enabled="true"
+                                        focusable="false" focused="false" long-clickable="false" password="false"
+                                        scrollable="false" selected="false" bounds="[170,2223][910,2277]"
+                                        displayed="true"&gt;
+                                        &lt;android.widget.Image index="0" package="com.android.chrome"
+                                        class="android.widget.Image" text="" checkable="false" checked="false"
+                                        clickable="false" enabled="true" focusable="false" focused="false"
+                                        long-clickable="false" password="false" scrollable="false" selected="false"
+                                        bounds="[170,2223][910,2277]" displayed="true" /&gt;
+                                        &lt;/android.view.View&gt;
+                                        &lt;/android.view.View&gt;
+                                        &lt;/android.view.View&gt;
+                                        &lt;/android.view.View&gt;
+                                        &lt;android.view.View index="4" package="com.android.chrome"
+                                        class="android.view.View" text="" resource-id="onetrust-consent-sdk"
+                                        checkable="false" checked="false" clickable="false" enabled="true"
+                                        focusable="false" focused="false" long-clickable="false" password="false"
+                                        scrollable="false" selected="false" bounds="[7,2115][144,2156]" displayed="true"&gt;
+                                        &lt;android.view.View index="0" package="com.android.chrome"
+                                        class="android.view.View" text="Manage Preferences"
+                                        resource-id="ot-sdk-btn-floating" checkable="false" checked="false"
+                                        clickable="false" enabled="true" focusable="false" focused="false"
+                                        long-clickable="false" password="false" scrollable="false" selected="false"
+                                        bounds="[7,2115][144,2156]" displayed="true"&gt;
+                                        &lt;android.view.View index="0" package="com.android.chrome"
+                                        class="android.view.View" text="" checkable="false" checked="false"
+                                        clickable="false" enabled="true" focusable="false" focused="false"
+                                        long-clickable="false" password="false" scrollable="false" selected="false"
+                                        bounds="[7,2115][144,2156]" displayed="true"&gt;
+                                        &lt;android.widget.Button index="0" package="com.android.chrome"
+                                        class="android.widget.Button" text="Open Preferences" checkable="false"
+                                        checked="false" clickable="true" enabled="true" focusable="true" focused="false"
+                                        long-clickable="false" password="false" scrollable="false" selected="false"
+                                        bounds="[7,2115][144,2156]" displayed="true" /&gt;
+                                        &lt;/android.view.View&gt;
+                                        &lt;android.view.View index="1" package="com.android.chrome"
+                                        class="android.view.View" text="" checkable="false" checked="false"
+                                        clickable="false" enabled="true" focusable="false" focused="false"
+                                        long-clickable="false" password="false" scrollable="false" selected="false"
+                                        bounds="[7,2115][144,2156]" displayed="true" /&gt;
+                                        &lt;android.widget.TextView index="2" package="com.android.chrome"
+                                        class="android.widget.TextView" text="Manage Preferences" checkable="false"
+                                        checked="false" clickable="false" enabled="true" focusable="false"
+                                        focused="false" long-clickable="false" password="false" scrollable="false"
+                                        selected="false" bounds="[178,2155][498,2156]" displayed="true" /&gt;
+                                        &lt;/android.view.View&gt;
+                                        &lt;/android.view.View&gt;
+                                        &lt;/android.webkit.WebView&gt;
+                                        &lt;/android.widget.FrameLayout&gt;
+                                        &lt;/android.widget.FrameLayout&gt;
+                                        &lt;android.widget.FrameLayout index="1" package="com.android.chrome"
+                                        class="android.widget.FrameLayout" text=""
+                                        resource-id="com.android.chrome:id/control_container" checkable="false"
+                                        checked="false" clickable="false" enabled="true" focusable="false"
+                                        focused="false" long-clickable="false" password="false" scrollable="false"
+                                        selected="false" bounds="[0,118][1080,268]" displayed="true"&gt;
+                                        &lt;android.widget.FrameLayout index="0" package="com.android.chrome"
+                                        class="android.widget.FrameLayout" text=""
+                                        resource-id="com.android.chrome:id/toolbar_container" checkable="false"
+                                        checked="false" clickable="false" enabled="true" focusable="false"
+                                        focused="false" long-clickable="false" password="false" scrollable="false"
+                                        selected="false" bounds="[0,118][1080,268]" displayed="true"&gt;
+                                        &lt;android.widget.FrameLayout index="0" package="com.android.chrome"
+                                        class="android.widget.FrameLayout" text=""
+                                        resource-id="com.android.chrome:id/toolbar" checkable="false" checked="false"
+                                        clickable="false" enabled="true" focusable="false" focused="false"
+                                        long-clickable="false" password="false" scrollable="false" selected="false"
+                                        bounds="[0,118][1080,265]" displayed="true"&gt;
+                                        &lt;android.widget.ImageButton index="0" package="com.android.chrome"
+                                        class="android.widget.ImageButton" text="" content-desc="Home"
+                                        resource-id="com.android.chrome:id/home_button" checkable="false"
+                                        checked="false" clickable="true" enabled="true" focusable="true" focused="false"
+                                        long-clickable="true" password="false" scrollable="false" selected="false"
+                                        bounds="[0,118][126,265]" displayed="true" /&gt;
+                                        &lt;android.widget.FrameLayout index="1" package="com.android.chrome"
+                                        class="android.widget.FrameLayout" text=""
+                                        resource-id="com.android.chrome:id/location_bar" checkable="false"
+                                        checked="false" clickable="false" enabled="true" focusable="false"
+                                        focused="false" long-clickable="false" password="false" scrollable="false"
+                                        selected="false" bounds="[126,118][828,265]" displayed="true"&gt;
+                                        &lt;android.widget.LinearLayout index="0" package="com.android.chrome"
+                                        class="android.widget.LinearLayout" text=""
+                                        resource-id="com.android.chrome:id/location_bar_status" checkable="false"
+                                        checked="false" clickable="true" enabled="true" focusable="true" focused="false"
+                                        long-clickable="true" password="false" scrollable="false" selected="false"
+                                        bounds="[137,118][221,265]" displayed="true"&gt;
+                                        &lt;android.widget.LinearLayout index="0" package="com.android.chrome"
+                                        class="android.widget.LinearLayout" text=""
+                                        resource-id="com.android.chrome:id/location_bar_status_icon_view"
+                                        checkable="false" checked="false" clickable="false" enabled="true"
+                                        focusable="false" focused="false" long-clickable="false" password="false"
+                                        scrollable="false" selected="false" bounds="[137,118][221,265]" displayed="true"&gt;
+                                        &lt;android.widget.FrameLayout index="0" package="com.android.chrome"
+                                        class="android.widget.FrameLayout" text=""
+                                        resource-id="com.android.chrome:id/location_bar_status_icon_frame"
+                                        checkable="false" checked="false" clickable="false" enabled="true"
+                                        focusable="false" focused="false" long-clickable="false" password="false"
+                                        scrollable="false" selected="false" bounds="[137,118][221,265]" displayed="true"&gt;
+                                        &lt;android.widget.ImageView index="0" package="com.android.chrome"
+                                        class="android.widget.ImageView" text="" content-desc="Connection is secure"
+                                        resource-id="com.android.chrome:id/location_bar_status_icon" checkable="false"
+                                        checked="false" clickable="false" enabled="true" focusable="false"
+                                        focused="false" long-clickable="false" password="false" scrollable="false"
+                                        selected="false" bounds="[147,118][210,265]" displayed="true" /&gt;
+                                        &lt;/android.widget.FrameLayout&gt;
+                                        &lt;/android.widget.LinearLayout&gt;
+                                        &lt;/android.widget.LinearLayout&gt;
+                                        &lt;android.widget.EditText index="1" package="com.android.chrome"
+                                        class="android.widget.EditText" text="playgroundxyz.com/privacy"
+                                        resource-id="com.android.chrome:id/url_bar" checkable="false" checked="false"
+                                        clickable="true" enabled="true" focusable="true" focused="false"
+                                        long-clickable="true" password="false" scrollable="false" selected="false"
+                                        bounds="[221,126][807,257]" displayed="true" /&gt;
+                                        &lt;/android.widget.FrameLayout&gt;
+                                        &lt;android.widget.LinearLayout index="2" package="com.android.chrome"
+                                        class="android.widget.LinearLayout" text=""
+                                        resource-id="com.android.chrome:id/toolbar_buttons" checkable="false"
+                                        checked="false" clickable="false" enabled="true" focusable="true"
+                                        focused="false" long-clickable="false" password="false" scrollable="false"
+                                        selected="false" bounds="[828,118][1080,265]" displayed="true"&gt;
+                                        &lt;android.widget.ImageButton index="0" package="com.android.chrome"
+                                        class="android.widget.ImageButton" text="" content-desc="Switch or close tabs"
+                                        resource-id="com.android.chrome:id/tab_switcher_button" checkable="false"
+                                        checked="false" clickable="true" enabled="true" focusable="true" focused="false"
+                                        long-clickable="true" password="false" scrollable="false" selected="false"
+                                        bounds="[828,118][954,265]" displayed="true" /&gt;
+                                        &lt;android.widget.FrameLayout index="1" package="com.android.chrome"
+                                        class="android.widget.FrameLayout" text=""
+                                        resource-id="com.android.chrome:id/menu_button_wrapper" checkable="false"
+                                        checked="false" clickable="false" enabled="true" focusable="false"
+                                        focused="false" long-clickable="false" password="false" scrollable="false"
+                                        selected="false" bounds="[954,118][1080,265]" displayed="true"&gt;
+                                        &lt;android.widget.ImageButton index="0" package="com.android.chrome"
+                                        class="android.widget.ImageButton" text="" content-desc="More options"
+                                        resource-id="com.android.chrome:id/menu_button" checkable="false"
+                                        checked="false" clickable="true" enabled="true" focusable="true" focused="false"
+                                        long-clickable="false" password="false" scrollable="false" selected="false"
+                                        bounds="[954,118][1080,265]" displayed="true" /&gt;
+                                        &lt;/android.widget.FrameLayout&gt;
+                                        &lt;/android.widget.LinearLayout&gt;
+                                        &lt;/android.widget.FrameLayout&gt;
+                                        &lt;android.widget.ImageView index="1" package="com.android.chrome"
+                                        class="android.widget.ImageView" text=""
+                                        resource-id="com.android.chrome:id/toolbar_hairline" checkable="false"
+                                        checked="false" clickable="false" enabled="true" focusable="false"
+                                        focused="false" long-clickable="false" password="false" scrollable="false"
+                                        selected="false" bounds="[0,265][1080,268]" displayed="true" /&gt;
+                                        &lt;/android.widget.FrameLayout&gt;
+                                        &lt;/android.widget.FrameLayout&gt;
+                                        &lt;/android.view.ViewGroup&gt;
+                                        &lt;/android.widget.FrameLayout&gt;
+                                        &lt;/android.widget.FrameLayout&gt;
+                                        &lt;/android.widget.FrameLayout&gt;
+                                        &lt;/android.widget.LinearLayout&gt;
+                                        &lt;/android.widget.FrameLayout&gt;
+                                        &lt;/hierarchy&gt;
+                                    </msg>
+                                    <kw name="Capture Page Screenshot">
+                                        <msg timestamp="20230306 18:42:53.233" level="FAIL">Multiple keywords with name
+                                            'Capture Page Screenshot' found. Give the full name of the keyword you want
+                                            to use:
+                                            MobileTestLibrary.Capture Page Screenshot
+                                            WebApplicationTestLibrary.Capture Page Screenshot
+                                        </msg>
+                                        <status status="FAIL" starttime="20230306 18:42:53.232"
+                                                endtime="20230306 18:42:53.233"/>
+                                    </kw>
+                                    <msg timestamp="20230306 18:42:53.243" level="WARN">Keyword 'Capture Page
+                                        Screenshot' could not be run on failure: Multiple keywords with name 'Capture
+                                        Page Screenshot' found. Give the full name of the keyword you want to use:
+                                        MobileTestLibrary.Capture Page Screenshot
+                                        WebApplicationTestLibrary.Capture Page Screenshot
+                                    </msg>
+                                    <kw name="Capture Page Screenshot">
+                                        <msg timestamp="20230306 18:42:53.245" level="FAIL">Multiple keywords with name
+                                            'Capture Page Screenshot' found. Give the full name of the keyword you want
+                                            to use:
+                                            MobileTestLibrary.Capture Page Screenshot
+                                            WebApplicationTestLibrary.Capture Page Screenshot
+                                        </msg>
+                                        <status status="FAIL" starttime="20230306 18:42:53.244"
+                                                endtime="20230306 18:42:53.245"/>
+                                    </kw>
+                                    <msg timestamp="20230306 18:42:53.254" level="WARN">Keyword 'Capture Page
+                                        Screenshot' could not be run on failure: Multiple keywords with name 'Capture
+                                        Page Screenshot' found. Give the full name of the keyword you want to use:
+                                        MobileTestLibrary.Capture Page Screenshot
+                                        WebApplicationTestLibrary.Capture Page Screenshot
+                                    </msg>
+                                    <msg timestamp="20230306 18:42:53.254" level="INFO">criteria is
+                                        onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                        criteria is onetrust-accept-btn-handler
+                                    </msg>
+                                    <msg timestamp="20230306 18:42:53.255" level="FAIL">Element locator
+                                        'onetrust-accept-btn-handler' did not match any elements after 30 seconds
+                                    </msg>
+                                    <status status="FAIL" starttime="20230306 18:42:22.060"
+                                            endtime="20230306 18:42:53.258"/>
+                                </kw>
+                                <status status="FAIL" starttime="20230306 18:42:22.059"
+                                        endtime="20230306 18:42:53.258"/>
+                            </kw>
+                            <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+                                <arg>MobileTestLibrary.Click Element</arg>
+                                <arg>${accept cookies}</arg>
+                                <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+                                <kw name="Click Element" library="MobileTestLibrary">
+                                    <arg>${accept cookies}</arg>
+                                    <doc>Click element identified by `locator`.</doc>
+                                    <msg timestamp="20230306 18:42:53.267" level="INFO">Clicking element
+                                        'onetrust-accept-btn-handler'.
+                                    </msg>
+                                    <kw name="Capture Page Screenshot">
+                                        <msg timestamp="20230306 18:42:53.983" level="FAIL">Multiple keywords with name
+                                            'Capture Page Screenshot' found. Give the full name of the keyword you want
+                                            to use:
+                                            MobileTestLibrary.Capture Page Screenshot
+                                            WebApplicationTestLibrary.Capture Page Screenshot
+                                        </msg>
+                                        <status status="FAIL" starttime="20230306 18:42:53.983"
+                                                endtime="20230306 18:42:53.985"/>
+                                    </kw>
+                                    <msg timestamp="20230306 18:42:53.994" level="WARN">Keyword 'Capture Page
+                                        Screenshot' could not be run on failure: Multiple keywords with name 'Capture
+                                        Page Screenshot' found. Give the full name of the keyword you want to use:
+                                        MobileTestLibrary.Capture Page Screenshot
+                                        WebApplicationTestLibrary.Capture Page Screenshot
+                                    </msg>
+                                    <kw name="Capture Page Screenshot">
+                                        <msg timestamp="20230306 18:42:53.995" level="FAIL">Multiple keywords with name
+                                            'Capture Page Screenshot' found. Give the full name of the keyword you want
+                                            to use:
+                                            MobileTestLibrary.Capture Page Screenshot
+                                            WebApplicationTestLibrary.Capture Page Screenshot
+                                        </msg>
+                                        <status status="FAIL" starttime="20230306 18:42:53.995"
+                                                endtime="20230306 18:42:53.995"/>
+                                    </kw>
+                                    <msg timestamp="20230306 18:42:54.003" level="WARN">Keyword 'Capture Page
+                                        Screenshot' could not be run on failure: Multiple keywords with name 'Capture
+                                        Page Screenshot' found. Give the full name of the keyword you want to use:
+                                        MobileTestLibrary.Capture Page Screenshot
+                                        WebApplicationTestLibrary.Capture Page Screenshot
+                                    </msg>
+                                    <msg timestamp="20230306 18:42:54.004" level="INFO">criteria is
+                                        onetrust-accept-btn-handler
+                                    </msg>
+                                    <msg timestamp="20230306 18:42:54.004" level="FAIL">ValueError: Element locator
+                                        'onetrust-accept-btn-handler' did not match any elements.
+                                    </msg>
+                                    <status status="FAIL" starttime="20230306 18:42:53.259"
+                                            endtime="20230306 18:42:54.007"/>
+                                </kw>
+                                <status status="FAIL" starttime="20230306 18:42:53.258"
+                                        endtime="20230306 18:42:54.007"/>
+                            </kw>
+                            <status status="FAIL" starttime="20230306 18:42:22.058" endtime="20230306 18:42:54.007"/>
+                        </branch>
+                        <branch type="EXCEPT">
+                            <kw name="Log To Console" library="BuiltIn">
+                                <arg>cookies already accepted by the user</arg>
+                                <doc>Logs the given message to the console.</doc>
+                                <status status="PASS" starttime="20230306 18:42:54.007"
+                                        endtime="20230306 18:42:54.008"/>
+                            </kw>
+                            <status status="PASS" starttime="20230306 18:42:54.007" endtime="20230306 18:42:54.008"/>
+                        </branch>
+                        <status status="PASS" starttime="20230306 18:42:22.058" endtime="20230306 18:42:54.008"/>
+                    </try>
+                    <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                        <arg>Privacy Policy</arg>
+                        <doc>Verifies that current page contains `text`.</doc>
+                        <msg timestamp="20230306 18:42:54.130" level="INFO">Current page contains text 'Privacy
+                            Policy'.
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:42:54.008" endtime="20230306 18:42:54.130"/>
+                    </kw>
+                    <kw name="Click Element" library="MobileTestLibrary">
+                        <arg>${Read Privacy Policy Btn}</arg>
+                        <doc>Click element identified by `locator`.</doc>
+                        <msg timestamp="20230306 18:42:54.140" level="INFO">Clicking element
+                            '//android.view.View[@content-desc="Read Privacy Policy"]/android.widget.TextView'.
+                        </msg>
+                        <msg timestamp="20230306 18:42:54.897" level="INFO">xpath criteria:
+                            //android.view.View[@content-desc="Read Privacy Policy"]/android.widget.TextView
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:42:54.131" endtime="20230306 18:42:54.898"/>
+                    </kw>
+                    <kw name="Wait Until Page Contains" library="MobileTestLibrary">
+                        <arg>In this Privacy Policy, 'us' 'we' or 'our' means PLAYGROUND XYZ HOLDINGS</arg>
+                        <doc>Waits until `text` appears on current page.</doc>
+                        <status status="PASS" starttime="20230306 18:42:54.898" endtime="20230306 18:42:57.593"/>
+                    </kw>
+                    <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                        <arg>In this Privacy Policy, 'us' 'we' or 'our' means PLAYGROUND XYZ HOLDINGS PTY LTD (ABN 76
+                            607 526 027) and our related bodies PLAYGROUND XYZ AUSTRALIA PTY LTD (ABN 42 607 532 365),
+                            PLAYGROUND XYZ IP PTY LTD (ABN 66 607 532 025), PLAYGROUND XYZ EMEA LTD (UK Company No.
+                            10802474), PLAYGROUND XYZ ASIA PTE. LTD. (SG Registration No. 201809380E) and PLAYGROUND XYZ
+                            NORTH AMERICA CORP (EIN 36-4922580). We are committed to respecting your privacy.
+                        </arg>
+                        <doc>Verifies that current page contains `text`.</doc>
+                        <msg timestamp="20230306 18:42:58.157" level="INFO">Current page contains text 'In this Privacy
+                            Policy, 'us' 'we' or 'our' means PLAYGROUND XYZ HOLDINGS PTY LTD (ABN 76 607 526 027) and
+                            our related bodies PLAYGROUND XYZ AUSTRALIA PTY LTD (ABN 42 607 532 365), PLAYGROUND XYZ IP
+                            PTY LTD (ABN 66 607 532 025), PLAYGROUND XYZ EMEA LTD (UK Company No. 10802474), PLAYGROUND
+                            XYZ ASIA PTE. LTD. (SG Registration No. 201809380E) and PLAYGROUND XYZ NORTH AMERICA CORP
+                            (EIN 36-4922580). We are committed to respecting your privacy.'.
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:42:57.593" endtime="20230306 18:42:58.157"/>
+                    </kw>
+                    <kw name="Scroll To Element By Exact Text" library="MobileTestLibrary">
+                        <arg>Read Privacy Policy for California Residents</arg>
+                        <status status="PASS" starttime="20230306 18:42:58.157" endtime="20230306 18:43:02.133"/>
+                    </kw>
+                    <kw name="Click Element" library="MobileTestLibrary">
+                        <arg>${Read Privacy Policy for California Residents Btn}</arg>
+                        <doc>Click element identified by `locator`.</doc>
+                        <msg timestamp="20230306 18:43:02.145" level="INFO">Clicking element
+                            '//android.view.View[@content-desc="Read Privacy Policy for California
+                            Residents"]/android.widget.TextView'.
+                        </msg>
+                        <msg timestamp="20230306 18:43:02.926" level="INFO">xpath criteria:
+                            //android.view.View[@content-desc="Read Privacy Policy for California
+                            Residents"]/android.widget.TextView
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:02.133" endtime="20230306 18:43:02.926"/>
+                    </kw>
+                    <kw name="Wait Until Page Contains" library="MobileTestLibrary">
+                        <arg>Playground XYZ Holdings Pty. Ltd., Playground XYZ Australia Pty. Ltd.</arg>
+                        <arg>timeout=15</arg>
+                        <doc>Waits until `text` appears on current page.</doc>
+                        <status status="PASS" starttime="20230306 18:43:02.927" endtime="20230306 18:43:06.531"/>
+                    </kw>
+                    <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                        <arg>Playground XYZ Holdings Pty. Ltd., Playground XYZ Australia Pty. Ltd., Playground XYZ IP
+                            Pty. Ltd., Playground XYZ EMEA Ltd., Playground XYZ Asia Pte. Ltd. and Playground XYZ North
+                            America Corp. and their affiliates (collectively,“[COMPANY],” “we,” “us,” or “our”) adopts
+                            this Privacy Statement to comply with the California Consumer Privacy Act of 2018 (“CCPA”)
+                            and other California privacy laws. This Privacy Statement applies solely to visitors, users,
+                            and others who reside in the State of California (“consumers,” “you,” or “your”).
+                        </arg>
+                        <arg>This Privacy Statement explains our privacy practices and your rights regarding the
+                            collection, use, and disclosure of your personal information.
+                        </arg>
+                        <doc>Verifies that current page contains `text`.</doc>
+                        <msg timestamp="20230306 18:43:07.304" level="INFO">Current page contains text 'Playground XYZ
+                            Holdings Pty. Ltd., Playground XYZ Australia Pty. Ltd., Playground XYZ IP Pty. Ltd.,
+                            Playground XYZ EMEA Ltd., Playground XYZ Asia Pte. Ltd. and Playground XYZ North America
+                            Corp. and their affiliates (collectively,“[COMPANY],” “we,” “us,” or “our”) adopts this
+                            Privacy Statement to comply with the California Consumer Privacy Act of 2018 (“CCPA”) and
+                            other California privacy laws. This Privacy Statement applies solely to visitors, users, and
+                            others who reside in the State of California (“consumers,” “you,” or “your”).'.
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:06.531" endtime="20230306 18:43:07.304"/>
+                    </kw>
+                    <kw name="Go Back" library="MobileTestLibrary">
+                        <doc>Goes one step backward in the browser history.</doc>
+                        <status status="PASS" starttime="20230306 18:43:07.304" endtime="20230306 18:43:07.835"/>
+                    </kw>
+                    <kw name="Go Back" library="MobileTestLibrary">
+                        <doc>Goes one step backward in the browser history.</doc>
+                        <status status="PASS" starttime="20230306 18:43:07.835" endtime="20230306 18:43:08.720"/>
+                    </kw>
+                    <kw name="Go Back" library="MobileTestLibrary">
+                        <doc>Goes one step backward in the browser history.</doc>
+                        <status status="PASS" starttime="20230306 18:43:08.721" endtime="20230306 18:43:09.457"/>
+                    </kw>
+                    <status status="PASS" starttime="20230306 18:42:21.150" endtime="20230306 18:43:09.457"/>
+                </kw>
+                <kw name="close Test application" library="Setup keywords" type="TEARDOWN">
+                    <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+                        <arg>MobileTestLibrary.Close Application</arg>
+                        <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+                        <kw name="Close Application" library="MobileTestLibrary">
+                            <doc>Closes the current application and also close webdriver session.</doc>
+                            <status status="PASS" starttime="20230306 18:43:09.460" endtime="20230306 18:43:09.875"/>
+                        </kw>
+                        <status status="PASS" starttime="20230306 18:43:09.459" endtime="20230306 18:43:09.876"/>
+                    </kw>
+                    <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+                        <arg>WebApplicationTestLibrary.Close Browser</arg>
+                        <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+                        <kw name="Close Browser" library="WebApplicationTestLibrary">
+                            <doc>Closes the current browser.</doc>
+                            <status status="PASS" starttime="20230306 18:43:09.877" endtime="20230306 18:43:09.877"/>
+                        </kw>
+                        <status status="PASS" starttime="20230306 18:43:09.876" endtime="20230306 18:43:09.878"/>
+                    </kw>
+                    <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+                        <arg>WebApplicationTestLibrary.Close All Browsers</arg>
+                        <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+                        <kw name="Close All Browsers" library="WebApplicationTestLibrary">
+                            <doc>Closes all open browsers and resets the browser cache.</doc>
+                            <status status="PASS" starttime="20230306 18:43:09.879" endtime="20230306 18:43:09.879"/>
+                        </kw>
+                        <status status="PASS" starttime="20230306 18:43:09.878" endtime="20230306 18:43:09.879"/>
+                    </kw>
+                    <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+                        <arg>MobileTestLibrary.Close All Applications</arg>
+                        <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+                        <kw name="Close All Applications" library="MobileTestLibrary">
+                            <doc>Closes all open applications.</doc>
+                            <status status="PASS" starttime="20230306 18:43:09.880" endtime="20230306 18:43:09.889"/>
+                        </kw>
+                        <status status="PASS" starttime="20230306 18:43:09.880" endtime="20230306 18:43:09.890"/>
+                    </kw>
+                    <status status="PASS" starttime="20230306 18:43:09.458" endtime="20230306 18:43:09.890"/>
+                </kw>
+                <doc>Verification that Google Play button redirecting user to Vision Project on play store</doc>
+                <tag>Regression</tag>
+                <status status="PASS" starttime="20230306 18:42:01.552" endtime="20230306 18:43:09.890"/>
+            </test>
+            <kw name="tearDown" library="Setup keywords" type="TEARDOWN">
+                <kw name="Stop Appium Service" library="MobileTestLibrary">
+                    <status status="PASS" starttime="20230306 18:43:09.893" endtime="20230306 18:43:09.894"/>
+                </kw>
+                <status status="PASS" starttime="20230306 18:43:09.892" endtime="20230306 18:43:09.895"/>
+            </kw>
+            <status status="PASS" starttime="20230306 18:42:00.329" endtime="20230306 18:43:09.895"/>
+        </suite>
+        <suite id="s1-s2" name="TC002 - Verify that Deep link URL is providing QR code"
+               source="D:\FusionTestFramework\Com.XYZProject.Android\XYZProject.TestcaseSuite\TC002 - Verify that Deep link URL is providing QR code.robot">
+            <test id="s1-s2-t1" name="Verify that Deep link URL is providing QR code" line="8">
+                <kw name="Launch browser and input url" library="Setup keywords" type="SETUP">
+                    <kw name="Open Browser" library="WebApplicationTestLibrary">
+                        <arg>${url}</arg>
+                        <arg>${Browser}</arg>
+                        <doc>Opens a new browser instance to the optional ``url``.</doc>
+                        <msg timestamp="20230306 18:43:09.926" level="INFO">Opening browser 'chrome' to base url
+                            'https://social.vision-project.co/?studyID=d2563e38-04e4-4c06-8323-f8c4722040b0&amp;userID=Jai'.
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:09.926" endtime="20230306 18:43:12.374"/>
+                    </kw>
+                    <kw name="Maximize Browser Window" library="WebApplicationTestLibrary">
+                        <doc>Maximizes current browser window.</doc>
+                        <status status="PASS" starttime="20230306 18:43:12.374" endtime="20230306 18:43:12.492"/>
+                    </kw>
+                    <status status="PASS" starttime="20230306 18:43:09.925" endtime="20230306 18:43:12.493"/>
+                </kw>
+                <kw name="wait until QR code generated and validate QR code link details and log to console"
+                    library="QR_Code_page_keywords">
+                    <kw name="Wait Until Page Contains" library="WebApplicationTestLibrary">
+                        <arg>Study cannot be conducted here</arg>
+                        <doc>Waits until ``text`` appears on the current page.</doc>
+                        <status status="PASS" starttime="20230306 18:43:12.493" endtime="20230306 18:43:12.509"/>
+                    </kw>
+                    <kw name="Element Should Be Visible" library="WebApplicationTestLibrary">
+                        <arg>${QR_Code}</arg>
+                        <doc>Verifies that the element identified by ``locator`` is visible.</doc>
+                        <msg timestamp="20230306 18:43:12.539" level="INFO">Element '//*[@viewBox='0 0 256 256']' is
+                            displayed.
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:12.509" endtime="20230306 18:43:12.539"/>
+                    </kw>
+                    <kw name="Capture Element Screenshot" library="WebApplicationTestLibrary">
+                        <var>${captured_img}</var>
+                        <arg>${QR_Code}</arg>
+                        <doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log
+                            file.
+                        </doc>
+                        <msg timestamp="20230306 18:43:12.689" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td
+                            colspan="3"&gt;&lt;a href="selenium-element-screenshot-1.png"&gt;&lt;img
+                            src="selenium-element-screenshot-1.png" width="400px"&gt;&lt;/a&gt;
+                        </msg>
+                        <msg timestamp="20230306 18:43:12.689" level="INFO">${captured_img} =
+                            D:\FusionTestFramework\Com.XYZProject.Android\XYZProject.TestResults\06-03-23_18-42-00\selenium-element-screenshot-1.png
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:12.539" endtime="20230306 18:43:12.689"/>
+                    </kw>
+                    <kw name="Scan QR Code" library="WebApplicationTestLibrary">
+                        <var>${QRCodedata}</var>
+                        <arg>${captured_img}</arg>
+                        <msg timestamp="20230306 18:43:13.366" level="INFO">3.4.1 (3, 4, 1)</msg>
+                        <msg timestamp="20230306 18:43:13.366" level="INFO">${QRCodedata} =
+                            BarCode(raw='https://social.vision-project.co/?studyID=d2563e38-04e4-4c06-8323-f8c4722040b0&amp;userID=Jai',
+                            parsed='https://social.vision-project.co/?studyID=d2563e38-04e4-4c06-8323-f8c4722040b0&amp;userID=J...
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:12.690" endtime="20230306 18:43:13.366"/>
+                    </kw>
+                    <kw name="Log To Console" library="BuiltIn">
+                        <arg>${QRCodedata}</arg>
+                        <doc>Logs the given message to the console.</doc>
+                        <status status="PASS" starttime="20230306 18:43:13.366" endtime="20230306 18:43:13.366"/>
+                    </kw>
+                    <status status="PASS" starttime="20230306 18:43:12.493" endtime="20230306 18:43:13.367"/>
+                </kw>
+                <kw name="Close Browser" library="WebApplicationTestLibrary" type="TEARDOWN">
+                    <doc>Closes the current browser.</doc>
+                    <status status="PASS" starttime="20230306 18:43:13.368" endtime="20230306 18:43:15.611"/>
+                </kw>
+                <doc>verification of barcode generation of specified link</doc>
+                <tag>Regression</tag>
+                <status status="PASS" starttime="20230306 18:43:09.925" endtime="20230306 18:43:15.612"/>
+            </test>
+            <status status="PASS" starttime="20230306 18:43:09.899" endtime="20230306 18:43:15.612"/>
+        </suite>
+        <suite id="s1-s3" name="TC003 - Verify that Google Play button redirecting user to Vision Project on play store"
+               source="D:\FusionTestFramework\Com.XYZProject.Android\XYZProject.TestcaseSuite\TC003 - Verify that Google Play button redirecting user to Vision Project on play store.robot">
+            <kw name="Setup before suit start" library="Setup keywords" type="SETUP">
+                <kw name="Start Appium Service" library="MobileTestLibrary">
+                    <status status="PASS" starttime="20230306 18:43:15.652" endtime="20230306 18:43:16.454"/>
+                </kw>
+                <status status="PASS" starttime="20230306 18:43:15.652" endtime="20230306 18:43:16.454"/>
+            </kw>
+            <test id="s1-s3-t1" name="Verify that Google Play button redirecting user to Vision Project on play store"
+                  line="11">
+                <kw name="Launch Test application" library="Setup keywords" type="SETUP">
+                    <kw name="Open Application" library="MobileTestLibrary">
+                        <arg>${remote_url}</arg>
+                        <arg>&amp;{device}</arg>
+                        <doc>Opens a new application to given Appium server.
+                            Capabilities of appium server, Android and iOS,
+                            Please check
+                            https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+                            | *Option* | *Man.* | *Description* |
+                            | remote_url | Yes | Appium server url |
+                            | alias | no | alias |
+                            | strict_ssl | No | allows you to send commands to an invalid certificate host like a
+                            self-signed one. |
+                        </doc>
+                        <status status="PASS" starttime="20230306 18:43:16.455" endtime="20230306 18:43:24.810"/>
+                    </kw>
+                    <kw name="Set Appium Timeout" library="MobileTestLibrary">
+                        <arg>30</arg>
+                        <doc>Sets the timeout in seconds used by various keywords.</doc>
+                        <status status="PASS" starttime="20230306 18:43:24.811" endtime="20230306 18:43:24.812"/>
+                    </kw>
+                    <status status="PASS" starttime="20230306 18:43:16.455" endtime="20230306 18:43:24.812"/>
+                </kw>
+                <kw name="launch camera app and wait until user scan the QR code from study link url"
+                    library="launch_flow_keywords">
+                    <kw name="Start Activity" library="MobileTestLibrary">
+                        <arg>com.google.android.GoogleCamera</arg>
+                        <arg>com.android.camera.CameraLauncher</arg>
+                        <doc>Opens an arbitrary activity during a test. If the activity belongs to
+                            another application, that application is started and the activity is opened.
+                        </doc>
+                        <status status="PASS" starttime="20230306 18:43:24.813" endtime="20230306 18:43:25.700"/>
+                    </kw>
+                    <kw name="Open Browser" library="WebApplicationTestLibrary">
+                        <arg>${url}</arg>
+                        <arg>${Browser}</arg>
+                        <doc>Opens a new browser instance to the optional ``url``.</doc>
+                        <msg timestamp="20230306 18:43:25.703" level="INFO">Opening browser 'chrome' to base url
+                            'https://social.vision-project.co/?studyID=d2563e38-04e4-4c06-8323-f8c4722040b0&amp;userID=Jai'.
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:25.700" endtime="20230306 18:43:28.120"/>
+                    </kw>
+                    <kw name="Maximize Browser Window" library="WebApplicationTestLibrary">
+                        <doc>Maximizes current browser window.</doc>
+                        <status status="PASS" starttime="20230306 18:43:28.120" endtime="20230306 18:43:28.250"/>
+                    </kw>
+                    <status status="PASS" starttime="20230306 18:43:24.813" endtime="20230306 18:43:28.250"/>
+                </kw>
+                <kw name="tap on generated link" library="launch_flow_keywords">
+                    <kw name="Wait Until Element Is Visible" library="MobileTestLibrary">
+                        <arg>${camera_smartchip_text}</arg>
+                        <arg>timeout= 300</arg>
+                        <doc>Waits until element specified with `locator` is visible.</doc>
+                        <msg timestamp="20230306 18:43:30.431" level="INFO">criteria is
+                            com.google.android.GoogleCamera:id/smarts_chip_text
+                            criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+                            criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+                            criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+                            criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+                            criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:28.251" endtime="20230306 18:43:30.431"/>
+                    </kw>
+                    <kw name="Click Element" library="MobileTestLibrary">
+                        <arg>${camera_smartchip_text}</arg>
+                        <doc>Click element identified by `locator`.</doc>
+                        <msg timestamp="20230306 18:43:30.441" level="INFO">Clicking element
+                            'com.google.android.GoogleCamera:id/smarts_chip_text'.
+                        </msg>
+                        <msg timestamp="20230306 18:43:30.605" level="INFO">criteria is
+                            com.google.android.GoogleCamera:id/smarts_chip_text
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:30.432" endtime="20230306 18:43:30.606"/>
+                    </kw>
+                    <kw name="Close Browser" library="WebApplicationTestLibrary">
+                        <doc>Closes the current browser.</doc>
+                        <status status="PASS" starttime="20230306 18:43:30.606" endtime="20230306 18:43:32.907"/>
+                    </kw>
+                    <kw name="Wait Until Element Is Visible" library="MobileTestLibrary">
+                        <arg>${google_playstore_Button}</arg>
+                        <arg>timeout=30</arg>
+                        <doc>Waits until element specified with `locator` is visible.</doc>
+                        <msg timestamp="20230306 18:43:34.303" level="INFO">xpath criteria:
+                            //android.widget.Button[@index=3]
+                            xpath criteria: //android.widget.Button[@index=3]
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:32.908" endtime="20230306 18:43:34.303"/>
+                    </kw>
+                    <kw name="Get Text From Index" library="MobileTestLibrary">
+                        <var>${SlicedStudyLink}</var>
+                        <arg>${url}</arg>
+                        <arg>42</arg>
+                        <arg>78</arg>
+                        <msg timestamp="20230306 18:43:34.306" level="INFO">${SlicedStudyLink} =
+                            d2563e38-04e4-4c06-8323-f8c4722040b0
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:34.304" endtime="20230306 18:43:34.306"/>
+                    </kw>
+                    <kw name="Set Global Variable" library="BuiltIn">
+                        <arg>${SlicedStudyLink}</arg>
+                        <doc>Makes a variable available globally in all tests and suites.</doc>
+                        <msg timestamp="20230306 18:43:34.307" level="INFO">${SlicedStudyLink} =
+                            d2563e38-04e4-4c06-8323-f8c4722040b0
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:34.306" endtime="20230306 18:43:34.309"/>
+                    </kw>
+                    <kw name="Log To Console" library="BuiltIn">
+                        <arg>${SlicedStudyLink}</arg>
+                        <doc>Logs the given message to the console.</doc>
+                        <status status="PASS" starttime="20230306 18:43:34.309" endtime="20230306 18:43:34.310"/>
+                    </kw>
+                    <status status="PASS" starttime="20230306 18:43:28.250" endtime="20230306 18:43:34.310"/>
+                </kw>
+                <kw name="tap on 'google play store' button" library="launch_flow_keywords">
+                    <kw name="Wait Until Element Is Visible" library="MobileTestLibrary">
+                        <arg>${google_playstore_Button}</arg>
+                        <arg>timeout=30</arg>
+                        <doc>Waits until element specified with `locator` is visible.</doc>
+                        <msg timestamp="20230306 18:43:34.395" level="INFO">xpath criteria:
+                            //android.widget.Button[@index=3]
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:34.311" endtime="20230306 18:43:34.395"/>
+                    </kw>
+                    <kw name="Click Element" library="MobileTestLibrary">
+                        <arg>${google_playstore_Button}</arg>
+                        <doc>Click element identified by `locator`.</doc>
+                        <msg timestamp="20230306 18:43:34.403" level="INFO">Clicking element
+                            '//android.widget.Button[@index=3]'.
+                        </msg>
+                        <msg timestamp="20230306 18:43:34.525" level="INFO">xpath criteria:
+                            //android.widget.Button[@index=3]
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:34.395" endtime="20230306 18:43:34.525"/>
+                    </kw>
+                    <status status="PASS" starttime="20230306 18:43:34.310" endtime="20230306 18:43:34.526"/>
+                </kw>
+                <kw name="verify user is landed on 'google playstore' on vision app page"
+                    library="launch_flow_keywords">
+                    <kw name="Wait Until Page Contains" library="MobileTestLibrary">
+                        <arg>Google Play</arg>
+                        <doc>Waits until `text` appears on current page.</doc>
+                        <status status="PASS" starttime="20230306 18:43:34.527" endtime="20230306 18:43:35.206"/>
+                    </kw>
+                    <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                        <arg>Vision Project</arg>
+                        <doc>Verifies that current page contains `text`.</doc>
+                        <msg timestamp="20230306 18:43:35.866" level="INFO">Current page contains text 'Vision
+                            Project'.
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:35.206" endtime="20230306 18:43:35.866"/>
+                    </kw>
+                    <kw name="Go Back" library="MobileTestLibrary">
+                        <doc>Goes one step backward in the browser history.</doc>
+                        <status status="PASS" starttime="20230306 18:43:35.866" endtime="20230306 18:43:36.557"/>
+                    </kw>
+                    <status status="PASS" starttime="20230306 18:43:34.527" endtime="20230306 18:43:36.559"/>
+                </kw>
+                <kw name="Verify if Need Help? page opens up after tapping Need Help? link from landing page"
+                    library="launch_flow_keywords">
+                    <kw name="Wait Until Page Contains" library="MobileTestLibrary">
+                        <arg>Need Help</arg>
+                        <doc>Waits until `text` appears on current page.</doc>
+                        <status status="PASS" starttime="20230306 18:43:36.561" endtime="20230306 18:43:37.180"/>
+                    </kw>
+                    <kw name="Click Element" library="MobileTestLibrary">
+                        <arg>${Need_Help}</arg>
+                        <doc>Click element identified by `locator`.</doc>
+                        <msg timestamp="20230306 18:43:37.190" level="INFO">Clicking element
+                            '//android.view.View[@content-desc="Need Help"]/android.widget.TextView'.
+                        </msg>
+                        <msg timestamp="20230306 18:43:37.342" level="INFO">xpath criteria:
+                            //android.view.View[@content-desc="Need Help"]/android.widget.TextView
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:37.181" endtime="20230306 18:43:37.342"/>
+                    </kw>
+                    <status status="PASS" starttime="20230306 18:43:36.559" endtime="20230306 18:43:37.343"/>
+                </kw>
+                <kw name="Verify if &quot;Contact Us&quot;, &quot;How to check Android version&quot; , &quot;Privacy Policy&quot; and &quot;Terms of User Agreement&quot; option are provided on Need help page"
+                    library="launch_flow_keywords">
+                    <kw name="Wait Until Page Contains" library="MobileTestLibrary">
+                        <arg>Contact us</arg>
+                        <doc>Waits until `text` appears on current page.</doc>
+                        <status status="PASS" starttime="20230306 18:43:37.344" endtime="20230306 18:43:38.099"/>
+                    </kw>
+                    <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                        <arg>Contact us</arg>
+                        <doc>Verifies that current page contains `text`.</doc>
+                        <msg timestamp="20230306 18:43:38.219" level="INFO">Current page contains text 'Contact us'.
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:38.099" endtime="20230306 18:43:38.219"/>
+                    </kw>
+                    <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                        <arg>How to check Android version</arg>
+                        <doc>Verifies that current page contains `text`.</doc>
+                        <msg timestamp="20230306 18:43:38.324" level="INFO">Current page contains text 'How to check
+                            Android version'.
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:38.220" endtime="20230306 18:43:38.324"/>
+                    </kw>
+                    <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                        <arg>Privacy policy</arg>
+                        <doc>Verifies that current page contains `text`.</doc>
+                        <msg timestamp="20230306 18:43:38.438" level="INFO">Current page contains text 'Privacy
+                            policy'.
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:38.325" endtime="20230306 18:43:38.438"/>
+                    </kw>
+                    <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                        <arg>Terms of Use Agreement</arg>
+                        <doc>Verifies that current page contains `text`.</doc>
+                        <msg timestamp="20230306 18:43:38.524" level="INFO">Current page contains text 'Terms of Use
+                            Agreement'.
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:38.438" endtime="20230306 18:43:38.525"/>
+                    </kw>
+                    <status status="PASS" starttime="20230306 18:43:37.343" endtime="20230306 18:43:38.525"/>
+                </kw>
+                <kw name="tap on 'Contact us' and verify user is landing on contact us page"
+                    library="launch_flow_keywords">
+                    <kw name="Wait Until Element Is Visible" library="MobileTestLibrary">
+                        <arg>${contact us}</arg>
+                        <doc>Waits until element specified with `locator` is visible.</doc>
+                        <msg timestamp="20230306 18:43:38.658" level="INFO">xpath criteria:
+                            //android.view.View[@content-desc="Contact us"]/android.widget.TextView
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:38.526" endtime="20230306 18:43:38.658"/>
+                    </kw>
+                    <kw name="Click Element" library="MobileTestLibrary">
+                        <arg>${contact us}</arg>
+                        <doc>Click element identified by `locator`.</doc>
+                        <msg timestamp="20230306 18:43:38.669" level="INFO">Clicking element
+                            '//android.view.View[@content-desc="Contact us"]/android.widget.TextView'.
+                        </msg>
+                        <msg timestamp="20230306 18:43:38.853" level="INFO">xpath criteria:
+                            //android.view.View[@content-desc="Contact us"]/android.widget.TextView
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:38.659" endtime="20230306 18:43:38.853"/>
+                    </kw>
+                    <kw name="Wait Until Page Contains" library="MobileTestLibrary">
+                        <arg>Contact us</arg>
+                        <doc>Waits until `text` appears on current page.</doc>
+                        <status status="PASS" starttime="20230306 18:43:38.854" endtime="20230306 18:43:39.462"/>
+                    </kw>
+                    <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                        <arg>If you need help or have any questions or feedback, please send an email to the following
+                            address. We will get back to you within 1 business day.
+                        </arg>
+                        <doc>Verifies that current page contains `text`.</doc>
+                        <msg timestamp="20230306 18:43:39.591" level="INFO">Current page contains text 'If you need help
+                            or have any questions or feedback, please send an email to the following address. We will
+                            get back to you within 1 business day.'.
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:39.462" endtime="20230306 18:43:39.591"/>
+                    </kw>
+                    <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                        <arg>support@vision-project.co</arg>
+                        <doc>Verifies that current page contains `text`.</doc>
+                        <msg timestamp="20230306 18:43:39.684" level="INFO">Current page contains text
+                            'support@vision-project.co'.
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:39.591" endtime="20230306 18:43:39.684"/>
+                    </kw>
+                    <kw name="Click Element" library="MobileTestLibrary">
+                        <arg>${Go Back Button}</arg>
+                        <doc>Click element identified by `locator`.</doc>
+                        <msg timestamp="20230306 18:43:39.693" level="INFO">Clicking element
+                            '//android.widget.Button[@text='Go Back']'.
+                        </msg>
+                        <msg timestamp="20230306 18:43:39.814" level="INFO">xpath criteria:
+                            //android.widget.Button[@text='Go Back']
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:39.685" endtime="20230306 18:43:39.814"/>
+                    </kw>
+                    <status status="PASS" starttime="20230306 18:43:38.526" endtime="20230306 18:43:39.815"/>
+                </kw>
+                <kw name="tap on 'How to check Android version' and verify user is landing on 'How to check Android version' page"
+                    library="launch_flow_keywords">
+                    <kw name="Wait Until Element Is Visible" library="MobileTestLibrary">
+                        <arg>${How to check Android version}</arg>
+                        <doc>Waits until element specified with `locator` is visible.</doc>
+                        <msg timestamp="20230306 18:43:40.487" level="INFO">xpath criteria:
+                            //android.view.View[@content-desc="How to check Android version"]/android.widget.TextView
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:39.816" endtime="20230306 18:43:40.487"/>
+                    </kw>
+                    <kw name="Click Element" library="MobileTestLibrary">
+                        <arg>${How to check Android version}</arg>
+                        <doc>Click element identified by `locator`.</doc>
+                        <msg timestamp="20230306 18:43:40.497" level="INFO">Clicking element
+                            '//android.view.View[@content-desc="How to check Android version"]/android.widget.TextView'.
+                        </msg>
+                        <msg timestamp="20230306 18:43:40.659" level="INFO">xpath criteria:
+                            //android.view.View[@content-desc="How to check Android version"]/android.widget.TextView
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:40.488" endtime="20230306 18:43:40.660"/>
+                    </kw>
+                    <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                        <arg>How to check Android version</arg>
+                        <doc>Verifies that current page contains `text`.</doc>
+                        <msg timestamp="20230306 18:43:41.322" level="INFO">Current page contains text 'How to check
+                            Android version'.
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:40.661" endtime="20230306 18:43:41.322"/>
+                    </kw>
+                    <kw name="Page Should Contain Element" library="MobileTestLibrary">
+                        <arg>${Go Back Button}</arg>
+                        <doc>Verifies that current page contains `locator` element.</doc>
+                        <msg timestamp="20230306 18:43:41.415" level="INFO">Current page contains element
+                            '//android.widget.Button[@text='Go Back']'.
+                        </msg>
+                        <msg timestamp="20230306 18:43:41.415" level="INFO">xpath criteria:
+                            //android.widget.Button[@text='Go Back']
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:41.323" endtime="20230306 18:43:41.415"/>
+                    </kw>
+                    <kw name="Click Element" library="MobileTestLibrary">
+                        <arg>${Go Back Button}</arg>
+                        <doc>Click element identified by `locator`.</doc>
+                        <msg timestamp="20230306 18:43:41.424" level="INFO">Clicking element
+                            '//android.widget.Button[@text='Go Back']'.
+                        </msg>
+                        <msg timestamp="20230306 18:43:41.577" level="INFO">xpath criteria:
+                            //android.widget.Button[@text='Go Back']
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:41.415" endtime="20230306 18:43:41.577"/>
+                    </kw>
+                    <status status="PASS" starttime="20230306 18:43:39.815" endtime="20230306 18:43:41.578"/>
+                </kw>
+                <kw name="tap on 'Terms of Use Agreement' and verify user is landing on Terms of Use Agreement page"
+                    library="launch_flow_keywords">
+                    <kw name="Wait Until Element Is Visible" library="MobileTestLibrary">
+                        <arg>${Terms of Use Agreement}</arg>
+                        <arg>timeout=10</arg>
+                        <doc>Waits until element specified with `locator` is visible.</doc>
+                        <msg timestamp="20230306 18:43:42.700" level="INFO">xpath criteria:
+                            //android.view.View[@content-desc="Terms of Use Agreement"]//android.widget.TextView
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:41.579" endtime="20230306 18:43:42.700"/>
+                    </kw>
+                    <kw name="Click Element" library="MobileTestLibrary">
+                        <arg>${Terms of Use Agreement}</arg>
+                        <doc>Click element identified by `locator`.</doc>
+                        <msg timestamp="20230306 18:43:42.707" level="INFO">Clicking element
+                            '//android.view.View[@content-desc="Terms of Use Agreement"]//android.widget.TextView'.
+                        </msg>
+                        <msg timestamp="20230306 18:43:42.875" level="INFO">xpath criteria:
+                            //android.view.View[@content-desc="Terms of Use Agreement"]//android.widget.TextView
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:43:42.701" endtime="20230306 18:43:42.875"/>
+                    </kw>
+                    <kw name="Wait Until Page Contains" library="MobileTestLibrary">
+                        <arg>Vision Project Terms of Use Agreement</arg>
+                        <doc>Waits until `text` appears on current page.</doc>
+                        <status status="PASS" starttime="20230306 18:43:42.876" endtime="20230306 18:43:46.060"/>
+                    </kw>
+                    <kw name="Scroll To Element By Exact Text" library="MobileTestLibrary">
+                        <arg>19. Electronic Signatures</arg>
+                        <status status="PASS" starttime="20230306 18:43:46.060" endtime="20230306 18:44:27.339"/>
+                    </kw>
+                    <kw name="Page Should Contain Text" library="MobileTestLibrary">
+                        <arg>19. Electronic Signatures</arg>
+                        <doc>Verifies that current page contains `text`.</doc>
+                        <msg timestamp="20230306 18:44:27.602" level="INFO">Current page contains text '19. Electronic
+                            Signatures'.
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:44:27.339" endtime="20230306 18:44:27.602"/>
+                    </kw>
+                    <kw name="Go Back" library="MobileTestLibrary">
+                        <doc>Goes one step backward in the browser history.</doc>
+                        <status status="PASS" starttime="20230306 18:44:27.602" endtime="20230306 18:44:27.682"/>
+                    </kw>
+                    <status status="PASS" starttime="20230306 18:43:41.578" endtime="20230306 18:44:27.683"/>
+                </kw>
+                <kw name="close Test application" library="Setup keywords" type="TEARDOWN">
+                    <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+                        <arg>MobileTestLibrary.Close Application</arg>
+                        <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+                        <kw name="Close Application" library="MobileTestLibrary">
+                            <doc>Closes the current application and also close webdriver session.</doc>
+                            <status status="PASS" starttime="20230306 18:44:27.685" endtime="20230306 18:44:28.157"/>
+                        </kw>
+                        <status status="PASS" starttime="20230306 18:44:27.685" endtime="20230306 18:44:28.157"/>
+                    </kw>
+                    <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+                        <arg>WebApplicationTestLibrary.Close Browser</arg>
+                        <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+                        <kw name="Close Browser" library="WebApplicationTestLibrary">
+                            <doc>Closes the current browser.</doc>
+                            <status status="PASS" starttime="20230306 18:44:28.159" endtime="20230306 18:44:28.159"/>
+                        </kw>
+                        <status status="PASS" starttime="20230306 18:44:28.158" endtime="20230306 18:44:28.159"/>
+                    </kw>
+                    <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+                        <arg>WebApplicationTestLibrary.Close All Browsers</arg>
+                        <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+                        <kw name="Close All Browsers" library="WebApplicationTestLibrary">
+                            <doc>Closes all open browsers and resets the browser cache.</doc>
+                            <status status="PASS" starttime="20230306 18:44:28.160" endtime="20230306 18:44:28.161"/>
+                        </kw>
+                        <status status="PASS" starttime="20230306 18:44:28.160" endtime="20230306 18:44:28.161"/>
+                    </kw>
+                    <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+                        <arg>MobileTestLibrary.Close All Applications</arg>
+                        <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+                        <kw name="Close All Applications" library="MobileTestLibrary">
+                            <doc>Closes all open applications.</doc>
+                            <status status="PASS" starttime="20230306 18:44:28.162" endtime="20230306 18:44:28.174"/>
+                        </kw>
+                        <status status="PASS" starttime="20230306 18:44:28.161" endtime="20230306 18:44:28.174"/>
+                    </kw>
+                    <status status="PASS" starttime="20230306 18:44:27.684" endtime="20230306 18:44:28.175"/>
+                </kw>
+                <doc>Verification that Google Play button redirecting user to Vision Project on play store</doc>
+                <tag>Regression</tag>
+                <status status="PASS" starttime="20230306 18:43:16.454" endtime="20230306 18:44:28.175"/>
+            </test>
+            <kw name="tearDown" library="Setup keywords" type="TEARDOWN">
+                <kw name="Stop Appium Service" library="MobileTestLibrary">
+                    <status status="PASS" starttime="20230306 18:44:28.177" endtime="20230306 18:44:28.178"/>
+                </kw>
+                <status status="PASS" starttime="20230306 18:44:28.176" endtime="20230306 18:44:28.178"/>
+            </kw>
+            <status status="PASS" starttime="20230306 18:43:15.615" endtime="20230306 18:44:28.178"/>
+        </suite>
+        <suite id="s1-s4"
+               name="TC004 - Verify that if social app is not installed on phone then App was not found screen appears"
+               source="D:\FusionTestFramework\Com.XYZProject.Android\XYZProject.TestcaseSuite\TC004 - Verify that if social app is not installed on phone then App was not found screen appears.robot">
+            <kw name="Setup before suit start" library="Setup keywords" type="SETUP">
+                <kw name="Start Appium Service" library="MobileTestLibrary">
+                    <status status="PASS" starttime="20230306 18:44:28.200" endtime="20230306 18:44:29.013"/>
+                </kw>
+                <status status="PASS" starttime="20230306 18:44:28.200" endtime="20230306 18:44:29.013"/>
+            </kw>
+            <test id="s1-s4-t1"
+                  name="Verify that if social app is not installed on phone then App was not found screen appears"
+                  line="10">
+                <kw name="Launch Test application" library="Setup keywords" type="SETUP">
+                    <kw name="Open Application" library="MobileTestLibrary">
+                        <arg>${remote_url}</arg>
+                        <arg>&amp;{device}</arg>
+                        <doc>Opens a new application to given Appium server.
+                            Capabilities of appium server, Android and iOS,
+                            Please check
+                            https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+                            | *Option* | *Man.* | *Description* |
+                            | remote_url | Yes | Appium server url |
+                            | alias | no | alias |
+                            | strict_ssl | No | allows you to send commands to an invalid certificate host like a
+                            self-signed one. |
+                        </doc>
+                        <status status="PASS" starttime="20230306 18:44:29.014" endtime="20230306 18:44:37.668"/>
+                    </kw>
+                    <kw name="Set Appium Timeout" library="MobileTestLibrary">
+                        <arg>30</arg>
+                        <doc>Sets the timeout in seconds used by various keywords.</doc>
+                        <status status="PASS" starttime="20230306 18:44:37.668" endtime="20230306 18:44:37.668"/>
+                    </kw>
+                    <status status="PASS" starttime="20230306 18:44:29.014" endtime="20230306 18:44:37.668"/>
+                </kw>
+                <kw name="launch camera app and wait until user scan the QR code from study link url"
+                    library="launch_flow_keywords">
+                    <kw name="Start Activity" library="MobileTestLibrary">
+                        <arg>com.google.android.GoogleCamera</arg>
+                        <arg>com.android.camera.CameraLauncher</arg>
+                        <doc>Opens an arbitrary activity during a test. If the activity belongs to
+                            another application, that application is started and the activity is opened.
+                        </doc>
+                        <status status="PASS" starttime="20230306 18:44:37.669" endtime="20230306 18:44:38.454"/>
+                    </kw>
+                    <kw name="Open Browser" library="WebApplicationTestLibrary">
+                        <arg>${url}</arg>
+                        <arg>${Browser}</arg>
+                        <doc>Opens a new browser instance to the optional ``url``.</doc>
+                        <msg timestamp="20230306 18:44:38.455" level="INFO">Opening browser 'chrome' to base url
+                            'https://social.vision-project.co/?studyID=d2563e38-04e4-4c06-8323-f8c4722040b0&amp;userID=Jai'.
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:44:38.454" endtime="20230306 18:44:40.892"/>
+                    </kw>
+                    <kw name="Maximize Browser Window" library="WebApplicationTestLibrary">
+                        <doc>Maximizes current browser window.</doc>
+                        <status status="PASS" starttime="20230306 18:44:40.892" endtime="20230306 18:44:41.020"/>
+                    </kw>
+                    <status status="PASS" starttime="20230306 18:44:37.668" endtime="20230306 18:44:41.020"/>
+                </kw>
+                <kw name="tap on generated link" library="launch_flow_keywords">
+                    <kw name="Wait Until Element Is Visible" library="MobileTestLibrary">
+                        <arg>${camera_smartchip_text}</arg>
+                        <arg>timeout= 300</arg>
+                        <doc>Waits until element specified with `locator` is visible.</doc>
+                        <msg timestamp="20230306 18:44:44.456" level="INFO">criteria is
+                            com.google.android.GoogleCamera:id/smarts_chip_text
+                            criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+                            criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+                            criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+                            criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+                            criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+                            criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+                            criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:44:41.020" endtime="20230306 18:44:44.456"/>
+                    </kw>
+                    <kw name="Click Element" library="MobileTestLibrary">
+                        <arg>${camera_smartchip_text}</arg>
+                        <doc>Click element identified by `locator`.</doc>
+                        <msg timestamp="20230306 18:44:44.460" level="INFO">Clicking element
+                            'com.google.android.GoogleCamera:id/smarts_chip_text'.
+                        </msg>
+                        <msg timestamp="20230306 18:44:44.575" level="INFO">criteria is
+                            com.google.android.GoogleCamera:id/smarts_chip_text
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:44:44.456" endtime="20230306 18:44:44.576"/>
+                    </kw>
+                    <kw name="Close Browser" library="WebApplicationTestLibrary">
+                        <doc>Closes the current browser.</doc>
+                        <status status="PASS" starttime="20230306 18:44:44.576" endtime="20230306 18:44:46.869"/>
+                    </kw>
+                    <kw name="Wait Until Element Is Visible" library="MobileTestLibrary">
+                        <arg>${google_playstore_Button}</arg>
+                        <arg>timeout=30</arg>
+                        <doc>Waits until element specified with `locator` is visible.</doc>
+                        <msg timestamp="20230306 18:44:47.277" level="INFO">xpath criteria:
+                            //android.widget.Button[@index=3]
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:44:46.870" endtime="20230306 18:44:47.277"/>
+                    </kw>
+                    <kw name="Get Text From Index" library="MobileTestLibrary">
+                        <var>${SlicedStudyLink}</var>
+                        <arg>${url}</arg>
+                        <arg>42</arg>
+                        <arg>78</arg>
+                        <msg timestamp="20230306 18:44:47.279" level="INFO">${SlicedStudyLink} =
+                            d2563e38-04e4-4c06-8323-f8c4722040b0
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:44:47.278" endtime="20230306 18:44:47.279"/>
+                    </kw>
+                    <kw name="Set Global Variable" library="BuiltIn">
+                        <arg>${SlicedStudyLink}</arg>
+                        <doc>Makes a variable available globally in all tests and suites.</doc>
+                        <msg timestamp="20230306 18:44:47.281" level="INFO">${SlicedStudyLink} =
+                            d2563e38-04e4-4c06-8323-f8c4722040b0
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:44:47.279" endtime="20230306 18:44:47.281"/>
+                    </kw>
+                    <kw name="Log To Console" library="BuiltIn">
+                        <arg>${SlicedStudyLink}</arg>
+                        <doc>Logs the given message to the console.</doc>
+                        <status status="PASS" starttime="20230306 18:44:47.281" endtime="20230306 18:44:47.282"/>
+                    </kw>
+                    <status status="PASS" starttime="20230306 18:44:41.020" endtime="20230306 18:44:47.283"/>
+                </kw>
+                <kw name="tap on 'OPEN STUDY IN APP' button" library="launch_flow_keywords">
+                    <kw name="Wait Until Element Is Visible" library="MobileTestLibrary">
+                        <arg>${Open Study In app}</arg>
+                        <doc>Waits until element specified with `locator` is visible.</doc>
+                        <msg timestamp="20230306 18:44:47.411" level="INFO">xpath criteria:
+                            //android.view.View[@content-desc="OPEN STUDY IN APP"]/android.widget.Button
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:44:47.284" endtime="20230306 18:44:47.411"/>
+                    </kw>
+                    <kw name="Click Element" library="MobileTestLibrary">
+                        <arg>${Open Study In app}</arg>
+                        <doc>Click element identified by `locator`.</doc>
+                        <msg timestamp="20230306 18:44:47.420" level="INFO">Clicking element
+                            '//android.view.View[@content-desc="OPEN STUDY IN APP"]/android.widget.Button'.
+                        </msg>
+                        <msg timestamp="20230306 18:44:47.565" level="INFO">xpath criteria:
+                            //android.view.View[@content-desc="OPEN STUDY IN APP"]/android.widget.Button
+                        </msg>
+                        <status status="PASS" starttime="20230306 18:44:47.412" endtime="20230306 18:44:47.565"/>
+                    </kw>
+                    <status status="PASS" starttime="20230306 18:44:47.283" endtime="20230306 18:44:47.565"/>
+                </kw>
+                <kw name="verify link is pasted in textbox" library="launch_flow_keywords">
+                    <kw name="Wait Until Element Is Visible" library="MobileTestLibrary">
+                        <arg>${Study link textbox}</arg>
+                        <doc>Waits until element specified with `locator` is visible.</doc>
+                        <msg timestamp="20230306 18:44:49.241" level="INFO">criteria is
+                            com.playgroundxyz.vision_project:id/studyLink
+                        </msg>

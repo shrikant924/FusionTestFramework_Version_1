@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230306 18:16:20.719" rpa="false" schemaversion="3">
+    <suite id="s1" name="VisionProject.Testsuite"
+           source="D:\FusionTestFramework\Com.visionProject.Android\VisionProject.Testsuite">
+        <suite id="s1-s1" name="TC001 - Tap on 'Privacy policy' and verify user is landing on Privacy policy page"
+               source="D:\FusionTestFramework\Com.visionProject.Android\VisionProject.Testsuite\TC001 - Tap on 'Privacy policy' and verify user is landing on Privacy policy page.robot">
+            <kw name="Setup before suit start" library="Setup keywords" type="SETUP">
+                <kw name="Start Appium Service" library="MobileTestLibrary">
+                    <msg timestamp="20230306 18:16:23.581" level="WARN">Retrying (Retry(total=2, connect=None,
+                        read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection
+                        object at 0x000001D7620C9690&gt;, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')':
+                        /wd/hub/status
+                    </msg>
+                    <msg timestamp="20230306 18:16:24.585" level="WARN">Retrying (Retry(total=1, connect=None,
+                        read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection
+                        object at 0x000001D7620C9790&gt;, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')':
+                        /wd/hub/status
+                    </msg>
+                    <msg timestamp="20230306 18:16:25.590" level="WARN">Retrying (Retry(total=0, connect=None,
+                        read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection
+                        object at 0x000001D75E5F7750&gt;, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')':
+                        /wd/hub/status
+                    </msg>
+                    <msg timestamp="20230306 18:16:27.596" level="FAIL">AppiumServiceError: Appium server process is
+                        unable to start. Make sure proper values have been provided to 'node' (C:\Program
+                        Files\nodejs\node.exe), 'npm' (C:\Program Files\nodejs\npm.cmd) and 'main_script'
+                        (C:\Users\ZMO-WIN-ShrikantL-01\AppData\Roaming\npm\node_modules\appium/build/lib/main.js) method
+                        arguments.
+                    </msg>
+                    <status status="FAIL" starttime="20230306 18:16:21.365" endtime="20230306 18:16:27.597"/>
+                </kw>
+                <status status="FAIL" starttime="20230306 18:16:21.365" endtime="20230306 18:16:27.598"/>
+            </kw>
+            <test id="s1-s1-t1" name="Tap on 'Privacy policy' and verify user is landing on Privacy policy page"
+                  line="11">
+                <doc>Verification that Google Play button redirecting user to Vision Project on play store</doc>
+                <tag>Regression</tag>
+                <status status="FAIL" starttime="20230306 18:16:27.598" endtime="20230306 18:16:27.599">Parent suite
+                    setup failed:
+                    AppiumServiceError: Appium server process is unable to start. Make sure proper values have been
+                    provided to 'node' (C:\Program Files\nodejs\node.exe), 'npm' (C:\Program Files\nodejs\npm.cmd) and
+                    'main_script'
+                    (C:\Users\ZMO-WIN-ShrikantL-01\AppData\Roaming\npm\node_modules\appium/build/lib/main.js) method
+                    arguments.
+                </status>
+            </test>
+            <kw name="tearDown" library="Setup keywords" type="TEARDOWN">
+                <kw name="Stop Appium Service" library="MobileTestLibrary">
+                    <status status="PASS" starttime="20230306 18:16:27.600" endtime="20230306 18:16:27.600"/>
+                </kw>
+                <status status="PASS" starttime="20230306 18:16:27.600" endtime="20230306 18:16:27.600"/>
+            </kw>
+            <status status="FAIL" starttime="20230306 18:16:20.780" endtime="20230306 18:16:27.600">Suite setup failed:
+                AppiumServiceError: Appium server process is unable to start. Make sure proper values have been provided
+                to 'node' (C:\Program Files\nodejs\node.exe), 'npm' (C:\Program Files\nodejs\npm.cmd) and 'main_script'
+                (C:\Users\ZMO-WIN-ShrikantL-01\AppData\Roaming\npm\node_modules\appium/build/lib/main.js) method
+                arguments.
+            </status>
+        </suite>
+        <suite id="s1-s2" name="TC002 - Verify that Deep link URL is providing QR code"
+               source="D:\FusionTestFramework\Com.visionProject.Android\VisionProject.Testsuite\TC002 - Verify that Deep link URL is providing QR code.robot">
+            <test id="s1-s2-t1" name="Verify that Deep link URL is providing QR code" line="8">
+                <kw name="Launch browser and input url" library="Setup keywords" type="SETUP">
+                    <kw name="Open Browser" library="WebApplicationTestLibrary">
+                        <arg>${url}</arg>
+                        <arg>${Browser}</arg>
+                        <doc>Opens a new browser instance to the optional ``url``.</doc>
+                        <msg timestamp="20230306 18:16:27.617" level="FAIL">Variable '${url}' not found.</msg>
+                        <status status="FAIL" starttime="20230306 18:16:27.615" endtime="20230306 18:16:27.617"/>
+                    </kw>
+                    <kw name="Maximize Browser Window" library="WebApplicationTestLibrary">
+                        <doc>Maximizes current browser window.</doc>
+                        <status status="NOT RUN" starttime="20230306 18:16:27.618" endtime="20230306 18:16:27.618"/>
+                    </kw>
+                    <status status="FAIL" starttime="20230306 18:16:27.615" endtime="20230306 18:16:27.618"/>
+                </kw>
+                <kw name="Close Browser" library="WebApplicationTestLibrary" type="TEARDOWN">
+                    <doc>Closes the current browser.</doc>
+                    <status status="PASS" starttime="20230306 18:16:27.618" endtime="20230306 18:16:27.618"/>
+                </kw>
+                <doc>verification of barcode generation of specified link</doc>
+                <tag>Regression</tag>
+                <status status="FAIL" starttime="20230306 18:16:27.614" endtime="20230306 18:16:27.618">Setup failed:
+                    Variable '${url}' not found.
+                </status>
+            </test>
+            <status status="FAIL" starttime="20230306 18:16:27.602" endtime="20230306 18:16:27.619"/>
+        </suite>
+        <suite id="s1-s3" name="TC003 - Verify that Google Play button redirecting user to Vision Project on play store"
+               source="D:\FusionTestFramework\Com.visionProject.Android\VisionProject.Testsuite\TC003 - Verify that Google Play button redirecting user to Vision Project on play store.robot">
+            <kw name="Setup before suit start" library="Setup keywords" type="SETUP">
+                <kw name="Start Appium Service" library="MobileTestLibrary">
+                    <msg timestamp="20230306 18:16:29.495" level="WARN">Retrying (Retry(total=2, connect=None,
+                        read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection
+                        object at 0x000001D76211EC50&gt;, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')':
+                        /wd/hub/status
+                    </msg>
+                    <msg timestamp="20230306 18:16:30.511" level="WARN">Retrying (Retry(total=1, connect=None,
+                        read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection
+                        object at 0x000001D76213CCD0&gt;, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')':
+                        /wd/hub/status
+                    </msg>
+                    <msg timestamp="20230306 18:16:31.516" level="WARN">Retrying (Retry(total=0, connect=None,
+                        read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection
+                        object at 0x000001D76214AA90&gt;, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')':
+                        /wd/hub/status
+                    </msg>
+                    <msg timestamp="20230306 18:16:33.531" level="FAIL">AppiumServiceError: Appium server process is
+                        unable to start. Make sure proper values have been provided to 'node' (C:\Program
+                        Files\nodejs\node.exe), 'npm' (C:\Program Files\nodejs\npm.cmd) and 'main_script'
+                        (C:\Users\ZMO-WIN-ShrikantL-01\AppData\Roaming\npm\node_modules\appium/build/lib/main.js) method
+                        arguments.
+                    </msg>
+                    <status status="FAIL" starttime="20230306 18:16:27.634" endtime="20230306 18:16:33.533"/>
+                </kw>
+                <status status="FAIL" starttime="20230306 18:16:27.633" endtime="20230306 18:16:33.533"/>
+            </kw>
+            <test id="s1-s3-t1" name="Verify that Google Play button redirecting user to Vision Project on play store"
+                  line="11">
+                <doc>Verification that Google Play button redirecting user to Vision Project on play store</doc>
+                <tag>Regression</tag>
+                <status status="FAIL" starttime="20230306 18:16:33.534" endtime="20230306 18:16:33.535">Parent suite
+                    setup failed:
+                    AppiumServiceError: Appium server process is unable to start. Make sure proper values have been
+                    provided to 'node' (C:\Program Files\nodejs\node.exe), 'npm' (C:\Program Files\nodejs\npm.cmd) and
+                    'main_script'
+                    (C:\Users\ZMO-WIN-ShrikantL-01\AppData\Roaming\npm\node_modules\appium/build/lib/main.js) method
+                    arguments.
+                </status>
+            </test>
+            <kw name="tearDown" library="Setup keywords" type="TEARDOWN">
+                <kw name="Stop Appium Service" library="MobileTestLibrary">
+                    <status status="PASS" starttime="20230306 18:16:33.537" endtime="20230306 18:16:33.537"/>
+                </kw>
+                <status status="PASS" starttime="20230306 18:16:33.536" endtime="20230306 18:16:33.538"/>
+            </kw>
+            <status status="FAIL" starttime="20230306 18:16:27.620" endtime="20230306 18:16:33.538">Suite setup failed:
+                AppiumServiceError: Appium server process is unable to start. Make sure proper values have been provided
+                to 'node' (C:\Program Files\nodejs\node.exe), 'npm' (C:\Program Files\nodejs\npm.cmd) and 'main_script'
+                (C:\Users\ZMO-WIN-ShrikantL-01\AppData\Roaming\npm\node_modules\appium/build/lib/main.js) method
+                arguments.
+            </status>
+        </suite>
+        <suite id="s1-s4"
+               name="TC004 - Verify that if social app is not installed on phone then App was not found screen appears"
+               source="D:\FusionTestFramework\Com.visionProject.Android\VisionProject.Testsuite\TC004 - Verify that if social app is not installed on phone then App was not found screen appears.robot">
+            <kw name="Setup before suit start" library="Setup keywords" type="SETUP">
+                <kw name="Start Appium Service" library="MobileTestLibrary">
+                    <msg timestamp="20230306 18:16:35.568" level="WARN">Retrying (Retry(total=2, connect=None,
+                        read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection
+                        object at 0x000001D76211DBD0&gt;, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')':
+                        /wd/hub/status
+                    </msg>
+                    <msg timestamp="20230306 18:16:36.574" level="WARN">Retrying (Retry(total=1, connect=None,
+                        read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection
+                        object at 0x000001D762160110&gt;, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')':
+                        /wd/hub/status
+                    </msg>
+                    <msg timestamp="20230306 18:16:37.577" level="WARN">Retrying (Retry(total=0, connect=None,
+                        read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection
+                        object at 0x000001D762161350&gt;, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')':
+                        /wd/hub/status
+                    </msg>
+                    <msg timestamp="20230306 18:16:39.591" level="FAIL">AppiumServiceError: Appium server process is
+                        unable to start. Make sure proper values have been provided to 'node' (C:\Program
+                        Files\nodejs\node.exe), 'npm' (C:\Program Files\nodejs\npm.cmd) and 'main_script'
+                        (C:\Users\ZMO-WIN-ShrikantL-01\AppData\Roaming\npm\node_modules\appium/build/lib/main.js) method
+                        arguments.
+                    </msg>
+                    <status status="FAIL" starttime="20230306 18:16:33.573" endtime="20230306 18:16:39.593"/>
+                </kw>
+                <status status="FAIL" starttime="20230306 18:16:33.573" endtime="20230306 18:16:39.593"/>
+            </kw>
+            <test id="s1-s4-t1"
+                  name="Verify that if social app is not installed on phone then App was not found screen appears"
+                  line="10">
+                <doc>Verification that if social app is not installed on phone then App was not found screen appears
+                </doc>
+                <tag>smoke</tag>
+                <status status="FAIL" starttime="20230306 18:16:39.594" endtime="20230306 18:16:39.595">Parent suite
+                    setup failed:
+                    AppiumServiceError: Appium server process is unable to start. Make sure proper values have been
+                    provided to 'node' (C:\Program Files\nodejs\node.exe), 'npm' (C:\Program Files\nodejs\npm.cmd) and
+                    'main_script'
+                    (C:\Users\ZMO-WIN-ShrikantL-01\AppData\Roaming\npm\node_modules\appium/build/lib/main.js) method
+                    arguments.
+                </status>
+            </test>
+            <kw name="tearDown" library="Setup keywords" type="TEARDOWN">
+                <kw name="Stop Appium Service" library="MobileTestLibrary">
+                    <status status="PASS" starttime="20230306 18:16:39.597" endtime="20230306 18:16:39.598"/>
+                </kw>
+                <status status="PASS" starttime="20230306 18:16:39.597" endtime="20230306 18:16:39.598"/>
+            </kw>
+            <status status="FAIL" starttime="20230306 18:16:33.542" endtime="20230306 18:16:39.598">Suite setup failed:
+                AppiumServiceError: Appium server process is unable to start. Make sure proper values have been provided
+                to 'node' (C:\Program Files\nodejs\node.exe), 'npm' (C:\Program Files\nodejs\npm.cmd) and 'main_script'
+                (C:\Users\ZMO-WIN-ShrikantL-01\AppData\Roaming\npm\node_modules\appium/build/lib/main.js) method
+                arguments.
+            </status>
+        </suite>
+        <suite id="s1-s5" name="TC005 - Verify welcome page journey is as excepted"
+               source="D:\FusionTestFramework\Com.visionProject.Android\VisionProject.Testsuite\TC005 - Verify welcome page journey is as excepted.robot">
+            <kw name="Setup before suit start" library="Setup keywords" type="SETUP">
+                <kw name="Start Appium Service" library="MobileTestLibrary">
+                    <msg timestamp="20230306 18:16:41.465" level="WARN">Retrying (Retry(total=2, connect=None,
+                        read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection
+                        object at 0x000001D76215FA90&gt;, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')':
+                        /wd/hub/status
+                    </msg>
+                    <msg timestamp="20230306 18:16:42.468" level="WARN">Retrying (Retry(total=1, connect=None,
+                        read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection
+                        object at 0x000001D76215CDD0&gt;, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')':
+                        /wd/hub/status
+                    </msg>
+                    <msg timestamp="20230306 18:16:43.474" level="WARN">Retrying (Retry(total=0, connect=None,
+                        read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection
+                        object at 0x000001D76215EAD0&gt;, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')':
+                        /wd/hub/status
+                    </msg>
+                    <msg timestamp="20230306 18:16:45.488" level="FAIL">AppiumServiceError: Appium server process is
+                        unable to start. Make sure proper values have been provided to 'node' (C:\Program
+                        Files\nodejs\node.exe), 'npm' (C:\Program Files\nodejs\npm.cmd) and 'main_script'
+                        (C:\Users\ZMO-WIN-ShrikantL-01\AppData\Roaming\npm\node_modules\appium/build/lib/main.js) method
+                        arguments.
+                    </msg>
+                    <status status="FAIL" starttime="20230306 18:16:39.635" endtime="20230306 18:16:45.490"/>
+                </kw>
+                <status status="FAIL" starttime="20230306 18:16:39.635" endtime="20230306 18:16:45.490"/>
+            </kw>
+            <test id="s1-s5-t1" name="Verify that user is able to paste study link using Paste study link" line="11">
+                <doc>Verification that user is able to paste study link using Paste study link</doc>
+                <tag>Regression</tag>
+                <status status="FAIL" starttime="20230306 18:16:45.490" endtime="20230306 18:16:45.492">Parent suite
+                    setup failed:
+                    AppiumServiceError: Appium server process is unable to start. Make sure proper values have been
+                    provided to 'node' (C:\Program Files\nodejs\node.exe), 'npm' (C:\Program Files\nodejs\npm.cmd) and
+                    'main_script'
+                    (C:\Users\ZMO-WIN-ShrikantL-01\AppData\Roaming\npm\node_modules\appium/build/lib/main.js) method
+                    arguments.
+                </status>
+            </test>
+            <test id="s1-s5-t2" name="Verify that Help page open up when user taps on help icon&quot;?&quot;" line="22">
+                <doc>Verification that Help page open up when user taps on help icon"?"</doc>
+                <tag>Regression</tag>
+                <status status="FAIL" starttime="20230306 18:16:45.493" endtime="20230306 18:16:45.495">Parent suite
+                    setup failed:
+                    AppiumServiceError: Appium server process is unable to start. Make sure proper values have been
+                    provided to 'node' (C:\Program Files\nodejs\node.exe), 'npm' (C:\Program Files\nodejs\npm.cmd) and
+                    'main_script'
+                    (C:\Users\ZMO-WIN-ShrikantL-01\AppData\Roaming\npm\node_modules\appium/build/lib/main.js) method
+                    arguments.
+                </status>
+            </test>
+            <kw name="tearDown" library="Setup keywords" type="TEARDOWN">
+                <kw name="Stop Appium Service" library="MobileTestLibrary">
+                    <status status="PASS" starttime="20230306 18:16:45.497" endtime="20230306 18:16:45.497"/>
+                </kw>
+                <status status="PASS" starttime="20230306 18:16:45.496" endtime="20230306 18:16:45.498"/>
+            </kw>
+            <status status="FAIL" starttime="20230306 18:16:39.601" endtime="20230306 18:16:45.498">Suite setup failed:
+                AppiumServiceError: Appium server process is unable to start. Make sure proper values have been provided
+                to 'node' (C:\Program Files\nodejs\node.exe), 'npm' (C:\Program Files\nodejs\npm.cmd) and 'main_script'
+                (C:\Users\ZMO-WIN-ShrikantL-01\AppData\Roaming\npm\node_modules\appium/build/lib/main.js) method
+                arguments.
+            </status>
+        </suite>
+        <status status="FAIL" starttime="20230306 18:16:20.725" endtime="20230306 18:16:45.501"/>
+    </suite>
+    <statistics>
+        <total>
+            <stat pass="0" fail="6" skip="0">All Tests</stat>
+        </total>
+        <tag>
+            <stat pass="0" fail="5" skip="0">Regression</stat>
+            <stat pass="0" fail="1" skip="0">smoke</stat>
+        </tag>
+        <suite>
+            <stat pass="0" fail="6" skip="0" id="s1" name="VisionProject.Testsuite">VisionProject.Testsuite</stat>
+            <stat pass="0" fail="1" skip="0" id="s1-s1"
+                  name="TC001 - Tap on 'Privacy policy' and verify user is landing on Privacy policy page">
+                VisionProject.Testsuite.TC001 - Tap on 'Privacy policy' and verify user is landing on Privacy policy
+                page
+            </stat>
+            <stat pass="0" fail="1" skip="0" id="s1-s2" name="TC002 - Verify that Deep link URL is providing QR code">
+                VisionProject.Testsuite.TC002 - Verify that Deep link URL is providing QR code
+            </stat>
+            <stat pass="0" fail="1" skip="0" id="s1-s3"
+                  name="TC003 - Verify that Google Play button redirecting user to Vision Project on play store">
+                VisionProject.Testsuite.TC003 - Verify that Google Play button redirecting user to Vision Project on
+                play store
+            </stat>
+            <stat pass="0" fail="1" skip="0" id="s1-s4"
+                  name="TC004 - Verify that if social app is not installed on phone then App was not found screen appears">
+                VisionProject.Testsuite.TC004 - Verify that if social app is not installed on phone then App was not
+                found screen appears
+            </stat>
+            <stat pass="0" fail="2" skip="0" id="s1-s5" name="TC005 - Verify welcome page journey is as excepted">
+                VisionProject.Testsuite.TC005 - Verify welcome page journey is as excepted
+            </stat>
+        </suite>
+    </statistics>
+    <errors>
+        <msg timestamp="20230306 18:16:21.340" level="ERROR">Error in file
+            'D:\FusionTestFramework\Com.visionProject.Android\VisionProject.PageObject\VisionProject.PageObject.keywords\pageObjects.resource'
+            on line 4: Processing variable file
+            'D:\FusionTestFramework\Com.visionProject.Android\VisionProject.Config.Files\configuration.py' failed:
+            Importing variable file
+            'D:\FusionTestFramework\Com.visionProject.Android\VisionProject.Config.Files\configuration.py' failed:
+            TypeError: exceptions must derive from BaseException
+            Traceback (most recent call last):
+            File "D:\FusionTestFramework\Com.visionProject.Android\VisionProject.Config.Files\configuration.py", line 5,
+            in &lt;module&gt;
+            deviceDetails =
+            read_Json_file('\\Com.visionProject.Android\\Com.visionProject.Android\\VisionProject.Config.Files'
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            File "D:\FusionTestFramework\src\MobileTestLibrary\JsonFileReader.py", line 14, in read_Json_file
+            raise "file not found error..."
+            PYTHONPATH:
+            D:\FusionTestFramework\Com.visionProject.Android\VisionProject.Config.Files
+            D:\FusionTestFramework\Com.visionProject.Android
+            D:\FusionTestFramework
+            D:\FusionTestFramework\src
+            C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311\python311.zip
+            C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311\DLLs
+            C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311\Lib
+            C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311
+            D:\FusionTestFramework\venv
+            D:\FusionTestFramework\venv\Lib\site-packages
+        </msg>
+        <msg timestamp="20230306 18:16:23.581" level="WARN">Retrying (Retry(total=2, connect=None, read=None,
+            redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection
+            object at 0x000001D7620C9690&gt;, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')':
+            /wd/hub/status
+        </msg>
+        <msg timestamp="20230306 18:16:24.585" level="WARN">Retrying (Retry(total=1, connect=None, read=None,
+            redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection
+            object at 0x000001D7620C9790&gt;, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')':
+            /wd/hub/status
+        </msg>
+        <msg timestamp="20230306 18:16:25.590" level="WARN">Retrying (Retry(total=0, connect=None, read=None,
+            redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection
+            object at 0x000001D75E5F7750&gt;, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')':
+            /wd/hub/status
+        </msg>
+        <msg timestamp="20230306 18:16:27.606" level="ERROR">Error in file
+            'D:\FusionTestFramework\Com.visionProject.Android\VisionProject.PageObject\VisionProject.PageObject.keywords\pageObjects.resource'
+            on line 4: Processing variable file
+            'D:\FusionTestFramework\Com.visionProject.Android\VisionProject.Config.Files\configuration.py' failed:
+            Importing variable file
+            'D:\FusionTestFramework\Com.visionProject.Android\VisionProject.Config.Files\configuration.py' failed:
+            TypeError: exceptions must derive from BaseException
+            Traceback (most recent call last):
+            File "D:\FusionTestFramework\Com.visionProject.Android\VisionProject.Config.Files\configuration.py", line 5,
+            in &lt;module&gt;
+            deviceDetails =
+            read_Json_file('\\Com.visionProject.Android\\Com.visionProject.Android\\VisionProject.Config.Files'
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            File "D:\FusionTestFramework\src\MobileTestLibrary\JsonFileReader.py", line 14, in read_Json_file
+            raise "file not found error..."
+            PYTHONPATH:
+            D:\FusionTestFramework\Com.visionProject.Android\VisionProject.Config.Files
+            D:\FusionTestFramework\Com.visionProject.Android
+            D:\FusionTestFramework
+            D:\FusionTestFramework\src
+            C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311\python311.zip
+            C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311\DLLs
+            C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311\Lib
+            C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311
+            D:\FusionTestFramework\venv
+            D:\FusionTestFramework\venv\Lib\site-packages
+        </msg>
+        <msg timestamp="20230306 18:16:27.626" level="ERROR">Error in file
+            'D:\FusionTestFramework\Com.visionProject.Android\VisionProject.PageObject\VisionProject.PageObject.keywords\pageObjects.resource'
+            on line 4: Processing variable file
+            'D:\FusionTestFramework\Com.visionProject.Android\VisionProject.Config.Files\configuration.py' failed:
+            Importing variable file
+            'D:\FusionTestFramework\Com.visionProject.Android\VisionProject.Config.Files\configuration.py' failed:
+            TypeError: exceptions must derive from BaseException
+            Traceback (most recent call last):
+            File "D:\FusionTestFramework\Com.visionProject.Android\VisionProject.Config.Files\configuration.py", line 5,
+            in &lt;module&gt;
+            deviceDetails =
+            read_Json_file('\\Com.visionProject.Android\\Com.visionProject.Android\\VisionProject.Config.Files'
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            File "D:\FusionTestFramework\src\MobileTestLibrary\JsonFileReader.py", line 14, in read_Json_file
+            raise "file not found error..."
+            PYTHONPATH:
+            D:\FusionTestFramework\Com.visionProject.Android\VisionProject.Config.Files
+            D:\FusionTestFramework\Com.visionProject.Android
+            D:\FusionTestFramework
+            D:\FusionTestFramework\src
+            C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311\python311.zip
+            C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311\DLLs
+            C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311\Lib
+            C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311
+            D:\FusionTestFramework\venv
+            D:\FusionTestFramework\venv\Lib\site-packages
+        </msg>
+        <msg timestamp="20230306 18:16:29.495" level="WARN">Retrying (Retry(total=2, connect=None, read=None,
+            redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection
+            object at 0x000001D76211EC50&gt;, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')':
+            /wd/hub/status
+        </msg>
+        <msg timestamp="20230306 18:16:30.511" level="WARN">Retrying (Retry(total=1, connect=None, read=None,
+            redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection
+            object at 0x000001D76213CCD0&gt;, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')':
+            /wd/hub/status
+        </msg>
+        <msg timestamp="20230306 18:16:31.516" level="WARN">Retrying (Retry(total=0, connect=None, read=None,
+            redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection
+            object at 0x000001D76214AA90&gt;, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')':
+            /wd/hub/status
+        </msg>
+        <msg timestamp="20230306 18:16:33.558" level="ERROR">Error in file
+            'D:\FusionTestFramework\Com.visionProject.Android\VisionProject.PageObject\VisionProject.PageObject.keywords\pageObjects.resource'
+            on line 4: Processing variable file
+            'D:\FusionTestFramework\Com.visionProject.Android\VisionProject.Config.Files\configuration.py' failed:
+            Importing variable file
+            'D:\FusionTestFramework\Com.visionProject.Android\VisionProject.Config.Files\configuration.py' failed:
+            TypeError: exceptions must derive from BaseException
+            Traceback (most recent call last):
+            File "D:\FusionTestFramework\Com.visionProject.Android\VisionProject.Config.Files\configuration.py", line 5,
+            in &lt;module&gt;
+            deviceDetails =
+            read_Json_file('\\Com.visionProject.Android\\Com.visionProject.Android\\VisionProject.Config.Files'
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            File "D:\FusionTestFramework\src\MobileTestLibrary\JsonFileReader.py", line 14, in read_Json_file
+            raise "file not found error..."
+            PYTHONPATH:
+            D:\FusionTestFramework\Com.visionProject.Android\VisionProject.Config.Files
+            D:\FusionTestFramework\Com.visionProject.Android
+            D:\FusionTestFramework
+            D:\FusionTestFramework\src
+            C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311\python311.zip
+            C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311\DLLs
+            C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311\Lib
+            C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311
+            D:\FusionTestFramework\venv
+            D:\FusionTestFramework\venv\Lib\site-packages
+        </msg>
+        <msg timestamp="20230306 18:16:35.568" level="WARN">Retrying (Retry(total=2, connect=None, read=None,
+            redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection
+            object at 0x000001D76211DBD0&gt;, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')':
+            /wd/hub/status
+        </msg>
+        <msg timestamp="20230306 18:16:36.574" level="WARN">Retrying (Retry(total=1, connect=None, read=None,
+            redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection
+            object at 0x000001D762160110&gt;, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')':
+            /wd/hub/status
+        </msg>
+        <msg timestamp="20230306 18:16:37.577" level="WARN">Retrying (Retry(total=0, connect=None, read=None,
+            redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection
+            object at 0x000001D762161350&gt;, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')':
+            /wd/hub/status
+        </msg>
+        <msg timestamp="20230306 18:16:39.619" level="ERROR">Error in file
+            'D:\FusionTestFramework\Com.visionProject.Android\VisionProject.PageObject\VisionProject.PageObject.keywords\pageObjects.resource'
+            on line 4: Processing variable file
+            'D:\FusionTestFramework\Com.visionProject.Android\VisionProject.Config.Files\configuration.py' failed:
+            Importing variable file
+            'D:\FusionTestFramework\Com.visionProject.Android\VisionProject.Config.Files\configuration.py' failed:
+            TypeError: exceptions must derive from BaseException
+            Traceback (most recent call last):
+            File "D:\FusionTestFramework\Com.visionProject.Android\VisionProject.Config.Files\configuration.py", line 5,
+            in &lt;module&gt;
+            deviceDetails =
+            read_Json_file('\\Com.visionProject.Android\\Com.visionProject.Android\\VisionProject.Config.Files'
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            File "D:\FusionTestFramework\src\MobileTestLibrary\JsonFileReader.py", line 14, in read_Json_file
+            raise "file not found error..."
+            PYTHONPATH:
+            D:\FusionTestFramework\Com.visionProject.Android\VisionProject.Config.Files
+            D:\FusionTestFramework\Com.visionProject.Android
+            D:\FusionTestFramework
+            D:\FusionTestFramework\src
+            C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311\python311.zip
+            C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311\DLLs
+            C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311\Lib
+            C:\Users\ZMO-WIN-ShrikantL-01\AppData\Local\Programs\Python\Python311
+            D:\FusionTestFramework\venv
+            D:\FusionTestFramework\venv\Lib\site-packages
+        </msg>
+        <msg timestamp="20230306 18:16:41.465" level="WARN">Retrying (Retry(total=2, connect=None, read=None,
+            redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection
+            object at 0x000001D76215FA90&gt;, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')':
+            /wd/hub/status
+        </msg>
+        <msg timestamp="20230306 18:16:42.468" level="WARN">Retrying (Retry(total=1, connect=None, read=None,
+            redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection
+            object at 0x000001D76215CDD0&gt;, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')':
+            /wd/hub/status
+        </msg>
+        <msg timestamp="20230306 18:16:43.474" level="WARN">Retrying (Retry(total=0, connect=None, read=None,
+            redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection
+            object at 0x000001D76215EAD0&gt;, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')':
+            /wd/hub/status
+        </msg>
+    </errors>
+</robot>

@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230308 09:39:11.463" rpa="false" schemaversion="3">
+    <suite id="s1" name="XYZProject.TestcaseSuite"
+           source="D:\FusionTestFramework\Com.XYZProject.Android\XYZProject.TestcaseSuite">
+        <suite id="s1-s1" name="TC001 - Tap on 'Privacy policy' and verify user is landing on Privacy policy page"
+               source="D:\FusionTestFramework\Com.XYZProject.Android\XYZProject.TestcaseSuite\TC001 - Tap on 'Privacy policy' and verify user is landing on Privacy policy page.robot">
+            <kw name="Setup before suit start" library="Setup keywords" type="SETUP">
+                <kw name="Start Appium Service" library="MobileTestLibrary">
+                    <msg timestamp="20230308 09:39:13.752" level="WARN">Retrying (Retry(total=2, connect=None,
+                        read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection
+                        object at 0x000001FD18B6B110&gt;, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')':
+                        /wd/hub/status
+                    </msg>
+                    <status status="PASS" starttime="20230308 09:39:11.924" endtime="20230308 09:39:14.308"/>
+                </kw>
+                <status status="PASS" starttime="20230308 09:39:11.924" endtime="20230308 09:39:14.308"/>
+            </kw>
+            <test id="s1-s1-t1" name="Tap on 'Privacy policy' and verify user is landing on Privacy policy page"
+                  line="11">
+                <kw name="Launch Test application" library="Setup keywords" type="SETUP">
+                    <kw name="Open Application" library="MobileTestLibrary">
+                        <arg>${remote_url}</arg>
+                        <arg>&amp;{device}</arg>
+                        <doc>Opens a new application to given Appium server.
+                            Capabilities of appium server, Android and iOS,
+                            Please check
+                            https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+                            | *Option* | *Man.* | *Description* |
+                            | remote_url | Yes | Appium server url |
+                            | alias | no | alias |
+                            | strict_ssl | No | allows you to send commands to an invalid certificate host like a
+                            self-signed one. |
+                        </doc>
+                        <kw name="Capture Page Screenshot">
+                            <msg timestamp="20230308 09:40:27.789" level="FAIL">Multiple keywords with name 'Capture
+                                Page Screenshot' found. Give the full name of the keyword you want to use:
+                                MobileTestLibrary.Capture Page Screenshot
+                                WebApplicationTestLibrary.Capture Page Screenshot
+                            </msg>
+                            <status status="FAIL" starttime="20230308 09:40:27.789" endtime="20230308 09:40:27.789"/>
+                        </kw>
+                        <msg timestamp="20230308 09:40:27.793" level="WARN">Keyword 'Capture Page Screenshot' could not
+                            be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the
+                            full name of the keyword you want to use:
+                            MobileTestLibrary.Capture Page Screenshot
+                            WebApplicationTestLibrary.Capture Page Screenshot
+                        </msg>
+                        <kw name="Capture Page Screenshot">
+                            <msg timestamp="20230308 09:40:27.794" level="FAIL">Multiple keywords with name 'Capture
+                                Page Screenshot' found. Give the full name of the keyword you want to use:
+                                MobileTestLibrary.Capture Page Screenshot
+                                WebApplicationTestLibrary.Capture Page Screenshot
+                            </msg>
+                            <status status="FAIL" starttime="20230308 09:40:27.794" endtime="20230308 09:40:27.794"/>
+                        </kw>
+                        <msg timestamp="20230308 09:40:27.798" level="WARN">Keyword 'Capture Page Screenshot' could not
+                            be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the
+                            full name of the keyword you want to use:
+                            MobileTestLibrary.Capture Page Screenshot
+                            WebApplicationTestLibrary.Capture Page Screenshot
+                        </msg>
+                        <msg timestamp="20230308 09:40:27.799" level="FAIL">WebDriverException: Message: An unknown
+                            server-side error occurred while processing the command. Original error: Error getting AVD
+                            with retry. Original error: Condition unmet after 60068 ms. Timing out.
+                            Stacktrace:
+                            UnknownError: An unknown server-side error occurred while processing the command. Original
+                            error: Error getting AVD with retry. Original error: Condition unmet after 60068 ms. Timing
+                            out.
+                            at getResponseForW3CError
+                            (C:\Users\ZMO-WIN-ShrikantL-01\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+                            at asyncHandler
+                            (C:\Users\ZMO-WIN-ShrikantL-01\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:380:37)
+                        </msg>
+                        <status status="FAIL" starttime="20230308 09:39:14.309" endtime="20230308 09:40:27.806"/>
+                    </kw>
+                    <kw name="Set Appium Timeout" library="MobileTestLibrary">
+                        <arg>30</arg>
+                        <doc>Sets the timeout in seconds used by various keywords.</doc>
+                        <status status="NOT RUN" starttime="20230308 09:40:27.807" endtime="20230308 09:40:27.807"/>
+                    </kw>
+                    <status status="FAIL" starttime="20230308 09:39:14.308" endtime="20230308 09:40:27.807"/>
+                </kw>
+                <kw name="close Test application" library="Setup keywords" type="TEARDOWN">
+                    <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+                        <arg>MobileTestLibrary.Close Application</arg>
+                        <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+                        <kw name="Close Application" library="MobileTestLibrary">
+                            <doc>Closes the current application and also close webdriver session.</doc>
+                            <kw name="Capture Page Screenshot">
+                                <msg timestamp="20230308 09:40:27.809" level="FAIL">Multiple keywords with name 'Capture
+                                    Page Screenshot' found. Give the full name of the keyword you want to use:
+                                    MobileTestLibrary.Capture Page Screenshot
+                                    WebApplicationTestLibrary.Capture Page Screenshot
+                                </msg>
+                                <status status="FAIL" starttime="20230308 09:40:27.809"
+                                        endtime="20230308 09:40:27.809"/>
+                            </kw>
+                            <msg timestamp="20230308 09:40:27.813" level="WARN">Keyword 'Capture Page Screenshot' could
+                                not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give
+                                the full name of the keyword you want to use:
+                                MobileTestLibrary.Capture Page Screenshot
+                                WebApplicationTestLibrary.Capture Page Screenshot
+                            </msg>
+                            <kw name="Capture Page Screenshot">
+                                <msg timestamp="20230308 09:40:27.814" level="FAIL">Multiple keywords with name 'Capture
+                                    Page Screenshot' found. Give the full name of the keyword you want to use:
+                                    MobileTestLibrary.Capture Page Screenshot
+                                    WebApplicationTestLibrary.Capture Page Screenshot
+                                </msg>
+                                <status status="FAIL" starttime="20230308 09:40:27.814"
+                                        endtime="20230308 09:40:27.814"/>
+                            </kw>
+                            <msg timestamp="20230308 09:40:27.818" level="WARN">Keyword 'Capture Page Screenshot' could
+                                not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give
+                                the full name of the keyword you want to use:
+                                MobileTestLibrary.Capture Page Screenshot
+                                WebApplicationTestLibrary.Capture Page Screenshot
+                            </msg>
+                            <msg timestamp="20230308 09:40:27.818" level="FAIL">No application is open</msg>
+                            <status status="FAIL" starttime="20230308 09:40:27.808" endtime="20230308 09:40:27.819"/>
+                        </kw>
+                        <status status="FAIL" starttime="20230308 09:40:27.808" endtime="20230308 09:40:27.820"/>
+                    </kw>
+                    <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+                        <arg>WebApplicationTestLibrary.Close Browser</arg>
+                        <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+                        <kw name="Close Browser" library="WebApplicationTestLibrary">
+                            <doc>Closes the current browser.</doc>
+                            <status status="PASS" starttime="20230308 09:40:27.820" endtime="20230308 09:40:27.821"/>
+                        </kw>
+                        <status status="PASS" starttime="20230308 09:40:27.820" endtime="20230308 09:40:27.821"/>
+                    </kw>
+                    <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+                        <arg>WebApplicationTestLibrary.Close All Browsers</arg>
+                        <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+                        <kw name="Close All Browsers" library="WebApplicationTestLibrary">
+                            <doc>Closes all open browsers and resets the browser cache.</doc>
+                            <status status="PASS" starttime="20230308 09:40:27.821" endtime="20230308 09:40:27.821"/>
+                        </kw>
+                        <status status="PASS" starttime="20230308 09:40:27.821" endtime="20230308 09:40:27.821"/>
+                    </kw>
+                    <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+                        <arg>MobileTestLibrary.Close All Applications</arg>
+                        <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+                        <kw name="Close All Applications" library="MobileTestLibrary">
+                            <doc>Closes all open applications.</doc>
+                            <status status="PASS" starttime="20230308 09:40:27.822" endtime="20230308 09:40:27.827"/>
+                        </kw>
+                        <status status="PASS" starttime="20230308 09:40:27.822" endtime="20230308 09:40:27.827"/>
+                    </kw>
+                    <status status="FAIL" starttime="20230308 09:40:27.808" endtime="20230308 09:40:27.828">No
+                        application is open
+                    </status>
+                </kw>
+                <doc>Verification that Google Play button redirecting user to Vision Project on play store</doc>
+                <tag>Regression</tag>
+                <status status="FAIL" starttime="20230308 09:39:14.308" endtime="20230308 09:40:27.828">Setup failed:
+                    WebDriverException: Message: An unknown server-side error occurred while processing the command.
+                    Original error: Error getting AVD with retry. Original error: Condition unmet after 60068 ms. Timing
+                    out.
+                    Stacktrace:
+                    UnknownError: An unknown server-side error occurred while processing the command. Original error:
+                    Error getting AVD with retry. Original error: Condition unmet after 60068 ms. Timing out.
+                    at getResponseForW3CError
+                    (C:\Users\ZMO-WIN-ShrikantL-01\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+                    at asyncHandler
+                    (C:\Users\ZMO-WIN-ShrikantL-01\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:380:37)
+
+                    Also teardown failed:
+                    No application is open
+                </status>
+            </test>
+            <kw name="tearDown" library="Setup keywords" type="TEARDOWN">
+                <kw name="Stop Appium Service" library="MobileTestLibrary">
+                    <status status="PASS" starttime="20230308 09:40:27.830" endtime="20230308 09:40:27.830"/>
+                </kw>
+                <status status="PASS" starttime="20230308 09:40:27.829" endtime="20230308 09:40:27.830"/>
+            </kw>
+            <status status="FAIL" starttime="20230308 09:39:11.498" endtime="20230308 09:40:27.830"/>
+        </suite>
+        <suite id="s1-s2" name="TC002 - Verify that Deep link URL is providing QR code"
+               source="D:\FusionTestFramework\Com.XYZProject.Android\XYZProject.TestcaseSuite\TC002 - Verify that Deep link URL is providing QR code.robot">
+            <test id="s1-s2-t1" name="Verify that Deep link URL is providing QR code" line="8">
+                <kw name="Launch browser and input url" library="Setup keywords" type="SETUP">
+                    <kw name="Open Browser" library="WebApplicationTestLibrary">
+                        <arg>${url}</arg>
+                        <arg>${Browser}</arg>
+                        <doc>Opens a new browser instance to the optional ``url``.</doc>
+                        <msg timestamp="20230308 09:40:27.854" level="INFO">Opening browser 'chrome' to base url
+                            'https://social.vision-project.co/?studyID=d2563e38-04e4-4c06-8323-f8c4722040b0&amp;userID=Jai'.
+                        </msg>
+                        <status status="PASS" starttime="20230308 09:40:27.854" endtime="20230308 09:40:33.436"/>
+                    </kw>
+                    <kw name="Maximize Browser Window" library="WebApplicationTestLibrary">
+                        <doc>Maximizes current browser window.</doc>
+                        <status status="PASS" starttime="20230308 09:40:33.437" endtime="20230308 09:40:33.569"/>
+                    </kw>
+                    <status status="PASS" starttime="20230308 09:40:27.853" endtime="20230308 09:40:33.569"/>
+                </kw>
+                <kw name="wait until QR code generated and validate QR code link details and log to console"
+                    library="QR_Code_page_keywords">
+                    <kw name="Wait Until Page Contains" library="WebApplicationTestLibrary">
+                        <arg>Study cannot be conducted here</arg>
+                        <doc>Waits until ``text`` appears on the current page.</doc>
+                        <status status="PASS" starttime="20230308 09:40:33.570" endtime="20230308 09:40:33.603"/>
+                    </kw>
+                    <kw name="Element Should Be Visible" library="WebApplicationTestLibrary">
+                        <arg>${QR_Code}</arg>
+                        <doc>Verifies that the element identified by ``locator`` is visible.</doc>
+                        <msg timestamp="20230308 09:40:33.666" level="INFO">Element '//*[@viewBox='0 0 256 256']' is
+                            displayed.
+                        </msg>
+                        <status status="PASS" starttime="20230308 09:40:33.603" endtime="20230308 09:40:33.667"/>
+                    </kw>
+                    <kw name="Capture Element Screenshot" library="WebApplicationTestLibrary">
+                        <var>${captured_img}</var>
+                        <arg>${QR_Code}</arg>
+                        <doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log
+                            file.
+                        </doc>
+                        <msg timestamp="20230308 09:40:33.792" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td
+                            colspan="3"&gt;&lt;a href="selenium-element-screenshot-1.png"&gt;&lt;img
+                            src="selenium-element-screenshot-1.png" width="400px"&gt;&lt;/a&gt;
+                        </msg>
+                        <msg timestamp="20230308 09:40:33.792" level="INFO">${captured_img} =
+                            D:\FusionTestFramework\Com.XYZProject.Android\XYZProject.TestResults\08-03-23_09-39-11\selenium-element-screenshot-1.png
+                        </msg>
+                        <status status="PASS" starttime="20230308 09:40:33.667" endtime="20230308 09:40:33.792"/>
+                    </kw>
+                    <kw name="Scan QR Code" library="WebApplicationTestLibrary">
+                        <var>${QRCodedata}</var>
+                        <arg>${captured_img}</arg>
+                        <msg timestamp="20230308 09:40:34.731" level="INFO">3.4.1 (3, 4, 1)</msg>
+                        <msg timestamp="20230308 09:40:34.731" level="INFO">${QRCodedata} =
+                            BarCode(raw='https://social.vision-project.co/?studyID=d2563e38-04e4-4c06-8323-f8c4722040b0&amp;userID=Jai',
+                            parsed='https://social.vision-project.co/?studyID=d2563e38-04e4-4c06-8323-f8c4722040b0&amp;userID=J...
+                        </msg>
+                        <status status="PASS" starttime="20230308 09:40:33.793" endtime="20230308 09:40:34.731"/>
+                    </kw>
+                    <kw name="Log To Console" library="BuiltIn">
+                        <arg>${QRCodedata}</arg>
+                        <doc>Logs the given message to the console.</doc>
+                        <status status="PASS" starttime="20230308 09:40:34.731" endtime="20230308 09:40:34.732"/>
+                    </kw>
+                    <status status="PASS" starttime="20230308 09:40:33.570" endtime="20230308 09:40:34.732"/>
+                </kw>
+                <kw name="Close Browser" library="WebApplicationTestLibrary" type="TEARDOWN">
+                    <doc>Closes the current browser.</doc>
+                    <msg timestamp="20230308 09:40:36.040" level="ERROR">When closing browser, received exception:
+                        Execution terminated by signal
+                    </msg>
+                    <msg timestamp="20230308 09:40:36.040" level="INFO">Cannot capture screenshot because no browser is
+                        open.
+                    </msg>
+                    <status status="FAIL" starttime="20230308 09:40:34.732" endtime="20230308 09:40:36.040">Execution
+                        terminated by signal
+                    </status>
+                </kw>
+                <doc>verification of barcode generation of specified link</doc>
+                <tag>Regression</tag>
+                <status status="FAIL" starttime="20230308 09:40:27.853" endtime="20230308 09:40:36.040">Teardown failed:
+                    Execution terminated by signal
+                </status>
+            </test>
+            <status status="FAIL" starttime="20230308 09:40:27.832" endtime="20230308 09:40:36.040"/>
+        </suite>
+        <suite id="s1-s3" name="TC003 - Verify that Google Play button redirecting user to Vision Project on play store"
+               source="D:\FusionTestFramework\Com.XYZProject.Android\XYZProject.TestcaseSuite\TC003 - Verify that Google Play button redirecting user to Vision Project on play store.robot">
+            <test id="s1-s3-t1" name="Verify that Google Play button redirecting user to Vision Project on play store"
+                  line="11">
+                <doc>Verification that Google Play button redirecting user to Vision Project on play store</doc>
+                <tag>Regression</tag>
+                <tag>robot:exit</tag>
+                <status status="FAIL" starttime="20230308 09:40:36.042" endtime="20230308 09:40:36.042">Test execution
+                    stopped due to a fatal error.
+                </status>
+            </test>
+            <status status="FAIL" starttime="20230308 09:40:36.041" endtime="20230308 09:40:36.042"/>
+        </suite>
+        <suite id="s1-s4"
+               name="TC004 - Verify that if social app is not installed on phone then App was not found screen appears"
+               source="D:\FusionTestFramework\Com.XYZProject.Android\XYZProject.TestcaseSuite\TC004 - Verify that if social app is not installed on phone then App was not found screen appears.robot">
+            <test id="s1-s4-t1"
+                  name="Verify that if social app is not installed on phone then App was not found screen appears"
+                  line="10">
+                <doc>Verification that if social app is not installed on phone then App was not found screen appears
+                </doc>
+                <tag>robot:exit</tag>
+                <tag>smoke</tag>
+                <status status="FAIL" starttime="20230308 09:40:36.043" endtime="20230308 09:40:36.043">Test execution
+                    stopped due to a fatal error.
+                </status>
+            </test>
+            <status status="FAIL" starttime="20230308 09:40:36.043" endtime="20230308 09:40:36.044"/>
+        </suite>
+        <suite id="s1-s5" name="TC005 - Verify welcome page journey is as excepted"
+               source="D:\FusionTestFramework\Com.XYZProject.Android\XYZProject.TestcaseSuite\TC005 - Verify welcome page journey is as excepted.robot">
+            <test id="s1-s5-t1" name="Verify that user is able to paste study link using Paste study link" line="11">
+                <doc>Verification that user is able to paste study link using Paste study link</doc>
+                <tag>Regression</tag>
+                <tag>robot:exit</tag>
+                <status status="FAIL" starttime="20230308 09:40:36.045" endtime="20230308 09:40:36.046">Test execution
+                    stopped due to a fatal error.
+                </status>
+            </test>
+            <test id="s1-s5-t2" name="Verify that Help page open up when user taps on help icon&quot;?&quot;" line="22">
+                <doc>Verification that Help page open up when user taps on help icon"?"</doc>
+                <tag>Regression</tag>
+                <tag>robot:exit</tag>
+                <status status="FAIL" starttime="20230308 09:40:36.046" endtime="20230308 09:40:36.047">Test execution
+                    stopped due to a fatal error.
+                </status>
+            </test>
+            <status status="FAIL" starttime="20230308 09:40:36.044" endtime="20230308 09:40:36.047"/>
+        </suite>
+        <status status="FAIL" starttime="20230308 09:39:11.466" endtime="20230308 09:40:36.049"/>
+    </suite>
+    <statistics>
+        <total>
+            <stat pass="0" fail="6" skip="0">All Tests</stat>
+        </total>
+        <tag>
+            <stat pass="0" fail="2" skip="0" info="combined" combined="NOT robot:exit">NOT robot:exit</stat>
+            <stat pass="0" fail="5" skip="0">Regression</stat>
+            <stat pass="0" fail="1" skip="0">smoke</stat>
+        </tag>
+        <suite>
+            <stat pass="0" fail="6" skip="0" id="s1" name="XYZProject.TestcaseSuite">XYZProject.TestcaseSuite</stat>
+            <stat pass="0" fail="1" skip="0" id="s1-s1"
+                  name="TC001 - Tap on 'Privacy policy' and verify user is landing on Privacy policy page">
+                XYZProject.TestcaseSuite.TC001 - Tap on 'Privacy policy' and verify user is landing on Privacy policy
+                page
+            </stat>
+            <stat pass="0" fail="1" skip="0" id="s1-s2" name="TC002 - Verify that Deep link URL is providing QR code">
+                XYZProject.TestcaseSuite.TC002 - Verify that Deep link URL is providing QR code
+            </stat>
+            <stat pass="0" fail="1" skip="0" id="s1-s3"
+                  name="TC003 - Verify that Google Play button redirecting user to Vision Project on play store">
+                XYZProject.TestcaseSuite.TC003 - Verify that Google Play button redirecting user to Vision Project on
+                play store
+            </stat>
+            <stat pass="0" fail="1" skip="0" id="s1-s4"
+                  name="TC004 - Verify that if social app is not installed on phone then App was not found screen appears">
+                XYZProject.TestcaseSuite.TC004 - Verify that if social app is not installed on phone then App was not
+                found screen appears
+            </stat>
+            <stat pass="0" fail="2" skip="0" id="s1-s5" name="TC005 - Verify welcome page journey is as excepted">
+                XYZProject.TestcaseSuite.TC005 - Verify welcome page journey is as excepted
+            </stat>
+        </suite>
+    </statistics>
+    <errors>
+        <msg timestamp="20230308 09:39:13.752" level="WARN">Retrying (Retry(total=2, connect=None, read=None,
+            redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection
+            object at 0x000001FD18B6B110&gt;, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')':
+            /wd/hub/status
+        </msg>
+        <msg timestamp="20230308 09:40:27.793" level="WARN">Keyword 'Capture Page Screenshot' could not be run on
+            failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you
+            want to use:
+            MobileTestLibrary.Capture Page Screenshot
+            WebApplicationTestLibrary.Capture Page Screenshot
+        </msg>
+        <msg timestamp="20230308 09:40:27.798" level="WARN">Keyword 'Capture Page Screenshot' could not be run on
+            failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you
+            want to use:
+            MobileTestLibrary.Capture Page Screenshot
+            WebApplicationTestLibrary.Capture Page Screenshot
+        </msg>
+        <msg timestamp="20230308 09:40:27.813" level="WARN">Keyword 'Capture Page Screenshot' could not be run on
+            failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you
+            want to use:
+            MobileTestLibrary.Capture Page Screenshot
+            WebApplicationTestLibrary.Capture Page Screenshot
+        </msg>
+        <msg timestamp="20230308 09:40:27.818" level="WARN">Keyword 'Capture Page Screenshot' could not be run on
+            failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you
+            want to use:
+            MobileTestLibrary.Capture Page Screenshot
+            WebApplicationTestLibrary.Capture Page Screenshot
+        </msg>
+        <msg timestamp="20230308 09:40:36.040" level="ERROR">When closing browser, received exception: Execution
+            terminated by signal
+        </msg>
+    </errors>
+</robot>
