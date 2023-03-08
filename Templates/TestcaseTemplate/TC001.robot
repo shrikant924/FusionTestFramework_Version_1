@@ -1,6 +1,6 @@
 *** Settings ***
 
-Resource        ../../../../com.visionProject.android/Com.visionProject.Android/VisionProject.PageObject/VisionProject.PageObject.keywords/KeywordsSetup.resource
+Resource       ../../com.playgroundxyz.vision_project/com.playgroundxyz.vision_project.PageObject/com.playgroundxyz.vision_project.PageObject.keywords/pageObjects.resource
 Suite Setup
 Suite Teardown
 Task Setup
