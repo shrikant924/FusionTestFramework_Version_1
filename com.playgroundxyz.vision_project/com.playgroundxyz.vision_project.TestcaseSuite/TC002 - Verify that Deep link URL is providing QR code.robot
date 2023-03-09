@@ -1,5 +1,5 @@
 *** Settings ***
-Resource        ../XYZProject.PageObject/XYZProject.PageObject.keywords/pageObjects.resource
+Resource        ../../com.playgroundxyz.vision_project/com.playgroundxyz.vision_project.PageObject/com.playgroundxyz.vision_project.PageObject.keywords/pageObjects.resource
 Test Setup          Launch browser and input url
 Test Teardown       Close Browser
 
