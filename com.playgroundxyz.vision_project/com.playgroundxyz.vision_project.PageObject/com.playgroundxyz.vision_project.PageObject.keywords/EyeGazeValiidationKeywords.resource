@@ -1,20 +1,19 @@
 *** Settings ***
 Resource    pageObjects.resource
-Library    XML
 
 *** Keywords ***
 Need to Manual Input here 'Look at the dot until it goes green and disappears'
     mobile.Wait Until Page Contains    ${EyeGazeValiidation titleText}
     mobile.Wait Until Page Contains Element    ${EyeGazeValiidation BeginBtn}    timeout=300
     mobile.Page Should Contain Text     	Repeat five times. The dots will appear in random places.
-    mobile.Tap    ${EyeGazeValiidation BeginBtn}
+    mobile.Click element    ${EyeGazeValiidation BeginBtn}
     mobile.Wait Until Page Contains    Just a few more to go        timeout=300
     mobile.Page Should Contain Text    Great job so far! Keep going. The dots will go green and disappear once the accuracy is validated.
     mobile.Wait Until Element Is Visible    ${EyeGazeValiidation ContinueToAccuracyCheckBtn}
-    mobile.Tap    ${EyeGazeValiidation ContinueToAccuracyCheckBtn}
+    mobile.Click element    ${EyeGazeValiidation ContinueToAccuracyCheckBtn}
     TRY
         Verify 'Accuracy needs to be improved' screen getting displayed if user fails to validate accuracy
-    EXCEPT    
+    EXCEPT
         Log To Console    "Accuracy is good"
     END
     
@@ -39,13 +38,13 @@ Verify 'Accuracy needs to be improved' screen getting displayed if user fails to
     mobile.Page Should Contain Text    Keep your head and phone still while looking at the dots.
     mobile.Click Element    ${tryAgainBtn}
     mobile.Wait Until Element Is Visible    ${EyeGazeValiidation ContinueToAccuracyCheckBtn}
-    mobile.Tap    ${EyeGazeValiidation ContinueToAccuracyCheckBtn}
+    mobile.Click element    ${EyeGazeValiidation ContinueToAccuracyCheckBtn}
 
 verify 'Well done! The eye tracking setup is complete' screen getting displayed after validation of EYE gaze
     mobile.Wait Until Page Contains    Well done
     Verify help icon is working as excepted
     mobile.Page Should Contain Text    You will have accuracy checks every 1 minutes during your browsing session to maintain the accuracy of our eye tracking.
-    mobile.Tap    ${BEGIN Button}
+    mobile.Click element    ${BEGIN Button}
      
 Verify 'You are ready to begin the study' screen getting displayed
     mobile.Wait Until Page Contains    	You are ready to begin the study        timeout=300
@@ -55,15 +54,15 @@ Verify 'You are ready to begin the study' screen getting displayed
     mobile.Page Should Contain Text    The Vision Project app will record your screen while you browse.
     Verify help icon is working as excepted
 
-Tap on 'View A Quick Demo' Button
+Click element on 'View A Quick Demo' Button
     mobile.Wait Until Element Is Visible    ${ViewAQuickDemoBtn}
-    mobile.Tap    ${ViewAQuickDemoBtn}
+    mobile.Click element    ${ViewAQuickDemoBtn}
 
-Tap on 'Skip And Start Study' Button
+Click element on 'Skip And Start Study' Button
     mobile.Wait Until Element Is Visible    ${Skip&StartTheStudyBtn}
-    mobile.Tap    ${Skip&StartTheStudyBtn}
+    mobile.Click element    ${Skip&StartTheStudyBtn}
     
-Verify study instructions and tap on 'START STUDY' button
+Verify study instructions and Click element on 'START STUDY' button
     mobile.Wait Until Page Contains    Study instructions
     Verify help icon is working as excepted
     mobile.Page Should Contain Text    You will see a floating timer with the time remaining and the status of the recording in the top right corner of the screen.
@@ -73,5 +72,5 @@ Verify study instructions and tap on 'START STUDY' button
     mobile.Swipe By Percent     80    50    20    50
     mobile.Wait Until Page Contains    When the browsing
     mobile.Page Should Contain Text    When the browsing session is complete you will see a notification like this. Please act according to the instructions in the notification.
-    mobile.Tap    ${studyInstructions StartStudyBtn}
+    mobile.Click element    ${studyInstructions StartStudyBtn}
 
