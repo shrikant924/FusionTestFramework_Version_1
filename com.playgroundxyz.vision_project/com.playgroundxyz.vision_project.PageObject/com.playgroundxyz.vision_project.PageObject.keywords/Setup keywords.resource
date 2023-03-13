@@ -4,6 +4,7 @@ Resource       pageObjects.resource
 *** Keywords ***
 Setup before suit start
     mobile.Start Appium Service
+    Set Log Level    DEBUG
 
 tearDown
     mobile.Stop Appium Service

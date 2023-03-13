@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230313 14:05:09.176" rpa="false" schemaversion="3">
+<suite id="s1" name="TC004 - Verify that if social app is not installed on phone then App was not found screen appears" source="d:\FusionTestFramework\com.playgroundxyz.vision_project\com.playgroundxyz.vision_project.TestcaseSuite\TC004 - Verify that if social app is not installed on phone then App was not found screen appears.robot">
+<kw name="Setup before suit start" library="Setup keywords" type="SETUP">
+<kw name="Start Appium Service" library="mobile">
+<status status="PASS" starttime="20230313 14:05:09.622" endtime="20230313 14:05:17.411"/>
+</kw>
+<status status="PASS" starttime="20230313 14:05:09.621" endtime="20230313 14:05:17.411"/>
+</kw>
+<test id="s1-t1" name="Verify that if social app is not installed on phone then App was not found screen appears" line="10">
+<kw name="Launch Test application" library="Setup keywords" type="SETUP">
+<kw name="Open Application" library="mobile">
+<arg>${remote_url}</arg>
+<arg>&amp;{device}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20230313 14:05:17.415" endtime="20230313 14:05:25.622"/>
+</kw>
+<kw name="Set Log Level" library="BuiltIn">
+<arg>DEBUG</arg>
+<doc>Sets the log threshold to the specified level and returns the old level.</doc>
+<msg timestamp="20230313 14:05:25.623" level="INFO">Log level changed from INFO to DEBUG.</msg>
+<status status="PASS" starttime="20230313 14:05:25.623" endtime="20230313 14:05:25.625"/>
+</kw>
+<kw name="Set Appium Timeout" library="mobile">
+<arg>30</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20230313 14:05:25.625" endtime="20230313 14:05:25.625"/>
+</kw>
+<status status="PASS" starttime="20230313 14:05:17.414" endtime="20230313 14:05:25.626"/>
+</kw>
+<kw name="launch camera app and wait until user scan the QR code from study link url" library="launch_flow_keywords">
+<kw name="Start Activity" library="mobile">
+<arg>com.google.android.GoogleCamera</arg>
+<arg>com.android.camera.CameraLauncher</arg>
+<doc>Opens an arbitrary activity during a test. If the activity belongs to
+another application, that application is started and the activity is opened.</doc>
+<msg timestamp="20230313 14:05:25.630" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/appium/device/start_activity {"appPackage": "com.google.android.GoogleCamera", "appActivity": "com.android.camera.CameraLauncher"}</msg>
+<msg timestamp="20230313 14:05:26.430" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/appium/device/start_activity HTTP/1.1" 200 14</msg>
+<msg timestamp="20230313 14:05:26.431" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Mon, 13 Mar 2023 08:35:26 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:26.431" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20230313 14:05:25.630" endtime="20230313 14:05:26.431"/>
+</kw>
+<kw name="Open Browser" library="web">
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230313 14:05:26.432" level="INFO">Opening browser 'chrome' to base url 'https://social.vision-project.co/?studyID=d2563e38-04e4-4c06-8323-f8c4722040b0&amp;userID=Jai'.</msg>
+<msg timestamp="20230313 14:05:26.438" level="DEBUG">driver not found in PATH, trying Selenium Manager</msg>
+<msg timestamp="20230313 14:05:26.439" level="DEBUG">Executing: d:\FusionTestFramework\venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome</msg>
+<msg timestamp="20230313 14:05:27.506" level="DEBUG">Using driver at: C:\Users\ZMO-WIN-ShrikantL-01\.cache\selenium\chromedriver\win32\111.0.5563.64\chromedriver.exe</msg>
+<msg timestamp="20230313 14:05:28.234" level="DEBUG">Started executable: `chromedriver` in a child process with pid: 18952</msg>
+<msg timestamp="20230313 14:05:28.741" level="DEBUG">POST http://localhost:53259/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}}</msg>
+<msg timestamp="20230313 14:05:28.742" level="DEBUG">Starting new HTTP connection (1): localhost:53259</msg>
+<msg timestamp="20230313 14:05:29.828" level="DEBUG">http://localhost:53259 "POST /session HTTP/1.1" 200 861</msg>
+<msg timestamp="20230313 14:05:29.829" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"111.0.5563.64","chrome":{"chromedriverVersion":"111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995})","userDataDir":"C:\\Users\\ZMO-WI~1\\AppData\\Local\\Temp\\scoped_dir18952_314501899"},"goog:chromeOptions":{"debuggerAddress":"localhost:53264"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"59bb943f6c5ae02a2f03600dbb735383"}} | headers=HTTPHeaderDict({'Content-Length': '861', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20230313 14:05:29.829" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:29.830" level="DEBUG">POST http://localhost:53259/session/59bb943f6c5ae02a2f03600dbb735383/timeouts {"script": 5000}</msg>
+<msg timestamp="20230313 14:05:29.831" level="DEBUG">http://localhost:53259 "POST /session/59bb943f6c5ae02a2f03600dbb735383/timeouts HTTP/1.1" 200 14</msg>
+<msg timestamp="20230313 14:05:29.831" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20230313 14:05:29.831" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:29.831" level="DEBUG">POST http://localhost:53259/session/59bb943f6c5ae02a2f03600dbb735383/timeouts {"implicit": 0}</msg>
+<msg timestamp="20230313 14:05:29.833" level="DEBUG">http://localhost:53259 "POST /session/59bb943f6c5ae02a2f03600dbb735383/timeouts HTTP/1.1" 200 14</msg>
+<msg timestamp="20230313 14:05:29.833" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20230313 14:05:29.833" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:29.833" level="DEBUG">POST http://localhost:53259/session/59bb943f6c5ae02a2f03600dbb735383/url {"url": "https://social.vision-project.co/?studyID=d2563e38-04e4-4c06-8323-f8c4722040b0&amp;userID=Jai"}</msg>
+<msg timestamp="20230313 14:05:30.732" level="DEBUG">http://localhost:53259 "POST /session/59bb943f6c5ae02a2f03600dbb735383/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20230313 14:05:30.732" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20230313 14:05:30.733" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:30.733" level="DEBUG">Opened browser with session id 59bb943f6c5ae02a2f03600dbb735383.</msg>
+<status status="PASS" starttime="20230313 14:05:26.431" endtime="20230313 14:05:30.733"/>
+</kw>
+<kw name="Maximize Browser Window" library="web">
+<doc>Maximizes current browser window.</doc>
+<msg timestamp="20230313 14:05:30.735" level="DEBUG">POST http://localhost:53259/session/59bb943f6c5ae02a2f03600dbb735383/window/maximize {}</msg>
+<msg timestamp="20230313 14:05:30.857" level="DEBUG">http://localhost:53259 "POST /session/59bb943f6c5ae02a2f03600dbb735383/window/maximize HTTP/1.1" 200 51</msg>
+<msg timestamp="20230313 14:05:30.859" level="DEBUG">Remote response: status=200 | data={"value":{"height":840,"width":1552,"x":-8,"y":-8}} | headers=HTTPHeaderDict({'Content-Length': '51', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20230313 14:05:30.860" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20230313 14:05:30.734" endtime="20230313 14:05:30.860"/>
+</kw>
+<status status="PASS" starttime="20230313 14:05:25.628" endtime="20230313 14:05:30.861"/>
+</kw>
+<kw name="tap on generated link" library="launch_flow_keywords">
+<kw name="Wait Until Element Is Visible" library="mobile">
+<arg>${camera_smartchip_text}</arg>
+<arg>timeout= 300</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230313 14:05:30.870" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:30.997" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:30.998" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:30 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:30.998" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:31.205" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:31.339" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:31.340" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:31 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:31.340" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:31.541" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:31.676" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:31.678" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:31 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:31.678" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:31.881" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:32.014" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:32.015" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:32 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:32.018" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:32.220" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:32.319" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:32.321" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:32 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:32.321" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:32.523" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:32.642" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:32.642" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:32 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:32.643" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:32.843" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:32.925" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:32.925" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:32 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:32.925" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:33.127" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:33.200" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:33.201" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:33 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:33.201" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:33.403" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:33.478" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:33.479" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:33 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:33.480" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:33.680" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:33.746" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:33.746" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:33 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:33.747" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:33.948" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:34.035" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:34.036" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:34 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:34.036" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:34.237" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:34.328" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:34.328" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:34 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:34.328" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:34.529" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:34.601" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:34.602" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:34 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:34.602" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:34.804" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:34.892" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:34.893" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:34 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:34.893" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:35.094" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:35.187" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:35.188" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:35 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:35.188" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:35.389" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:35.470" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:35.471" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:35 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:35.471" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:35.671" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:35.746" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:35.746" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:35 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:35.747" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:35.947" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:36.012" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:36.013" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:36 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:36.014" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:36.214" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:36.294" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:36.295" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:36 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:36.295" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:36.496" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:36.586" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:36.586" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:36 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:36.586" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:36.787" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:36.860" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:36.861" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:36 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:36.861" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:37.061" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:37.154" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:37.154" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:37 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:37.154" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:37.356" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:37.454" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:37.454" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:37 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:37.454" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:37.656" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:37.715" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:37.716" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:37 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:37.716" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:37.918" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:37.973" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:37.973" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:37 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:37.974" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:38.174" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:38.248" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:38.248" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:38 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:38.250" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:38.451" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:38.539" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:38.540" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:38 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:38.540" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:38.741" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:38.818" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:38.818" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:38 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:38.819" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:39.019" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:39.110" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:39.111" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:39 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:39.111" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:39.312" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:39.448" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:39.448" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:39 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:39.448" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:39.654" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:39.756" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:39.758" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:39 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:39.758" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:39.959" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:40.071" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:40.073" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:40 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:40.073" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:40.274" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:40.363" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:40.364" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:40 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:40.364" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:40.568" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:40.649" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:40.649" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:40 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:40.652" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:40.853" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:40.961" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:40.963" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:40 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:40.964" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:41.167" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:41.261" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:41.261" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:41 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:41.261" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:41.462" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:41.556" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:41.556" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:41 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:41.556" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:41.757" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:41.854" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:41.855" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:41 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:41.855" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:42.057" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:42.152" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:42.154" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:42 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:42.155" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:42.357" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:42.451" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:42.452" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:42 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:42.453" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:42.654" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:42.742" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:42.743" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:42 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:42.743" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:42.943" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:43.029" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:43.030" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:43 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:43.030" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:43.232" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:43.323" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:43.325" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:43 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:43.325" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:43.526" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:43.623" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:43.624" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:43 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:43.626" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:43.827" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:43.914" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:43.915" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:43 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:43.919" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:44.120" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:44.190" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:44.192" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:44 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:44.192" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:44.394" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:44.445" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:44.445" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:44 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:44.445" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:44.654" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:44.726" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:44.726" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:44 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:44.727" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:44.927" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:45.007" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:45.008" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:45 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:45.008" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:45.209" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:45.305" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:45.306" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:45 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:45.306" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:45.506" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:45.594" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:45.594" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:45 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:45.595" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:45.795" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:45.910" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:45.911" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:45 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:45.911" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:46.112" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:46.176" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:46.176" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:46 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:46.176" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:46.377" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:46.457" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:46.457" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:46 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:46.457" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:46.659" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:46.769" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:46.771" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:46 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:46.771" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:46.973" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:47.075" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:47.076" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:47 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:47.076" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:47.278" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:47.387" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:47.388" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:47 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:47.388" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:47.589" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:47.652" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:47.653" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:47 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:47.653" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:47.853" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:47.945" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:47.946" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:47 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:47.946" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:48.148" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:48.212" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:48.213" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:48 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:48.213" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:48.414" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:48.480" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:48.481" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:48 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:48.482" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:48.684" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:48.793" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:48.793" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:48 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:48.794" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:48.994" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:49.091" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:49.092" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:49 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:49.093" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:49.294" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:49.357" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:49.359" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:49 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:49.359" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:49.560" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:49.661" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:49.662" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:49 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:49.663" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:49.866" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:49.942" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:49.943" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:49 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:49.944" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:50.145" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:50.226" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:50.228" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:50 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:50.228" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:50.430" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:50.525" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:50.526" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:50 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:50.527" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:50.729" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:50.818" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:50.819" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:50 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:50.819" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:51.021" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:51.129" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:51.130" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:51 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:51.130" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:51.332" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:51.428" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:51.429" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:51 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:51.429" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:51.630" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:51.722" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:51.724" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:51 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:51.724" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:51.925" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:52.023" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:52.025" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:52 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:52.025" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:52.226" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:52.287" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:52.288" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:52 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:52.289" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:52.489" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:52.572" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:52.573" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:52 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:52.573" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:52.775" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:52.852" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:52.854" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:52 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:52.854" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:53.055" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:53.130" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:53.130" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:53 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:53.130" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:53.331" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:53.456" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:53.457" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:53 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:53.457" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:53.658" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:53.721" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:53.721" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:53 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:53.721" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:53.922" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:54.020" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:54.022" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:54 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:54.023" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:54.224" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:54.373" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:54.375" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:54 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:54.376" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:54.578" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:54.662" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:54.664" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:54 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:54.665" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:54.867" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:54.955" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:54.956" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:54 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:54.957" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:55.158" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:55.245" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:55.245" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:55 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:55.245" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:55.448" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:55.538" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:55.540" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:55 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:55.540" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:55.741" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:55.833" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:55.833" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:55 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:55.834" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:56.034" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:56.127" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:56.129" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:56 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:56.129" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:56.330" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:56.420" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:56.422" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:56 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:56.422" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:56.624" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:56.709" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:56.710" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:56 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:56.712" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:56.914" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:57.015" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:57.015" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:57 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:57.015" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:57.220" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:57.295" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:57.296" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:57 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:57.296" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:57.498" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:57.593" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:57.594" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:57 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:57.595" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:57.797" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:57.879" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:57.880" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:57 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:57.880" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:58.084" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:58.150" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:58.152" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:58 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:58.152" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:58.353" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:58.437" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:58.439" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:58 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:58.439" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:58.640" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:58.734" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:58.734" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:58 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:58.735" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:58.936" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:59.024" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:59.024" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:59 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:59.024" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:59.225" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:59.312" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:59.313" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:59 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:59.315" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:59.517" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:59.611" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:59.613" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:59 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:59.614" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:05:59.816" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:05:59.919" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:05:59.921" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:35:59 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:05:59.921" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:00.122" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:00.238" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:00.240" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:00 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:00.240" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:00.442" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:00.521" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:00.522" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:00 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:00.523" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:00.725" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:00.814" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:00.818" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:00 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:00.819" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:01.020" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:01.096" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:01.097" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:01 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:01.098" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:01.301" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:01.387" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:01.389" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:01 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:01.389" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:01.590" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:01.701" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:01.702" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:01 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:01.702" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:01.903" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:02.002" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:02.002" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:01 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:02.002" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:02.204" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:02.311" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:02.313" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:02 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:02.313" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:02.514" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:02.611" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:02.612" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:02 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:02.612" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:02.815" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:02.946" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:02.946" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:02 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:02.946" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:03.148" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:03.247" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:03.247" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:03 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:03.251" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:03.452" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:03.551" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:03.552" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:03 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:03.552" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:03.754" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:03.870" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:03.872" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:03 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:03.872" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:04.073" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:04.188" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:04.189" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:04 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:04.190" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:04.391" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:04.497" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:04.497" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:04 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:04.500" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:04.702" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:04.821" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:04.822" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:04 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:04.823" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:05.025" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:05.102" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:05.103" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:05 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:05.103" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:05.303" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:05.394" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:05.394" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:05 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:05.395" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:05.595" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:05.686" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:05.687" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:05 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:05.687" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:05.888" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:05.991" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:05.992" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:05 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:05.993" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:06.193" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:06.327" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:06.328" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:06 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:06.329" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:06.530" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:06.630" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:06.630" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:06 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:06.631" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:06.832" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:06.942" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:06.943" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:06 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:06.944" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:07.145" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:07.239" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:07.240" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:07 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:07.241" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:07.442" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:07.544" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:07.546" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:07 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:07.547" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:07.749" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:07.823" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:07.823" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:07 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:07.824" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:08.024" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:08.139" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:08.141" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:08 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:08.141" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:08.342" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:08.427" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:08.428" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:08 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:08.429" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:08.631" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:08.689" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:08.689" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:08 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:08.690" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:08.891" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:08.970" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:08.971" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:08 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:08.971" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:09.173" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:09.230" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:09.231" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:09 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:09.232" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:09.433" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:09.506" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:09.507" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:09 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:09.507" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:09.708" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:09.826" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:09.826" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:09 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:09.826" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:10.031" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:10.110" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:10.110" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:10 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:10.111" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:10.311" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:10.396" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:10.398" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:10 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:10.398" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:10.601" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:10.690" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230313 14:06:10.692" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Mon, 13 Mar 2023 08:36:10 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:10.692" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:10.893" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:10.993" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20230313 14:06:10.994" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-03e3-ffff-ffff00000104","ELEMENT":"00000000-0000-03e3-ffff-ffff00000104"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-tNLxG+u89+JNcc1f3GOsUM2Qbwk"', 'Date': 'Mon, 13 Mar 2023 08:36:10 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:10.995" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:10.995" level="DEBUG">GET http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/element/00000000-0000-03e3-ffff-ffff00000104/displayed {"id": "00000000-0000-03e3-ffff-ffff00000104"}</msg>
+<msg timestamp="20230313 14:06:11.431" level="DEBUG">http://localhost:4723 "GET /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/element/00000000-0000-03e3-ffff-ffff00000104/displayed HTTP/1.1" 200 14</msg>
+<msg timestamp="20230313 14:06:11.431" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-2ZHvAWebNQpyjGZTg6uyV8/spTo"', 'Date': 'Mon, 13 Mar 2023 08:36:11 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:11.431" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:11.434" level="INFO">criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text
+criteria is com.google.android.GoogleCamera:id/smarts_chip_text</msg>
+<status status="PASS" starttime="20230313 14:05:30.867" endtime="20230313 14:06:11.437"/>
+</kw>
+<kw name="Click Element" library="mobile">
+<arg>${camera_smartchip_text}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230313 14:06:11.457" level="INFO">Clicking element 'com.google.android.GoogleCamera:id/smarts_chip_text'.</msg>
+<msg timestamp="20230313 14:06:11.458" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "id", "value": "com.google.android.GoogleCamera:id/smarts_chip_text"}</msg>
+<msg timestamp="20230313 14:06:11.536" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20230313 14:06:11.537" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-03e3-ffff-ffff00000104","ELEMENT":"00000000-0000-03e3-ffff-ffff00000104"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-tNLxG+u89+JNcc1f3GOsUM2Qbwk"', 'Date': 'Mon, 13 Mar 2023 08:36:11 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:11.537" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:11.537" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/element/00000000-0000-03e3-ffff-ffff00000104/click {"id": "00000000-0000-03e3-ffff-ffff00000104"}</msg>
+<msg timestamp="20230313 14:06:11.605" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/element/00000000-0000-03e3-ffff-ffff00000104/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20230313 14:06:11.606" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Mon, 13 Mar 2023 08:36:11 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:11.607" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:11.607" level="INFO">criteria is com.google.android.GoogleCamera:id/smarts_chip_text</msg>
+<status status="PASS" starttime="20230313 14:06:11.439" endtime="20230313 14:06:11.608"/>
+</kw>
+<kw name="Close Browser" library="web">
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230313 14:06:11.609" level="DEBUG">Closing browser with session id 59bb943f6c5ae02a2f03600dbb735383.</msg>
+<msg timestamp="20230313 14:06:11.610" level="DEBUG">DELETE http://localhost:53259/session/59bb943f6c5ae02a2f03600dbb735383 {}</msg>
+<msg timestamp="20230313 14:06:11.748" level="DEBUG">http://localhost:53259 "DELETE /session/59bb943f6c5ae02a2f03600dbb735383 HTTP/1.1" 200 14</msg>
+<msg timestamp="20230313 14:06:11.748" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20230313 14:06:11.748" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20230313 14:06:11.609" endtime="20230313 14:06:13.861"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="mobile">
+<arg>${google_playstore_Button}</arg>
+<arg>timeout=30</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230313 14:06:13.861" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "xpath", "value": "//android.widget.Button[@index=3]"}</msg>
+<msg timestamp="20230313 14:06:14.162" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20230313 14:06:14.162" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-03d9-0000-8f2c00000138","ELEMENT":"00000000-0000-03d9-0000-8f2c00000138"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-DDiomKzifBvkWyJ/KyVif4Q+O9I"', 'Date': 'Mon, 13 Mar 2023 08:36:14 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:14.162" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:14.166" level="DEBUG">GET http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/element/00000000-0000-03d9-0000-8f2c00000138/displayed {"id": "00000000-0000-03d9-0000-8f2c00000138"}</msg>
+<msg timestamp="20230313 14:06:14.184" level="DEBUG">http://localhost:4723 "GET /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/element/00000000-0000-03d9-0000-8f2c00000138/displayed HTTP/1.1" 200 14</msg>
+<msg timestamp="20230313 14:06:14.184" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-2ZHvAWebNQpyjGZTg6uyV8/spTo"', 'Date': 'Mon, 13 Mar 2023 08:36:14 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:14.184" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:14.184" level="INFO">xpath criteria: //android.widget.Button[@index=3]</msg>
+<status status="PASS" starttime="20230313 14:06:13.861" endtime="20230313 14:06:14.184"/>
+</kw>
+<kw name="Get Text From Index" library="mobile">
+<var>${SlicedStudyLink}</var>
+<arg>${url}</arg>
+<arg>42</arg>
+<arg>78</arg>
+<msg timestamp="20230313 14:06:14.185" level="INFO">${SlicedStudyLink} = d2563e38-04e4-4c06-8323-f8c4722040b0</msg>
+<status status="PASS" starttime="20230313 14:06:14.185" endtime="20230313 14:06:14.185"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SlicedStudyLink}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20230313 14:06:14.186" level="INFO">${SlicedStudyLink} = d2563e38-04e4-4c06-8323-f8c4722040b0</msg>
+<status status="PASS" starttime="20230313 14:06:14.185" endtime="20230313 14:06:14.186"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${SlicedStudyLink}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230313 14:06:14.186" endtime="20230313 14:06:14.187"/>
+</kw>
+<status status="PASS" starttime="20230313 14:05:30.864" endtime="20230313 14:06:14.187"/>
+</kw>
+<kw name="tap on 'OPEN STUDY IN APP' button" library="launch_flow_keywords">
+<kw name="Wait Until Element Is Visible" library="mobile">
+<arg>${Open Study In app}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230313 14:06:14.189" level="DEBUG">POST http://localhost:4723/wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements {"using": "xpath", "value": "//android.view.View[@content-desc=\"OPEN STUDY IN APP\"]/android.widget.Button"}</msg>
+<msg timestamp="20230313 14:06:14.262" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/31bdcac4-c4ff-415c-a750-100e31089f6a/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20230313 14:06:14.262" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-03d9-0000-8f4400000138","ELEMENT":"00000000-0000-03d9-0000-8f4400000138"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-N5FAOI+wyylCYW1zXv4tYSyOamw"', 'Date': 'Mon, 13 Mar 2023 08:36:14 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230313 14:06:14.262" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230313 14:06:14.262" level="DEBUG">
