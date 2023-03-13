@@ -18,7 +18,7 @@ Need to Manual Input here 'Look at the dot until it goes green and disappears'
     END
     
 Verify 'Accuracy needs to be improved' screen getting displayed if user fails to validate accuracy
-    mobile.Wait Until Element Is Visible    ${tryAgainBtn}          timeout=300
+    mobile.Wait Until Element Is Visible    ${tryAgainBtn}
     mobile.Page Should Contain Text    Try not to let your eyes wander during the accuracy check.
     mobile.Page Should Contain Text    Accuracy needs to be improved
     Verify help icon is working as excepted
@@ -41,7 +41,7 @@ Verify 'Accuracy needs to be improved' screen getting displayed if user fails to
     mobile.Click element    ${EyeGazeValiidation ContinueToAccuracyCheckBtn}
 
 verify 'Well done! The eye tracking setup is complete' screen getting displayed after validation of EYE gaze
-    mobile.Wait Until Page Contains    Well done
+    mobile.Wait Until Page Contains    You will have accuracy checks    timeout=5
     Verify help icon is working as excepted
     mobile.Page Should Contain Text    You will have accuracy checks every 1 minutes during your browsing session to maintain the accuracy of our eye tracking.
     mobile.Click element    ${BEGIN Button}
@@ -54,15 +54,15 @@ Verify 'You are ready to begin the study' screen getting displayed
     mobile.Page Should Contain Text    The Vision Project app will record your screen while you browse.
     Verify help icon is working as excepted
 
-Click element on 'View A Quick Demo' Button
+Tap on 'View A Quick Demo' Button
     mobile.Wait Until Element Is Visible    ${ViewAQuickDemoBtn}
     mobile.Click element    ${ViewAQuickDemoBtn}
 
-Click element on 'Skip And Start Study' Button
+Tap on 'Skip And Start Study' Button
     mobile.Wait Until Element Is Visible    ${Skip&StartTheStudyBtn}
     mobile.Click element    ${Skip&StartTheStudyBtn}
     
-Verify study instructions and Click element on 'START STUDY' button
+Verify study instructions and tap on 'START STUDY' button
     mobile.Wait Until Page Contains    Study instructions
     Verify help icon is working as excepted
     mobile.Page Should Contain Text    You will see a floating timer with the time remaining and the status of the recording in the top right corner of the screen.
