@@ -41,7 +41,7 @@ Verify 'Accuracy needs to be improved' screen getting displayed if user fails to
     mobile.Click element    ${EyeGazeValiidation ContinueToAccuracyCheckBtn}
 
 verify 'Well done! The eye tracking setup is complete' screen getting displayed after validation of EYE gaze
-    mobile.Wait Until Page Contains    You will have accuracy checks    timeout=5
+    mobile.Wait Until Page Contains    You will have accuracy checks
     Verify help icon is working as excepted
     mobile.Page Should Contain Text    You will have accuracy checks every 1 minutes during your browsing session to maintain the accuracy of our eye tracking.
     mobile.Click element    ${BEGIN Button}
